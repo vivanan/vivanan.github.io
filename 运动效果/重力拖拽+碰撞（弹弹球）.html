@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+#box{
+	width:100px;
+	height: 100px;
+	background: url(../desktopPage/images/ball1.png);
+	background-size:cover;
+	border-radius: 50%;
+	position:absolute;
+	left:100px;
+	top:0;
+}
+
+</style>
+<script>
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var oBallBox=document.getElementById('ballBox');
+	var iSpeedX=10+Math.random()*100;
+	var iSpeedY=10+Math.random()*100;
+	var lastX=0;
+	var lastY=0;	
+	
+	oBox.style.left=Math.random()*1000+'px';
+	oBox.style.top=Math.random()*10+'px';
+
+	collision(oBox);
+	oBox.onmousedown=function(ev){
+		clearInterval(timer);
+		var oEvent=ev || event;
+		var disX=oEvent.clientX-oBox.offsetLeft;
+		var disY=oEvent.clientY-oBox.offsetTop;
+		document.onmousemove=function(ev){
+			var oEvent=ev||event;
+			oBox.style.left=oEvent.clientX-disX+'px';
+			oBox.style.top=oEvent.clientY-disY+'px';
+
+			iSpeedX=oEvent.clientX-lastX;
+			iSpeedY=oEvent.clientY-lastY;
+
+			lastX=oEvent.clientX;
+			lastY=oEvent.clientY;
+		}
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			collision(oBox);
+		}
+		return false;
+	}
+	var timer;
+	function collision(obj){
+		timer=setInterval(function(){
+			iSpeedY+=5;
+			var l=obj.offsetLeft+iSpeedX;
+			var t=obj.offsetTop+iSpeedY;
+			if (l<0) {
+				l=0;
+				iSpeedX*=-0.8;
+				iSpeedY*=0.8;
+			}else if(l>document.documentElement.clientWidth-obj.offsetWidth){
+				l=document.documentElement.clientWidth-obj.offsetWidth;
+				iSpeedX*=-0.8;
+				iSpeedY*=0.8;
+			}else if(t<0){
+				t=0;
+				iSpeedY*=-0.8;
+				iSpeedX*=0.8;
+			}else if(t>document.documentElement.clientHeight-obj.offsetHeight){
+				t=document.documentElement.clientHeight-obj.offsetHeight;
+				iSpeedY*=-0.8;
+				iSpeedX*=0.8;
+			}
+			// 速度小于1,不动  如果不加 在ie8会滑动
+			if (Math.abs(iSpeedX)<1) {
+				iSpeedX=0;
+			}else if (Math.abs(iSpeedY)<1) {
+				iSpeedY=0;
+			}
+			if (iSpeedX==0 && iSpeedY==0 && t==document.documentElement.clientHeight-obj.offsetHeight) {
+				clearInterval(timer);
+			}
+			obj.style.left=l+'px';
+			obj.style.top=t+'px';
+		},30)
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="ballBox">
+	<div id="box"></div>
+</div>	
+</body>
+</html>

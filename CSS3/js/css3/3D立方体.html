@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background:url("dark-logs-bg.jpg")
+        }
+        #cube{
+            width:200px;
+            height:200px;
+            /*background:red;*/
+            margin:200px auto;
+            transform:perspective(800px) rotateY(-60deg) rotateX(40deg);
+            position:relative;
+            transform-style:preserve-3d;
+        }
+        #cube div{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .front{
+            background:green;
+            transform:translateZ(100px);
+        }
+        .back{
+            background:yellow;
+            transform:translateZ(-100px);
+        }
+        .top{
+            background:khaki;
+            transform:translateY(-100px) rotateX(90deg);
+        }
+        .bottom{
+            background:brown;
+            transform:translateY(100px) rotateX(90deg);
+        }
+        .left{
+            background:pink;
+            transform:translateX(-100px) rotateY(90deg);
+        }
+        .right{
+            background:black;
+            transform:translateX(100px) rotateY(90deg);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('cube');
+            var x=40;
+            var y=-60;
+            oBox.onmousedown=function(ev){
+                var oEvent=ev || event;
+                var disX=oEvent.clientX-y;
+                var disY=oEvent.clientY-x;
+                document.onmousemove=function(ev){
+                    var oEvent=ev || event;
+                    y=oEvent.clientX-disX;
+                    x=oEvent.clientY-disY;
+                    oBox.style.transform='perspective(800px) rotateY('+y+'deg) rotateX('+x+'deg)'
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                return false;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="cube">
+
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+
+    </div>
+</body>
+</html>

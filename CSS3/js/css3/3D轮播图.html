@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: url("dark-logs-bg.jpg");
+            background-size:cover;
+
+        }
+        .box-btn{
+            width:310px;
+            margin:5px auto;
+        }
+        input{
+            width:150px;
+            height:30px;
+            transition:800ms all ease;
+            border-radius:10px;
+            opacity:.5;
+            background:#000;
+            color:#fff;
+            outline:none;
+        }
+        #box{
+            width: 250px;
+            height: 250px;
+            margin:50px auto;
+            position:relative;
+            perspective:800px;
+        }
+        #box div{
+            width: 250px;
+            height: 250px;
+            position:absolute;
+            left:0;
+            top:0;
+            transition:1s All ease;
+            opacity:0;
+        }
+        #box .cur{
+            opacity:1;
+        }
+        #box .l1{
+            transform:translateX(-200px) rotateY(60deg);
+            opacity:.6;
+        }
+        #box .r1{
+            transform:translateX(200px) rotateY(-60deg);
+            opacity:.6;
+        }
+        #box .l2{
+            transform:translateX(-300px) rotateY(80deg);
+            opacity:.1;
+        }
+        #box .r2{
+            transform:translateX(300px) rotateY(-80deg);
+            opacity:.1;
+        }
+        #box div img{
+            width:100%;
+        }
+        input:hover{
+            transform:scale(1.1);
+            opacity:1;
+            background:#fff;
+            color:black;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById('box');
+            var aDiv=oBox.getElementsByTagName('div');
+            var oLeft=document.querySelectorAll('input')[0];
+            var oRight=document.querySelectorAll('input')[1];
+
+            var arr=[];
+            for(var i=0; i<aDiv.length; i++){
+                arr[i]=aDiv[i].className;
+            }
+            oLeft.onclick=function(){
+                arr.push(arr.shift());
+                for(var i= 0; i<aDiv.length; i++){
+
+                    aDiv[i].className=arr[i];
+                }
+            };
+            oRight.onclick=function(){
+                arr.unshift(arr.pop());
+                for(var i= 0; i<aDiv.length; i++){
+
+                    aDiv[i].className=arr[i];
+                }
+            };
+
+        }
+    </script>
+</head>
+<body>
+    <div class="box-btn">
+        <input type="button" value="向左">
+        <input type="button" value="向右">
+    </div>
+    <div id="box">
+        <div class="l2"><img src="img/mm3_big.png"></div>
+        <div class="l1"><img src="img/mm2_big.png"></div>
+        <div class="cur"><img src="img/mm1_big.png"></div>
+        <div class="r1"><img src="img/mm4_big.png"></div>
+        <div class="r2"><img src="img/mm5_big.png"></div>
+        <div><img src="img/mm6_big.png"></div>
+        <div><img src="img/mm7_big.png"></div>
+        <div><img src="img/mm8_big.png"></div>
+    </div>
+
+</body>
+</html>

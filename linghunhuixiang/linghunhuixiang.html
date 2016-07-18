@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		
+		.head{width:100%; height:50px; background: #f8f7f7;}
+		.head-in{width:1000px; height:40px; margin:0 auto; overflow: hidden; position: relative;}
+		.logo{width:86px; height:36px;  margin-top:6px; padding-right:13px; text-indent:-999em; display: block; border-right:1px solid #cecece;}
+		.logo p{background: url(img/logo_dark.png) no-repeat -4px -5px; width:99px; height:36px;}
+		.logo-con1{width:228px; height:24px;  position: absolute; left:430px; top:11px;}
+		.logo-con1 li{width:76px; height:24px;  }
+		.zhuce{width:24px; height:24px;background:url(img/cyou_sprite.png) no-repeat -139px 0; display: block;}
+		.zhuce1{color:#4a4a4a; margin-left:6px; margin-top:8px;}
+		.zhuce-1{width:24px; height:24px;background:url(img/cyou_sprite.png) no-repeat -189px 0; display: block;}
+		.zhuce-2{width:24px; height:24px;background:url(img/cyou_sprite.png) no-repeat 0 -104px; display: block;}
+			/*======================================*/
+		.headcon-right{width:313px; height:50px; position: absolute;left:833px; top:0; z-index:999;}
+		.rightcon-1{width:82px; height:31px; border-left:1px solid #e1e1e1; border-right:1px solid #e1e1e1;padding-top: 19px;}
+		.rightcon-1 a{width:30px;height:12px;margin-left:29px; display: block;}
+		.rightcon-1 i{width:6px; height:4px;background: url(img/cyou_sprite.png) -206px -148px; display: block; margin-top:5px;}
+		.rightcon-2{width:112px; height:31px; border-left:1px solid #e1e1e1; border-right:1px solid #e1e1e1;padding-top: 19px;}
+		.rightcon-2 a{width:65px;height:12px;margin-left:25px; display: block;}
+		.rightcon-2 i{width:6px; height:4px;background: url(img/cyou_sprite.png) -206px -148px; display: block; margin-top:5px;}
+		.head-line{width:100%; height:5px; background: url(img/5.jpg) no-repeat;}
+			/*=================================================mid1*/
+		.middlebox{width:100%; height:2472px;background:#1b1924;}
+		.midbox-bg{width:100%; height:1605px; background: url(img/con_bg.jpg) no-repeat center 0;}
+		.mid{width:1000px;height:2472px; margin:0 auto; position: relative; background: #1c1a25;}
+		.mid1{width:1000px; height:551px;}
+		.mid1-bg{width:1000px; height:551px; background: url(img/header_main.jpg) no-repeat; position:absolute; left:0; right:0;}
+		.mid1-head{width:1000px; height:107px; position: absolute;left: 0; top: 0;}
+		.mid1-logo{width:190px; height:100px; background: url(img/logo.gif) no-repeat;}
+		.mid1-nav li{height:69px;text-align: center; padding-top: 38px; padding-left:8px; padding-right:8px; }
+		.mid1-nav li a{color:#bebebe; font-family:'microsoft Yahei';}
+		.mid1-nav li a h2{font-size:15px;}
+		.mid1-nav li a h3{font-size:7px; height:7px; }
+		.mid1-nav li:hover{border-bottom:3px solid #fef89d;}
+		.dianzan{width:35px; height:122px; position: fixed; left:0; top:246px; background: url(img/dianzan.png) no-repeat;}
+		/*==========================mid1*/
+		.mid2{width:1000px; height:447px;background: #1b1924;}
+		.mid2-l{width:618px;height:414px;}
+		.mid2-r{width:382px; height:414px; }
+		.mid2-top1{width:617px; height:109px;}
+		.mid2-top1 a{display: block;}
+		.download{width:215px; height:109px; background: url(img/sprite.jpg) no-repeat; }	
+		.zhanghaozhuce{width:101px; height:109px;background: url(img/sprite.jpg) no-repeat -215px 0;  }	
+		.zhanghaochongzhi{width:100px; height:109px;background: url(img/sprite.jpg) no-repeat -315px 0;  }	
+		.duihuanzhongxin{width:100px; height:109px;background: url(img/sprite.jpg) no-repeat -415px 0;  }	
+		.xinshouzhinan{width:101px; height:109px;background: url(img/sprite.jpg) no-repeat -516px 0;  }	
+		.download:hover{background: url(img/sprite.jpg) no-repeat 0 -110px;}
+		.zhanghaozhuce:hover{background: url(img/sprite.jpg) no-repeat -215px -110px;}
+		.zhanghaochongzhi:hover{background: url(img/sprite.jpg) no-repeat -315px -110px;}
+		.duihuanzhongxin:hover{background: url(img/sprite.jpg) no-repeat -415px -110px;}
+		.xinshouzhinan:hover{background: url(img/sprite.jpg) no-repeat -516px -110px;}
+		.mid2-bottom{width:618px; height:305px;position: relative;}
+		.mid2-lpic
+		.mid2-lpic a{width:616px; height:303px; border:1px solid #443b4f;}
+		.pic1{width:616px; height:303px; background: url(img/pic1.jpg) no-repeat;display: block;position:absolute;left:0; top: 0; }
+		.pic2{width:616px; height:303px; background: url(img/pic2.jpg) no-repeat;display: none;position:absolute;left:0; top: 0; }
+		.pic3{width:616px; height:303px; background: url(img/pic3.jpg) no-repeat;display: none;position:absolute;left:0; top: 0; }
+		.pic4{width:616px; height:303px; background: url(img/pic4.jpg) no-repeat;display: none;position:absolute;left:0; top: 0; }
+		.pic5{width:616px; height:303px; background: url(img/pic5.jpg) no-repeat;display: none;position:absolute;left:0; top: 0; }
+		.picbtn{width:90px; height:16px; position: absolute;right:12px; bottom:11px;}
+		.picbtn a{width:15px; height:15px;background: #3a3e47;border-radius:50%;margin-left:3px;}
+		.picbtn a:hover{background: #d0290a;}
+		.btn2:hover .pic2{display: block;}/*图片轮播问题*/
+		
+		.mid2-r p{font-size:14px; color:#9faace; font-family: '微软雅黑'; padding-bottom:1px; margin-bottom: 1px;}
+		.mid2-r a{color:#f00000;}
+		.mid2-rtop{height:49px; background: url(img/sever.png) no-repeat 13px 7px; padding-left:97px; padding-top:15px; margin-bottom:3px;}				
+		.mid2-rmid{width:381px; height:43px; background: url(img/sprite.jpg) no-repeat 0 -220px;}
+		.mid2-rmid a{text-decoration: underline;}
+		.mid2-rmid p{width:175px;font-size:12px; padding-top:13px; padding-left:5px; position: relative;}
+		.jiahao{width:14px; height:14px; background: url(img/sprite.jpg) no-repeat -603px -227px;position: absolute; right: 15px; top:14px;}		
+		.mid2-rmid ul{width:176px; }
+		.mid2-rmid .look{width:36px;color: #9faace;padding-top:13px;display: block;}
+		.mid2-rmid li{width:41px; }
+		.weixin{width:41px; height:41px; background: url(img/sprite.jpg) no-repeat -241px -220px;display: block;}
+		.sina{width:41px; height:41px; background: url(img/sprite.jpg) no-repeat -289px -220px;display: block;margin-left:7px;}
+		.tencent{width:41px; height:41px; background: url(img/sprite.jpg) no-repeat -337px -220px;display: block;margin-left:14px;}
+		.weixin:hover{ background: url(img/sprite.jpg) no-repeat -398px -221px;}
+		.sina:hover{ background: url(img/sprite.jpg) no-repeat -442px -221px;}
+		.tencent:hover{ background: url(img/sprite.jpg) no-repeat -486px -221px;}
+		.mid2-rbottom{width:383px; height:305px;}
+		.mid2-botnav{width:381px; height:56px; background: url(img/sprite.jpg) 0 -262px no-repeat;}
+		.mid2-botnav li{width:94px; height:56px; background: url(img/sprite.jpg) no-repeat -94px -263px; text-align: center; line-height: 56px;}
+		.mid2-botnav li a{font-size: 14px; font-family: '微软雅黑'; color:#fefefe;}	
+		.mid2-botnav li:hover{width:94px; height:56px; background: url(img/sprite.jpg) no-repeat -94px -323px;}
+		.mid2-botcon{width:383px; height:230px; background: #322e3f; padding-top:18px;}
+		.mid2botcon-tit{width:347px; height:34px; background: url(img/sprite.jpg) 0 -378px no-repeat; margin:0 auto; text-align: center;line-height: 34px; margin-bottom: 10px;}
+		.mid2botcon-tit a{font-size: 14px; font-family: 'microsoft Yahei'}
+		.botcon-con{width:383px;}
+		.botcon-con li{margin-left:24px; margin-right:18px; margin-bottom:13px;}
+		.botcon-con li a{font-size:14px; color:#9ca7ca;}
+		.mid3{width:1000px; height:132px; margin-bottom:31px;}
+		.mid3 a{width:242px; height:130px; display: block; border:1px solid #433b4f;}
+		.guanggao1{background: url(img/mid3-1.jpg) no-repeat;}
+		.guanggao2{background: url(img/mid3-2.jpg) no-repeat; margin:0 8px;}
+		.guanggao3{background: url(img/mid3-3.jpg) no-repeat; margin-right:8px;}
+		.guanggao4{background: url(img/mid3-4.jpg) no-repeat;}
+		.mid4{width:1000px; height:378px;}
+		.mid4-lefttop{height:59px;}
+		.mid4-lefttop a{width:110px; height:58px; display: block;}
+		.mid4-lefttop .shushi{width:109px;background: url(img/sprite.jpg) no-repeat 0 -412px;}
+		.shooter{background: url(img/sprite.jpg) no-repeat -109px -412px;}
+		.shouhu{background: url(img/sprite.jpg) no-repeat -219px -412px;}
+		.magic{background: url(img/sprite.jpg) no-repeat -329px -412px;}
+		.fighter{background: url(img/sprite.jpg) no-repeat -439px -412px;}
+		.assassin{background: url(img/sprite.jpg) no-repeat -549px -412px;}
+		.shushi:hover{background: url(img/sprite.jpg) no-repeat 0 -470px;}
+		.shooter:hover{background: url(img/sprite.jpg) no-repeat -109px -470px;}
+		.shouhu:hover{background: url(img/sprite.jpg) no-repeat -219px -470px;}
+		.magic:hover{background: url(img/sprite.jpg) no-repeat -329px -470px;}
+		.fighter:hover{background: url(img/sprite.jpg) no-repeat -439px -470px;}
+		.assassin:hover{background: url(img/sprite.jpg) no-repeat -549px -470px;}
+		.professionpic{width:658px; height:288px; background: url(img/shenshe.jpg) no-repeat;}
+		.mid4-right{width:322px; height:348px;}
+		.mid4-rtop{width:322px; height:46px; }
+		.mid4-rtop span{width:28px; height:31px; background: url(img/sprite.jpg) -628px 0 no-repeat;}
+		.mid4-rtop h2{font-size:18px; font-family: 'microsoft Yahei'; color:#f7cc95; margin-left:17px; margin-top:5px;}
+		.mid4-mid{width:321px; height:150px;position: relative; margin-bottom:10px;}
+		.opabox{width:100%;position: absolute;left:0;bottom:0;}
+		.opa{width:100%; height:36px;background: #000; opacity:0.5; filter: alpha(opacity=50); }
+		.mid4-mid h3{font-size:14px; position: absolute;left:10px; bottom:10px; color:#fff; font-family: 'microsoft Yahei';}
+		.mid4-mid img{border: 1px solid #433b4f;}
+		.mid4-bottom{width:322px; height:141px;}
+		.mid4-bottom h3{width:321px; height:25px; background: url(img/sprite.jpg) no-repeat 0 -530px;margin-bottom:3px;}
+		.mid4-bottom p{margin-left:28px; padding-top:6px;}
+		.mid4-bottom i{display: block; margin-top: 6px; margin-right:11px;}
+		.mid4-bottom a{color:#99a4c7;}
+		.mid5{width:1000px;}
+		.mid5-left{width:216px;margin-right:19px;}
+		.mid5-ltop{width:175px; height:189px; background: url(img/sprite.jpg) 0 -555px no-repeat; padding: 0 20px; margin-bottom:23px;}
+		.mid5-ltop h3{height: 43px;line-height: 43px;text-align: center;color: #dbca90;font-size: 16px;}
+		.mid5-ltop ul{margin-top: 11px;}
+		.mid5-ltop li a{font-size: 14px;color: #9082a5; line-height: 28px; }
+		.mid5-lmid{width:215px; height:262px; background: url(img/main_a3.jpg) no-repeat;}
+		.mid5-lmid2{width:205px; height:36px; background: url(img/sprite.jpg) no-repeat -451px -273px; margin:5px auto;text-align: center; line-height: 36px;font-size: 15px; font-family: 'microsoft Yahei';color: #aa9ac2; margin-bottom:20px;}
+		.mid5-lbot{width:216px; height:265px;background: url(img/12345.jpg) no-repeat;}
+		.mid5-mid{width:424px; margin-right:20px;}
+		.mid5-mtop{width:424px; height:347px;}
+		.mid5-mhead{height:43px;}
+		.mid5-mhead i{width:49px; height:31px; background: url(img/sprite.jpg) no-repeat -607px -349px;}
+		.mid5-mhead .icon{font-size:19px; font-family: 'microsoft Yahei'; color: #f3cb8d; margin-top:3px;}
+		.mid5-ul1{height:48px;border: 1px solid #433b4f;}
+		.mid5-ul1 li{width:104px; height:48px; border-right:1px solid #433b4f; background: #1a191f; color:#a295b7; text-align: center; line-height: 48px; font-family: 'microsoft Yahei'}
+		.mid5-mtop .li2{border: none;width:107px;}
+		.mid5-ul1 li:hover{background: #322b3c;color:#fff;cursor: pointer; }
+		.mid5-mcon{width:408px; height:236px;background: #322b3c;padding-left:16px; padding-top:23px;}
+		.wjgl{width:105px; height:197px; border: 1px solid #433b4f;background: url(img/wj.jpg) no-repeat;}
+		.mid5-ul2{margin-left:18px;}
+		.mid5-ul2 li{color:#968aaa; font-family: 'microsoft Yahei';margin-bottom:10px;}
+		.mid5-mtop{margin-bottom:37px;}
+
+		.mid5-mhead .mid5-pic2{width:43px; height:31px; background: url(img/sprite.jpg) no-repeat -613px -381px;}
+		.p17173{width:105px; height:197px; border: 1px solid #433b4f;background: url(img/1031.jpg) no-repeat;}
+
+		.mid5-right{width:321px; height:347px;}
+		.mid5-right .mid5-rpic1{width:28px; height:31px; background: url(img/sprite.jpg) no-repeat -628px -39px;margin-right:5px;}
+		.mid5-rcon{width:286px; height:309px; background:#26212d; padding:0 18px;}
+		.mid5-rcon p{height:58px;font-family: 'microsoft Yahei'; border-bottom:1px dashed #9587ab;}
+		.mid5-rcon i{width:78px; height:26px;margin-top:16px; background: url(img/0000.jpg); text-align: center;line-height: 26px; color:#fff;}
+		.mid5-rcon a{margin-top:21px; margin-left:18px;color:#9587ab;}
+		.mid5-rcon .mid5-last{border:0;}
+		.mid5-rcon div{width:279px; height:39px; text-align: center;line-height: 39px;border: 3px solid #9587ab;}
+		.mid5-rcon div a{color: #9587ab; font-size: 22px;font-family: 'microsoft Yahei';}
+		.mid5-mhead .mid5-rpic4{width:33px; height:31px; background: url(img/sprite.jpg) no-repeat -623px -78px;}
+		.mid5-right .mid5-mtop{width:322px;}
+		.mid5-rlast{width:310px; height:235px;background: #322b3c;padding-top:23px; padding-left: 12px;}
+		.mid5-rlast div{width:137px; height:90px; background: url(img/123143432.jpg);margin-right:22px; margin-bottom:22px;}
+		.mid5-rlast .lastbox{margin-right:0;}
+		/*=======================*/
+		.mid6{width:1000px; height:133px;}
+		.mid6-head{width:893px; height:30px; background: url(img/game_anc.jpg) no-repeat; margin:0 auto;}
+		.mid6-con{text-align: center;line-height: 32px;color:#9587ab;font-family: 'microsoft Yahei';}
+
+		.bottombg{background: #1b1924;}
+		.botpic{width:1000px; height:10px; background: url(img/99999.jpg) no-repeat; margin:0 auto;}
+		.botlast{width:1000px; height:100px;background: #181818;margin:0 auto; overflow: hidden;}
+		.logo1{width: 115px;
+			    height: 52px;
+			    background: url(img/logo_dark.png) 0 -60px;
+			    float: left;
+			    margin-top: 20px;
+				}
+		.logo2{  float: left;margin-left: 10px;
+						    margin-top: 26px;
+						    width:36px ;height:40px;
+						    background: url(img/cyou_copyright_sprite.png) 0 -5px;}
+		.fir{margin-top: 30px;}
+		.fir a{color:#767676;}			    
+
+		</style>
+</head>
+<body>
+	<div class="head">
+		<div class="head-in">
+			<a href="#" class="logo"><p>畅游</p></a>
+			<ul class="logo-con1 clearfix">
+				<li class="clearfix fl">
+					<a href="#" class="zhuce fl"></a>
+					<a href="#" class="zhuce1 fl">注册</a></li>
+				<li class="clearfix fl">
+					<a href="#" class="zhuce-1 fl"></a>
+					<a href="#" class="zhuce1 fl">充值</a></li>
+				<li class="clearfix fl ">
+					<a href="#" class="zhuce-2 fl"></a>
+					<a href="#" class="zhuce1 fl">畅游+</a></li>
+			</ul>
+		</div>
+		<ul class="headcon-right clearfix">
+			<li class="rightcon-1 fl clearfix">
+				<a href="#" class="fl">客服</a>
+				<i class="fl"></i>
+			</li>
+			<li class="fl rightcon-2 clearfix">
+				<a href="#" class="fl">畅游全服务</a>
+				<i class="fl"></i>
+			</li>
+			<li class="fl rightcon-2 clearfix">
+				<a href="#" class="fl">畅游全游戏</a>
+				<i class="fl"></i>
+			</li>
+		</ul>
+	</div>
+	<div class="head-line"></div>
+	<div class="middlebox">
+		<div class="midbox-bg">
+			<div class="mid">
+				<div class="mid1">
+					<a href="#" class="mid1-bg"></a>
+					<div class="mid1-head clearfix">
+						<a href="#" class="mid1-logo fl"></a>
+						<ul class="fr mid1-nav clearfix">
+							<li class="fl">
+								<a href="#">
+									<h2>首页</h1>
+									<h3>HOME</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>新闻公告</h1>
+									<h3>NEWS</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>游戏特色</h1>
+									<h3>FEATURES</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>新手指南</h1>
+									<h3>NEWBIE</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>游戏下载</h1>
+									<h3>DOWNLOAD</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>活动专区</h1>
+									<h3>ACTIVTY</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>视觉欣赏</h1>
+									<h3>VIDIO&PICTURE</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>玩家互动</h1>
+									<h3>INTERACTION</h1>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="#">
+									<h2>客户服务</h1>
+									<h3>SERVICE</h1>
+								</a>
+							</li>							
+						</ul>						
+					</div>
+					<a href="#" class="dianzan"></a>
+				</div>
+				<div class="mid2 clearfix">
+					<div class="mid2-l fl">
+						<div class="mid2-top1 clearfix">
+							<a href="#" class="download fl"></a>		
+							<a href="#" class="zhanghaozhuce fl"></a>
+							<a href="#" class="zhanghaochongzhi fl"></a>
+							<a href="#" class="duihuanzhongxin fl"></a>
+							<a href="#" class="xinshouzhinan fl"></a>
+						</div>
+						<div class="mid2-bottom">
+							<div class="mid2-lpic">
+								<a href="#" class="pic1"></a>
+								<a href="#" class="pic2"></a>
+								<a href="#" class="pic3"></a>
+								<a href="#" class="pic4"></a>
+								<a href="#" class="pic5"></a>
+							</div>
+							<div class="picbtn clearfix">
+								<a href="#" class="btn1 fl"></a>
+								<a href="#" class="btn2 fl"></a>
+								<a href="#" class="btn3 fl"></a>
+								<a href="#" class="btn4 fl"></a>
+								<a href="#" class="btn5 fl"></a>
+							</div>
+						</div>
+					</div>
+					<div class="mid2-r fl">
+						<div class="mid2-rtop">
+							<p>电信一区<a href="#">【元素殿堂】</a>欢迎进驻</p>
+							<p>网通一区<a href="#">【雷霆之怒】</a>欢迎进驻</p>
+						</div>
+						<div class="mid2-rmid">
+							<p class="fl">距您上次访问有<a href="#">200</a>条更新
+							<a href="#" class="jiahao"></a></p>
+
+							
+							<ul class="fr clearfix">
+								<li class="look fl">关注：</li>
+								<li class="fl"><a href="#" class="weixin"></a></li>
+								<li class="fl"><a href="#" class="sina"></a></li>
+								<li class="fl"><a href="#" class="tencent"></a></li>
+							</ul>
+						</div>
+						<div class="mid2-rbottom">
+							<ul class="mid2-botnav clearfix">
+								<li class="fl"><a href="#">综合</a></li>
+								<li class="fl"><a href="#">新闻</a></li>
+								<li class="fl"><a href="#">公告</a></li>
+								<li class="fl"><a href="#">媒体</a></li>
+							</ul>
+							<div class="mid2-botcon">
+								<div class="mid2botcon-tit"><a href="#">4月8日大版开启 新职业术士魔神天降</a></div>
+								<ul class="botcon-con">
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									<li><a href="#">【新闻】决战开启！6月4日全新Raid本“暗黑城 02/24</a></li>
+									
+
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="mid3 clearfix">
+					<a href="#" class="guanggao1 fl"></a>
+					<a href="#" class="guanggao2 fl"></a>
+					<a href="#" class="guanggao3 fl"></a>
+					<a href="#" class="guanggao4 fl"></a>				
+				</div>
+				<div class="mid4 clearfix">
+					<div class="mid4-left fl">	
+						<ul class="mid4-lefttop clearfix">
+							<li class="fl">
+								<a href="#" class="shushi"></a>			
+							</li>
+							<li class="fl">
+								<a href="#" class="shooter"></a>			
+							</li>
+							<li class="fl">
+								<a href="#" class="shouhu"></a>			
+							</li>
+							<li class="fl">
+								<a href="#" class="magic"></a>			
+							</li>
+							<li class="fl">
+								<a href="#" class="fighter"></a>			
+							</li>
+							<li class="fl">
+								<a href="#" class="assassin"></a>			
+							</li>
+						</ul>
+						<div class="professionpic"></div>
+					</div>
+					<div class="mid4-right fr">
+						<div class="mid4-rtop clearfix">
+							<span class="fl"></span>
+							<h2 class="fl">活动中心</h2>
+						</div>
+						<div class="mid4-mid">
+							<a href="#"><img src="img/1.jpg" alt="女武神的秘宝"></a>
+							<div class="opabox">	
+								<div class="opa"></div>
+								<h3>女武神的秘宝</h3>
+							</div>
+						</div>
+						<div class="mid4-bottom">
+							<h3>
+								<p class="fl"><a href="">神谕者的成长礼</a></p>
+								<i class="fr"><a href="">进行中</a></i>
+							</h3>
+							<h3>
+								<p class="fl"><a href="">神谕者的成长礼</a></p>
+								<i class="fr"><a href="">进行中</a></i>
+							</h3>
+							<h3>
+								<p class="fl"><a href="">神谕者的成长礼</a></p>
+								<i class="fr"><a href="">进行中</a></i>
+							</h3>
+							<h3>
+								<p class="fl"><a href="">神谕者的成长礼</a></p>
+								<i class="fr"><a href="">进行中</a></i>
+							</h3>
+							<h3>
+								<p class="fl"><a href="">神谕者的成长礼</a></p>
+								<i class="fr"><a href="">进行中</a></i>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="mid5 clearfix">
+					<div class="mid5-left fl">
+						<div class="mid5-ltop clearfix">
+							<h3>快捷入口</h3>
+							<ul class="fl">
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+							</ul>
+							<ul class="fr">
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+								<li><a href="#">帐号管理</a></li>
+							</ul>
+						</div>
+						<a href="#"><div class="mid5-lmid"></div></a>
+						<a href="#"><div class="mid5-lmid2">媒体合作专区</div></a>
+						<a href="#"><div class="mid5-lbot"></div></a>
+					</div>
+					<div class="mid5-mid fl">
+						<div class="mid5-mtop">
+							<h2 class="mid5-mhead clearfix">
+								<i class="fl"></i>
+								<span class="icon fl">玩家交流</span>
+							</h2>
+							<ul class="clearfix mid5-ul1">
+								<li class="fl">玩家攻略</li>
+								<li class="fl">论坛热帖</li>
+								<li class="fl">社区精华</li>
+								<li class="fl li2">更多信息</li>
+							</ul>
+							<div class="mid5-mcon clearfix">
+								<div class="wjgl fl"></div>
+								<ul class="mid5-ul2 fl">
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="mid5-mtop">
+							<h2 class="mid5-mhead clearfix">
+								<i class="fl mid5-pic2"></i>
+								<span class="icon fl">媒体专区</span>
+							</h2>
+							<ul class="clearfix mid5-ul1">
+								<li class="fl">玩家攻略</li>
+								<li class="fl">论坛热帖</li>
+								<li class="fl">社区精华</li>
+								<li class="fl li2">更多信息</li>
+							</ul>
+							<div class="mid5-mcon clearfix">
+								<div class="p17173 fl"></div>
+								<ul class="mid5-ul2 fl">
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+									<li>生活技能之烹饪技能详细解读</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="mid5-right fl">
+						<div class="mid5-mtop">
+							<h2 class="mid5-mhead clearfix">
+								<i class="fl mid5-rpic1"></i>
+								<span class="icon fl">游戏资料</span>
+							</h2>
+							<div class="mid5-rcon">
+								<p clearfix>
+									<i class="fl">新手入门</i>
+									<a href="#" class="fl">注册帐号|下载游戏|登陆游戏</a>
+								</p>
+								<p clearfix>
+									<i class="fl">新手入门</i>
+									<a href="#" class="fl">注册帐号|下载游戏|登陆游戏</a>
+								</p>
+								<p clearfix>
+									<i class="fl">新手入门</i>
+									<a href="#" class="fl">注册帐号|下载游戏|登陆游戏</a>
+								</p>
+								<p class="mid5-last">
+									<i class="fl">新手入门</i>
+									<a href="#" class="fl">注册帐号|下载游戏|登陆游戏</a>
+								</p>
+								<div><a href="#">进入资料站</a></div>
+							</div>
+						</div>
+						<div class="mid5-mtop">
+							<h2 class="mid5-mhead clearfix">
+								<i class="fl mid5-rpic4"></i>
+								<span class="icon fl">视觉欣赏</span>
+							</h2>
+							<ul class="clearfix mid5-ul1">
+								<li class="fl">玩家攻略</li>
+								<li class="fl">论坛热帖</li>
+								<li class="fl li2">更多信息</li>
+							</ul>
+							<div class="mid5-rlast clearfix">
+								<div class="fl"></div>
+								<div class="fl lastbox"></div>
+								<div class="fl"></div>
+								<div class="fl lastbox"></div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="mid6">
+					<div class="mid6-head"></div>
+					<div class="mid6-con">抵制不良游戏，拒绝盗版游戏，注意自我保护谨防受骗上当，适度游戏益脑，沉迷游戏伤身，合理安排时间，享受健康生活<br />本身适合18周岁以上成年人用户，未满18周岁</div>
+				</div>
+				
+			</div>
+			<div class="bottombg">
+				<div class="botpic"></div>
+				<div class="botlast">
+					<a href="#" class="logo1"></a>
+					<a href="#" class="logo2"></a>
+					<p class="fir">北京畅游时代数码技术有限公司版权所有 Copyright © 2011 ChangYou.com Limited. All rights reserved. 法律声明 | <a href="#">联系我们</a></p>
+					<p>京网文[2011]0260-093号 | 京ICP证：070525号</p>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

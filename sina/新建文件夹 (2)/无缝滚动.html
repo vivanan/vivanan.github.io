@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+#box{
+	width:1040px;
+	height:260px;
+	border:1px solid #000;
+	margin:20px auto;
+	position: relative;
+	overflow: hidden;
+}
+ul{
+	position:absolute;
+	left:0;
+	top:0;
+}
+ul li{
+	float:left;
+	padding:5px;
+}
+img{
+	width:250px;
+}
+#btn1{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background: khaki;
+}
+#btn2{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	background: khaki;
+}
+.box{
+	width:150px;
+	height:52px;
+	margin:0 auto;
+}
+</style>
+<script>
+window.onload=function(){
+	var oUl=document.getElementById('ul');
+	var aLi=oUl.getElementsByTagName('li');
+	var oBtn1=document.getElementById('btn1');
+	var oBtn2=document.getElementById('btn2');
+
+	oUl.innerHTML+=oUl.innerHTML;
+	oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+	var timer;
+	var left=0;
+	function toleft(){
+		clearInterval(timer);
+		timer=setInterval(function (){
+			left-=2;
+			if (left<=-oUl.offsetWidth/2) {
+				left=0;
+			}
+			oUl.style.left=left+'px';
+		},30)
+	}
+	toleft();
+	function toright(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			left+=2;
+			if (left>=0) {
+				left=-oUl.offsetWidth/2;
+			}
+			oUl.style.left=left+'px';
+		},30)
+	}
+	oBtn1.onclick=function(){
+		toleft();
+	}
+	oBtn2.onclick=function(){
+		toright();
+	}
+
+}
+</script>
+</head>
+
+<body>
+<div class="box">
+	<input type="button" value="向左" id="btn1">
+	<input type="button" value="向右" id="btn2">
+</div>
+
+<div id="box">
+	<ul id="ul">
+		<li><img src="img5/5.jpg"></li>
+		<li><img src="img5/6.jpg"></li>
+		<li><img src="img5/7.jpg"></li>
+		<li><img src="img5/8.jpg"></li>
+	</ul>
+</div>
+</body>
+</html>

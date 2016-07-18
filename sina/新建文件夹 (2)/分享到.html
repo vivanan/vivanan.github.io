@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+#box{
+	width:0;
+	height:300px;
+	background: khaki;
+	position: absolute;
+	right:0;
+	top:50%;
+	margin-top: -150px;
+}
+#span{
+	width:30px;
+	height:100px;
+	background: orange;
+	position:absolute;
+	left:-30px;
+	top:50%;
+	margin-top: -50px;
+	text-align: center;
+	line-height: 30px;    
+}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var oSpan=document.getElementById('span');
+	oBox.onmouseenter=function(){
+		move(oBox,{width:100},500);
+	}
+	oBox.onmouseleave=function(){
+		move(oBox,{width:0},500);
+	}
+}
+</script>
+</head>
+
+<body>
+	<div id="box">
+		<span id="span">分享到</span>
+	</div>
+</body>
+</html>

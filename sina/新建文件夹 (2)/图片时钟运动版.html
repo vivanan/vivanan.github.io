@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+ul{
+	width:200px;
+	margin:20px auto;
+	height:35px;
+	overflow: hidden;
+
+}
+li{
+	float:left;
+	width:24px;
+	height:35px;
+	position: relative;
+	font-size: 30px;
+}
+img{
+	vertical-align: top;
+	position:absolute;
+	left:0;
+	top:0;
+
+}
+</style>
+<script src="../../js/moveframe.js"></script>
+<script>
+function toDouble(n){
+	return n<0?'0'+n:''+n;
+}
+window.onload=function(){
+	var aImg=document.getElementsByTagName('img');
+	function clock(){
+		var oDate=new Date();
+		var str=toDouble(oDate.getHours())+toDouble(oDate.getMinutes())+toDouble(oDate.getSeconds());
+		for (var i = 0; i < aImg.length; i++) {
+			move(aImg[i],{top:-35*str.charAt(i)})		
+		}
+	}
+	clock();
+	setInterval(clock,1000);
+}
+</script>
+</head>
+
+<body>
+<ul id="ul">
+	<li><img src="num.png"></li>
+	<li><img src="num.png"></li>
+	<li>:</li>
+	<li><img src="num.png"></li>
+	<li><img src="num.png"></li>
+	<li>:</li>
+	<li><img src="num.png"></li>
+	<li><img src="num.png"></li>
+</ul>
+</body>
+</html>

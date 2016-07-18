@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+#box{
+	width:200px;
+	height:200px;
+	border-radius: 50%;
+	background: purple;
+	color:yellow;
+	font-size: 100px;
+	text-align: center;
+	line-height: 200px;
+	position:absolute;
+	left:100px;
+	top:0;
+}
+</style>
+<script>
+function getStyle(obj,name){
+	return (obj.currentStyle || getComputedStyle(obj,false))[name];
+}
+function move(obj,name,target,duration,complete){
+	var start=parseFloat(getStyle(obj,name));
+	var dis=target-start;
+	var count=Math.floor(duration/30);
+	var n=0;
+	timer=setInterval(function(){
+		n++;
+		obj.style[name]=start+dis/count*n+'px';
+		if (n==count) {
+			clearInterval(timer)
+			complete && complete();
+		}
+	},30)
+}
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var timer=null;
+	oBox.onclick=function(){
+		move(oBox,'width',500,1000,function(){
+			move(oBox,'height',500,1000);
+		});
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="box">大黄</div>
+</body>
+</html>

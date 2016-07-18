@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background:url("nvshen.jpg");
+            background-size:cover;
+        }
+        #box{
+            width:600px;
+            height: 600px;
+            margin:10px auto;
+            background: url("pan.jpg");
+            background-size:cover;
+            border-radius:50%;
+            position:relative;
+            opacity:.7;
+        }
+        #box div{
+            position:absolute;
+            left:50%;
+            top: 50%;
+            transform-origin:bottom center;
+        }
+        #cap{
+            width: 40px;
+            height: 40px;
+            margin-left:-20px;
+            margin-top:-20px;
+            background:-webkit-radial-gradient(#ccc,#000);
+            border-radius:50%;
+        }
+        #hours{
+            width: 20px;
+            height: 160px;
+            border-radius:50% 50% 0 0;
+            margin-left:-10px;
+            margin-top:-160px;
+            background: #6203aa;
+            /*padding-top:30px;*/
+            text-align: center;
+            line-height:80px;
+            color:yellow;
+            font-size:18px;;
+        }
+        #min{
+            width:16px;
+            height:200px;
+            border-radius:50% 50% 0 0;
+            margin-left:-8px;
+            margin-top:-200px;
+            background: #00cc00;
+        }
+        #sec{
+            width:8px;
+            height:240px;
+            border-radius:50% 50% 0 0;
+            margin-left:-4px;
+            margin-top:-240px;
+            background:#ff0084;
+        }
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox=document.querySelector('#box');
+            var oH=document.querySelector('#hours');
+            var oM=document.querySelector('#min');
+            var oS=document.querySelector('#sec');
+
+            function clock(){
+                var oDate=new Date();
+                var h=oDate.getHours();
+                var m=oDate.getMinutes();
+                var s=oDate.getSeconds();
+                var ms=oDate.getMilliseconds();
+                oH.style.transform='rotate('+(h%12*30+m/60*30)+'deg)';
+                oM.style.transform='rotate('+(m*6+s/60*6)+'deg)';
+                oS.style.transform='rotate('+(s*6+ms/1000*6)+'deg)';
+//
+            }
+            clock();
+            setInterval(clock,30);
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="hours">肖楠</div>
+        <div id="min"></div>
+        <div id="sec"></div>
+        <div id="cap"></div>
+    </div>
+</body>
+</html>

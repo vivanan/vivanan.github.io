@@ -1,0 +1,725 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<meta name="description" content="智能社" />
+<title>index</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<style>
+body{
+	height:100%;
+    background-color: #b4daf0;
+    background-image: url(img/body_bg.jpg);
+    background-repeat: repeat-x;
+    background-position: center 0;
+	font-family: 'microsoft YaHei';
+	font-size: 12px;
+	color:#333;
+}
+.hidebox{
+	height:50px;
+	width:100%;
+	display: none;
+
+}
+.navhead{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 48px;
+    border-top: 2px solid #fa7d3c;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.15);
+    background: #f6fbfd;
+}
+.headbox{
+	width:1280px;
+	height:100%;
+	margin:0 auto;
+	position: relative;
+}
+.weibologo{
+	width: 140px;
+	height:100%;
+	background: url(img/WB_logo.png) 50% 40% no-repeat;
+	float: left;
+}
+.inp{
+	position: relative;
+    float: left;
+    width:550px;
+    height: 28px;
+    margin: 9px 0 0 0px;
+    background-color: #f2f2f5;
+    border: 1px solid #ccc;
+}
+.search{
+	position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 245px;*/
+    width:405px;
+    padding: 4px 33px 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    color: #808080;
+    outline-style: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.inp span{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 245px;
+    padding: 4px 33px 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    color: #808080;
+    outline-style: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.inp .search-icon{
+	width:18px;
+	height:23px;
+	position: absolute;
+    top: 4px;
+    right: 10px;
+    background: url(img/ico_btn_player.png) -64px -124px;
+}
+.nav-right{
+	width:552px;
+	height:48px;
+	float:right;
+}
+.usernav{
+	float: left;
+    margin: 11px 20px 11px 0;
+    /*width:404px;*/
+    height:26px;
+    border-right:1px solid #ccc;
+    padding-right:10px;
+}
+.usernav1{
+	height:26px;
+	float:left;
+}
+.usernav li{
+	float: left;
+    display: inline;
+    position: relative;
+    /*width:56px;*/
+    height:26px;
+    margin-left: 30px;
+    font-size: 14px;
+}
+.icon-1 a{
+	display:inline-block;
+}
+.icon-1 a i{
+	width:26px;
+	height:26px;
+	float:left;
+}
+.icon-1 a em{
+	height:26px;
+	float:left;
+	font-size: 15px;
+	margin-top: 3px;
+}
+.icon1{
+	background: url(img/images/icon_03.jpg) no-repeat;
+}
+.icon2{
+	background: url(img/images/icon_05.jpg) no-repeat;
+}
+.icon3{
+	background: url(img/images/icon_07.jpg) no-repeat;
+}
+.icon4{
+	background: url(img/images/icon_09.jpg) no-repeat;
+}
+.usernav1 .icon5{
+	width:36px;
+	background: url(img/images/icon_11.jpg) no-repeat;
+}
+.icon6{
+	background: url(img/images/icon_12.jpg) no-repeat;
+}
+.icon7{
+	background: url(img/images/icon_14.jpg) no-repeat;
+}
+.usernav1 li{
+	width:26px;
+	height:26px;
+	float:left;
+	margin-left: 10px;
+	margin-top:10px;
+}
+.usernav1 a{
+	width:26px;
+	height:26px;
+	display: block;
+}
+/*中间内容部分*/
+.body1{
+	width:100%;
+	height:100%;
+	background: url(img/body_bg.jpg) top center no-repeat;
+	padding-top: 50px;
+}
+.con-1{
+	width:1000px;
+	height:100%;
+	background-color: rgba(70,149,194,0.3);
+	margin:0 auto;
+	
+	
+}
+.con-left{
+	width:150px;
+	height:500px;
+	float: left;
+	background-color: rgba(70,149,194,0.3);
+	padding-top: 16px;
+}
+.con-left div{
+	height:34px;
+	padding-left:15px;
+	cursor:pointer;
+}
+.con-left div a{
+	line-height: 34px;
+	font-weight: bold;
+	font-size: 14px;
+	color:#fff;
+}
+.con-left div:hover{
+	background: rgba(255,255,255,0.1);
+}
+.con-left h3{
+	height:30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.con-left h3 span{
+	margin-left:60px; 
+	margin-top:10px; 
+	background:#a8d0e8; 
+	text-align: center; 
+	width:auto;
+	height:auto;
+	font-weight: bold;
+	border-radius: 2px;
+}
+.conmid{
+	width:600px;
+	float: left;
+	padding-top: 16px;
+}
+.conmid-head{
+	width:580px;
+	height:140px;
+	background: #fff;
+	border-radius: 4px;
+	padding:15px 10px 10px 10px;
+	margin-bottom:10px;
+}
+.conmid-head h2{
+	width:580px;
+	height:21px;
+}
+.conmid-head h2{
+
+	background: url(img/youshenme.png) no-repeat;
+	/*color: #1b7fb6;*/
+	/*font-size: 18px!important;*/
+	/*font-family: "WBswficon" !important;*/
+}
+.conmid-head h2 a{
+	color:#eb7350;
+}
+.texttop{
+	width:568px;
+	height:68px;
+	resize: none;
+	padding:5px;
+	border:1px solid #ccc;
+	margin:4px 4px 0 0;
+}
+.mid-head-bottom{
+	height:35px;
+}
+.mid-head-bottom-left{
+	width:380px;
+	height:30px;
+	padding-top:5px;
+	float:left;
+}
+.mid-head-bottom-left a{
+	float:left;
+	margin-right:18px;
+}
+.mid-head-bottom-left a i{
+	width:20px;
+	height:20px;
+	float:left;
+}
+.mid-head-bottom-left a em{
+	color:#333;
+	padding:2px 0 0 2px;
+	float:left;
+}
+.mid-head-bottom-left a em:hover{
+	color:#eb7350;
+}
+.i1{
+	background: url(img/images/biaoqing_1.jpg);
+}
+.i2{
+	background: url(img/images/biaoqing_2.jpg);
+}
+.i3{
+	background: url(img/images/biaoqing_3.jpg);
+}
+.i4{
+	background: url(img/images/biaoqing_4.jpg);
+}
+.i5{
+	background: url(img/images/biaoqing_5.jpg);
+}
+.mid-head-bottom-right{
+	width:200px;
+	height:30px;
+	/*padding-top:5px;*/
+	float:left;
+}
+.mid-head-bottom-right a{
+	width:62px; height:15px; float:right;
+	padding-top:7px;
+}
+.mid-head-bottom-right a:hover{
+	color:#eb7350;
+}
+.mid-head-bottom-right div{
+	width:60px;
+	height:28px;
+	border:1px solid #fbbd9e;
+	background: #ffc09f;
+	line-height: 29px;
+	padding:0 10px 0 10px;
+	text-align: center;
+	color:#fff;
+	border-radius: 3px;
+	cursor: pointer;
+	float:right;
+}
+.conmid-adv{
+	width:600px;
+	height: 80px;
+	display: block;
+	margin-bottom: 10px;
+}
+.conmid-adv img{
+	border-radius: 3px;
+}
+.recommend{
+	width:560px;
+	height: 30px;
+	padding:4px 20px 4px 20px;
+	border:1px solid #f2f2f5;
+	background: #fff;
+	border-radius: 3px;
+	position: relative;
+	margin-bottom:10px;
+}
+.con-recommend{
+	width:545px;
+	height:32px;
+	color:#808080;
+	line-height: 30px;
+	background: url(img/iconhot.png) no-repeat;
+	padding-left:15px;
+
+}
+.icon-menu{
+	width:41px;
+	height:28px;
+	position:absolute;
+	right:10px;
+	top:5px;
+	background: url(img/icon-memu.png) no-repeat;
+}
+.con-content{
+	width: 560px;
+	padding:20px 20px 4px 20px;
+	background: #fff;
+	position: relative;
+}
+.Favicon{
+	width:50px;
+	height:50px;
+	float:left;
+	margin-right:10px;
+}
+.Favicon img{
+	border-radius: 50%;
+}
+.content-blogger{
+	width:500px;
+	float: left;
+}
+.wb-info{
+	width:500px;
+	height:18px;
+	padding-top: 5px;
+	margin-bottom:7px;
+	position: relative;
+}
+.fa-name{
+	font-size: 14px;
+	color:#000;
+	font-weight: bold;
+}
+.fa-name:hover{color:#eb7350;}
+.icon-vip{
+	width: 14px;
+	height: 14px;
+	background: url(img/icon.png) no-repeat 0 -50px;
+	display: inline-block;
+}
+.icon-follow{
+	width:48px;
+	height:20px;
+	border:1px solid #ccc;
+	position: absolute;
+	right:20px;
+	top:4px;
+	background: url(img/follow.png) no-repeat;
+}
+.wb-from{
+	width:100%;
+	height:15px;
+	margin-bottom:2px;
+	color:#808080;
+}
+.wb-from a:hover{color:#eb7350;}
+.wb-text{
+	width:500px;
+	line-height: 23px;
+	font-size: 14px;
+	color:#333;
+}
+.bloggerpic{
+	width:510px;
+	margin:5px 0 6px 0;
+
+}
+.bloggerpic img{
+	height:248px;	
+}
+.zhuanfa{
+	border-top:1px solid #ccc;
+}
+.zhuanfa a{
+	width:33%;
+	text-align: center;
+	height:36px;
+	line-height: 36px;
+	display: block;
+	float: left;
+}
+.text2 span{
+	margin-top: 8px;
+	line-height: 22px;
+	height:22px;
+	width:100%;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	display: inline-block;
+}
+.text3 span{
+	background: url(img/damuzhi.png) no-repeat;
+	padding-left:12px;
+
+}
+.zhuanfa a:hover{color:#eb7350;}
+.con-right{
+	width:230px;
+	float:left;
+	padding-top: 16px;
+	margin-left:10px;
+}
+.user{margin-bottom: 10px; border-radius: 3px;}
+.user1{
+	width:100%;
+	height:75px;
+	background: url(img/001_s.jpg) no-repeat;
+	position: relative;
+}
+.mylogo{
+	width:60px;
+	height:60px;	
+	position:absolute;
+	left:85px;
+	bottom:-20px;
+}
+.mylogo img{
+	width:60px;
+	height:60px;
+	border-radius: 50%;
+}
+.user2{
+	width:198px;
+	height:65px;
+	padding:16px 16px 9px 16px;
+	background: #fff;
+}
+.user2 h3{
+	height:16px;
+	padding-top:5px;
+	line-height: 16px;
+	text-align: center;
+}
+.user2 h3 a{
+	width:14px;
+	height:14px;
+	background: url(img/icon.png) no-repeat 0 -200px;
+	
+	display: inline-block;
+}
+.user2 h3 i{
+	width:25px;
+	height:14px;
+	font-style: italic;
+	line-height: 14px;
+	padding:0 5px 0 3px;
+	margin-left:3px;
+	
+	background: #ffb400;
+	color:#fff;
+	border-radius: 10px;
+	display: inline-block;
+}
+.user2 h3 em{
+	width:84px;
+	height:16px;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	
+}
+.user2 h2{
+	width:198px;
+	height:34px;
+}
+.user2 h2 div{
+	width:65px;
+	float: left;
+	margin-top: 10px;
+}
+.user2 h2 div i{
+	height:18px;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	display: block;
+}
+.user2 h2 div em{
+	height:15px;
+	font-size: 12px;
+	color:#808080;
+	text-align: center;
+	display: block;
+}
+.right-adv{
+	width:198px;
+	height:250px;
+	padding:16px;
+	background: #fff;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+.right-item{
+	width:230px;
+	height:346px;
+	background: #fff;
+	border-radius: 3px;
+}
+.right-item h3{
+	height:38px;
+	line-height: 38px;
+	padding:0 16px 0 16px;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom:1px solid #ccc;
+}
+.right-item div{
+	height:275px;
+	padding:16px;
+	text-align: center;
+}
+</style>
+<script></script>
+</head>
+
+<body>
+<div class="body1">
+	<div class="hidebox"></div>
+	<div class="navhead">
+		<div class="headbox clearfix">
+			<a href="javascript:;" class="weibologo"></a>
+			<div class="fl inp">
+				<input type="text" id="search" class="search">
+				<span>大家正在搜：幼儿园表演洞房花烛</span>
+				<a href="javascript:;" class="search-icon"></a>
+			</div>
+			<div class="nav-right">
+				<div class="usernav">
+					<ul class="icon-1">
+						<li>
+							<a href="javascript:;" class="clearfix">
+								<i class="icon1"></i>
+								<em style="color: #fa7d3c;">首页</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="clearfix">
+								<i class="icon2"></i>
+								<em>发现</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="clearfix">
+								<i class="icon3"></i>
+								<em>游戏</em>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="clearfix">
+								<i class="icon4"></i>
+								<em>你们这些凡人</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="usernav1">
+					<ul class="clearfix">
+						<li><a href="javascript:;" class="icon5"></a></li>
+						<li><a href="javascript:;" class="icon6"></a></li>
+						<li><a href="javascript:;" class="icon7"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="con-mid">
+		<div class="con-1 clearfix">
+			<div style="width:150px; height:500px; display: none;"></div>
+			<div class="con-left">
+				<div><a href="javascript:;">首页</a></div>
+				<div><a href="javascript:;">收藏</a></div>
+				<div style="height:50px; border-bottom:1px solid #8fbfde"><a href="javascript:;">赞</a></div>
+				<div style="height:53px; border-bottom:1px solid #8fbfde; line-height: 53px; font-weight: normal; margin-bottom:15px"><a href="javascript:;">热门微博</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">好友圈</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">群微博</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">特别关注</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">名人明星</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">美女</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">网购</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">音乐</a></div>
+				<div><a href="javascript:;" style="font-weight: normal; font-size: 12px;">网络红人</a></div>
+				<h3><span><a href="javascript:;" style="color:#fff; font-size: 12px;">展开</a></span></h3>
+			</div>
+			<div class="conmid">
+				<div class="conmid-head">
+					<h2 class="clearfix">
+						<a href="javascript:;"  class="fr">热门微博</a>
+						<a href="javascript:;" class="fr">一代拳王穆罕默德·阿里因病去世，众网友微博悼念&nbsp;&nbsp;&nbsp;&nbsp;</a>						
+					</h2>
+					<textarea class="texttop" title="微博输入框" ></textarea>
+					<div class="mid-head-bottom clearfix">
+						<div class="mid-head-bottom-left clearfix">
+							<a href="javascript:;" class="clearfix"><i class="i1"></i><em>表情</em></a>
+							<a href="javascript:;" class="clearfix"><i class="i2"></i><em>图片</em></a>
+							<a href="javascript:;" class="clearfix"><i class="i3"></i><em>视频</em></a>
+							<a href="javascript:;" class="clearfix"><i class="i4"></i><em>话题</em></a>
+							<a href="javascript:;" class="clearfix"><i class="i5"></i><em>头条文章</em></a>
+						</div>
+						<div class="mid-head-bottom-right clearfix">
+							<div>发布</div>
+							<a href="javascript:;">公开</a>							
+						</div>
+					</div>
+				</div>
+				<a href="javascript" class="conmid-adv"><img src="img/600x80_img574e9b8768e12.png"></a>
+				<div class="recommend">
+					<h4 class="con-recommend">精彩微博推荐</h4>
+					<a href="javascript:;" class="icon-menu"></a>
+				</div>
+				<div style="width:600px; background: #fff; border-radius: 3px">
+					<div class="con-content clearfix">
+						<a href="javascript:;" class="Favicon"><img src="img/c5b61111jw8evtce1vtakj20yi0ykdkl.jpg"></a>
+						<div class="content-blogger">
+							<a href="javascript:;" class="icon-menu"></a>
+							<div class="wb-info">
+								<a href="javascript:;" class="fa-name">郭德纲&nbsp;</a>
+								<a href="javascript:;" class="icon-vip"></a>
+								<a href="javascript:;" class="icon-follow"></a>
+							</div>
+							<div class="wb-from">
+								<a href="javascript:;">6月9日 11:25</a>
+								来自
+								<a href="javascript:;">iPhone 6 Plus</a>
+							</div>
+							<div class="wb-text">好多人在争论端午快乐和端午安康，说纪念屈原不能快乐。仲夏登高，顺阳在上，五月是仲夏，它的第一个午日正是登高顺阳好天气之日，故五月初五亦称为“端阳节”。屈原死之前人们就过端午，只不过赶巧了他端午投江。不吃粽子也得过端午，不赛龙舟也得过端午，屈原不死也得过端午，懂了吗？请快乐……</div>
+							<div class="bloggerpic"><img src="img/guodegang.jpg"></div>
+						</div>
+
+					</div>	
+					<div class="clearfix zhuanfa">
+						<a href="javascript:;" class="text1"><span>转发46692</span></a>
+						<a href="javascript:;" class="text2"><span>评论2</span></a>
+						<a href="javascript:;" class="text3"><span>131320</span></a>
+					</div>				
+				</div>									
+			</div>
+			<div class="con-right">
+				<div class="user">
+					<div class="user1"><div class="mylogo"><img src="img/me.jpg" alt=""></div></div>
+					<div class="user2">
+						<h3>
+							<em>你们这些凡人</em>
+							<a href="javascript:;"></a>
+							<i>LV.4</i>
+						</h3>
+						<h2 class="clearfix">
+							<div><i>71</i><em>关注</em></div>
+							<div style="border-left:1px solid #ccc;border-right:1px solid #ccc;width:63px"><i>1</i><em>粉丝</em></div>
+							<div><i>14</i><em>微博</em></div>
+						</h2>
+					</div>					
+				</div>
+				<div class="right-adv"><img src="img/runningman.jpg"></div>
+				<div class="right-item">
+					<h3>热门商品推荐</h3>
+					<div><img src="img/jq3etHWo.jpg"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

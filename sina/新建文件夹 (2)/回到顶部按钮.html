@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+#btn{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	display: none;
+}
+</style>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn');
+	window.onscroll=function(){
+		var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollTop>100) {
+			oBtn.style.display='block';
+		}else{
+			oBtn.style.display='none';
+		}
+	}
+	
+	oBtn.onclick=function(){
+		var timer;
+		var scrollTop=document.documentElement.scrollTop || document.body.scrollTop;
+		var start=scrollTop;
+		var dis=0-start;
+		var count=Math.floor(1000/30);
+		var n=0;
+		clearInterval(timer);
+		timer=setInterval(function(){
+			n++;
+			var a=n/count;
+			var cur=start+dis*a;
+			document.documentElement.scrollTop=document.body.scrollTop=cur;
+			if (count==n) {
+				clearInterval(timer);
+			}
+		},30)
+	}
+}
+</script>
+</head>
+
+<body style="height:2000px">
+<input type="button" value="回到顶部" id="btn">
+</body>
+</html>

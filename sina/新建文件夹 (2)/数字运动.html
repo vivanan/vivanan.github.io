@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style></style>
+<script>
+window.onload=function(){
+	var oT=document.getElementById('t');
+	document.onclick=function(){
+		var start=0;
+		var dis=100-start;
+
+		var count=Math.floor(1000/30);
+		var n=0;
+		clearInterval(timer);
+		var timer=setInterval(function(){
+			n++;
+			var a=n/count;
+			var cur=start+dis*a;
+			oT.value=cur.toFixed(2);
+			if (count==n) {
+				clearInterval(timer);
+			}
+		},30)
+	}
+}
+</script>
+</head>
+
+<body>
+<input type="text" value="0" id="t">
+</body>
+</html>

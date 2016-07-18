@@ -1,0 +1,743 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>肖楠Viva</title>
+<link rel="icon" href="images/ico/me.ico">
+<link rel="stylesheet" href="css/index.css" />
+<script src="js/jquery.1.7.2.min.js"></script>
+<script src="js/basement.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/vivaIndex.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+  DD_belatedPNG.fix(".png_bg , .png_hover:hover , .png_pic");
+</script>
+<![endif]-->
+</head>
+
+<body>
+<!-- 前置动画 -->
+    <!-- <div id="beforeBg"></div> -->
+	<!--侧边栏导航-->
+    <div id="sidebar" class="png_bg">
+    	<div class="sidebar_top">
+        	<a class="png_hover" title="新浪微博" href="../sina/sina.html"><img class="png_pic" src="images/app_btns/sinalogo.png" /></a>
+        	<a class="png_hover" title="我的微信" href="../wechat/wechat.html"><img class="png_pic" src="images/app_btns/wechat.png" /></a>
+        	<a class="QQ_logining png_hover" title="QQ" href="javascript:;"><img class="png_pic" src="images/app_btns/big_015.png" /></a>
+        	<a class="png_hover" title="QQ空间" href="javascript:;"><img class="png_pic" src="images/app_btns/big_022.png" /></a>
+        	<a class="png_hover" title="美丽说" href="../mls/mls.html"><img class="png_pic" src="images/app_btns/mlslogo.png" /></a>
+            <a class="png_hover" title="腾讯微博" href="../mls/mls.html"><img class="png_pic" src="images/app_btns/big_006.png" /></a>
+        </div>
+        <div class="sidebar_middle">
+        	<p>
+            	<a class="input_method png_bg" title="QQ输入法" href="javascript:;"></a>
+                <a class="audio png_bg" title="静音" href="javascript:;"></a>
+            </p>
+            <p>
+            	<a class="set png_bg" title="系统设置" href="javascript:;"></a>
+                <a class="theme png_bg" title="主题设置" href="javascript:;"></a>
+            </p>
+        </div>
+        <div class="sidebar_bottom">
+        	<a class="png_bg" title="点击这里开始" href="javascript:;"></a>
+        </div>	
+    </div>
+    <!--头部导航-->
+    <div id="top_menu" class="clearfix">
+    	<a title="请登录" class="qq_photo" href="#"><img src="images/ico/nan2.png" /></a>
+        <div></div>
+    	<ul class="pages clearfix">
+        	<li class="active"><a class="num1 png_bg" href="javascript:;"></a></li>
+            <li><a class="num2 png_bg" href="javascript:;"></a></li>
+            <li><a class="num3 png_bg" href="javascript:;"></a></li>
+            <li><a class="num4 png_bg" href="javascript:;"></a></li>
+            <li><a class="num5 png_bg" href="javascript:;"></a></li>
+        </ul>
+        <p class="top_menu_right">
+        	<a title="全局视图" class="screen_style png_bg" href="#"></a>
+            <a title="搜索" class="search png_bg" href="#"></a>
+        </p>
+    </div>
+    
+    <!--苹果菜单-->  
+    <div id="apple_menu">
+    	<a class="appleMenu_aboutWeb" title="开发文档" href="#"><img src="images/app_btns/2.png" /></a>
+        <a class="appleMenu_Help" title="重力球" href="#"><img src="images/app_btns/1.png" /></a>
+        <a class="appleMenu_sysSet" title="系统设置" href="#"><img src="images/app_btns/4.png" /></a>
+        <a class="appleMenu_telMe" title="联系我" href="#"><img src="images/me.png" /></a>
+    </div>    
+    
+    <!--桌面按钮区域-->
+    <div id="content_window">
+    	<div class="content_box clearfix">
+            <div class="paging_window">
+            	<div class="app_list">
+                    <dl title="双击打开" class="app_btn read_word">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_007.png" /></dt>
+                        <dd class="app_btn_name"><p>书架选项卡</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn string_control">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_003.png" /></dt>
+                        <dd class="app_btn_name"><p>文本操作</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn tab_control_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_014.png" /></dt>
+                        <dd class="app_btn_name"><p>表格操作</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="dateClock app_btn">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/sfq.png" /></dt>
+                        <dd class="app_btn_name"><p>手风琴</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn LayoutChange_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_011.png" /></dt>
+                        <dd class="app_btn_name"><p>布局转换</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn Img_onload_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_008.png" /></dt>
+                        <dd class="app_btn_name"><p>图片预加载</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn sina_txt_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/sinalogo.png" /></dt>
+                        <dd class="app_btn_name"><p>微博留言</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn MyTabBox_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/big_025.png" /></dt>
+                        <dd class="app_btn_name"><p>面向对象Tab</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn Audi_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/logo.gif" /></dt>
+                        <dd class="app_btn_name"><p>灵魂回静态页</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn picWeb_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/jslogo.png" /></dt>
+                        <dd class="app_btn_name"><p>JS运动效果</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn Nxs_ico">
+                        <dt class="app_btn_logo"><img class="png_pic" src="images/app_btns/css3.png" /></dt>
+                        <dd class="app_btn_name"><p>H5/CSS3效果</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl title="双击打开" class="app_btn add_app">
+                        <dt class="app_btn_logo png_bg"></dt>
+                        <dd class="app_btn_name"><p>添加</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="paging_window">
+            	<div class="app_list">
+                    <dl class="app_btn">
+                        <dt class="app_btn_logo"><img src="images/app_btns/big_021.png" /></dt>
+                        <dd class="app_btn_name"><p>游戏</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl class="app_btn add_app">
+                        <dt class="app_btn_logo png_bg"></dt>
+                        <dd class="app_btn_name"><p>添加</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="paging_window">
+            	<div class="app_list">
+                    <dl class="app_btn">
+                        <dt class="app_btn_logo"><img src="images/app_btns/big_021.png" /></dt>
+                        <dd class="app_btn_name"><p>游戏</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl class="app_btn add_app">
+                        <dt class="app_btn_logo png_bg"></dt>
+                        <dd class="app_btn_name"><p>添加</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="paging_window">
+            	<div class="app_list">
+                    <dl class="app_btn">
+                        <dt class="app_btn_logo"><img src="images/app_btns/big_021.png" /></dt>
+                        <dd class="app_btn_name"><p>游戏</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl class="app_btn add_app">
+                        <dt class="app_btn_logo png_bg"></dt>
+                        <dd class="app_btn_name"><p>添加</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="paging_window">
+            	<div class="app_list">
+                    <dl class="app_btn">
+                        <dt class="app_btn_logo"><img src="images/app_btns/big_021.png" /></dt>
+                        <dd class="app_btn_name"><p>游戏</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                    <dl class="app_btn add_app">
+                        <dt class="app_btn_logo png_bg"></dt>
+                        <dd class="app_btn_name"><p>添加</p><div class="app_btn_name_bg"></div></dd>
+                    </dl>
+                </div>
+            </div>
+    	</div>
+    </div>
+    <!--用户应用弹出层-->
+    <div id="user_app">
+        <!-- 重力球 -->
+        <div id="ballBox">
+            <div id="box"></div>
+        </div>  
+        <!--遮罩-->
+    	<div id="mark"></div>
+        
+        <!--搜索框弹出层-->
+        <div id="search_box">
+        	<form method="get" action="http://www.baidu.com/s">
+            	<input name="wd" class="search_box_txt" value="搜索网页..." type="text" />
+            	<input class="search_box_btn png_bg" type="submit" value="" />
+            </form>
+            <!--搜索结果下拉列表-->
+            <div id="search_result">
+            	<ul class="search_result_list">
+                </ul>
+                <div class="search_result_bottom_bg png_bg">
+                	<a class="png_hover" href="#">去百度搜素</a>
+                </div>
+            </div>
+        </div>
+        
+        <!--QQ登陆框-->
+        <div id="QQ_login">
+        	<div class="QQ_login_closebtn png_bg"></div>
+        	<div class="QQ_login_ico png_bg"></div>
+        	<p class="QQ_login_error">输入正确的QQ账号！<a href="#">意见反馈</a></p>
+            <ul class="QQ_login_form">
+            	<li class="clearfix">
+                	<label>账  号：</label>
+                    <p><input type="text" value="QQ号码或Email账号" /></p>
+                </li>
+            	<li class="clearfix">
+                	<label>密  码：</label>
+                    <p><input type="text" value="" /></p>
+                </li>
+            </ul>
+            <div class="QQ_login_bottom clearfix">
+            	<input class="QQ_login_btn" type="button" value="" />
+        		<div class="QQ_login_state clearfix">
+                	<div class="online_state"></div>
+                    <div class="QQ_login_down"></div>
+                    <div class="QQ_state_explain">我在线上</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--自定义右键菜单-->
+        <ul id="myMenu">
+        	<li><a href='#'>&nbsp;&nbsp; i++语录</a></li>
+        	<li class="line_bg"></li>
+            <li><a href='#'>哎呀&nbsp;&nbsp;|&nbsp;&nbsp;简单的</a></li>
+            <li><a href='#'>气死&nbsp;&nbsp;|&nbsp;&nbsp; 令人</a></li>
+            <li class="myMenu_creat">
+            	<a href='#'>我了&nbsp;&nbsp;|&nbsp;&nbsp; 发指</a>
+            	<ul class="son_menu">
+                	<li><a class="new_file" href='#'>新建文件夹</a></li>
+                    <li><a class="new_word" href='#'>Microsoft Word文档</a></li>
+                    <li><a class="new_winrar" href='#'>WinRAR压缩文件</a></li>
+                    <li><a class="new_text" href='#'>文本文档</a></li>
+                </ul>
+            </li>
+            <li class="line_bg"></li>
+            <li><a href='#'>HTML5/CSS3</a></li>
+            <li><a href='#'>Javascript</a></li>
+            <li><a href='#'>html/css、交互</a></li>
+        </ul>
+        
+        <!--主题应用界面-->
+        <div class="theme_app">
+        	<div class="theme_app_title">
+            	<h3>主题设置</h3>
+            	<a class="close_btn ahover"></a>
+            </div>
+            <div class="theme_app_btns">
+            	<a class="active">系统主题</a>
+                <a>自定义</a>
+            </div>
+            <div class="theme_app_window">
+            	<div class="theme_app_content clearfix">
+                    <a _src="images/theme_app_pic/blue_glow.jpg">
+                        <div class="theme_app_pic">
+                        	<img src="images/theme_app_pic/theme_blue_glow.jpg" />
+                        </div>
+                        <p>磨砂背景</p>
+                    </a>
+                    <a _src="images/theme_app_pic/background-2.jpg">
+                        <div class="theme_app_pic">
+                        	<img src="images/theme_app_pic/background-1_theme_02.jpg" />
+                        </div>
+                        <p>星空1</p>
+                    </a>
+                    <a _src="images/theme_app_pic/wow.jpg">
+                        <div class="theme_app_pic">
+                        	<img src="images/theme_app_pic/theme_wow.jpg" />
+                        </div>
+                        <p>魔兽世界主题</p>
+                    </a>
+                    <a _src="images/theme_app_pic/sc2.jpg">
+                        <div class="theme_app_pic">
+                        	<img src="images/theme_app_pic/theme_sc2.jpg" />
+                        </div>
+                        <p>星际争霸主题</p>
+                    </a>
+                    <a _src="images/theme_app_pic/background-1.jpg">
+                        <div class="theme_app_pic">
+                            <img src="images/theme_app_pic/background-2_theme_02_02.jpg" />
+                        </div>
+                        <p>星空2</p>
+                    </a>
+                    <a _src="images/theme_app_pic/background-3.jpg">
+                        <div class="theme_app_pic">
+                        	<img src="images/theme_app_pic/background-3_theme_02_02.jpg" />
+                        </div>
+                        <p>星空3</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!--阅读天下-->
+        <div id="read_book">
+        	<div class="read_book_top">
+            	<p class="read_book_title">阅读天下</p>
+            </div>
+            <a class="close_btn" href="#"></a>
+            <div class="read_book_control clearfix">
+                <div class="read_book_control_btn">
+                    <a class="prev_btn" href="#"></a>
+                    <input class="paging_txt" type="text" value="1" />
+                    <a class="next_btn" href="#"></a>
+                </div>
+                <div class="read_book_search">
+                	<input class="book_search_txt" type="text" value="" />
+                	<input class="book_search_btn" type="button" value="" />
+                </div>
+            </div>
+            <div class="read_book_window">
+            	<div class="read_book_bg">
+                    <div class="read_book_left_bg"></div>
+                    <div class="read_book_center_bg"></div>
+                    <div class="read_book_right_bg"></div>
+                </div>
+            	<div class="read_book_content clearfix">
+                    <div class="book_content_paging">
+                    	<a href="#">
+                        	<img src="images/book_read_ico/book_lookWord.jpg" />
+                        	<p>
+                            	web前端开发技术
+                            	<span></span>
+                            </p>
+                        </a>
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_NaT.jpg" />
+                        	<p>
+                            	移动WEB开发
+                            	<span></span>
+                            </p>
+                        </a>
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_live_03.jpg" />
+                        	<p>
+                            	响应式web设计
+                            	<span></span>    
+                            </p>
+                        </a>
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_huaxi_07.png" />
+                        	<p>
+                            	jQ交互式前端开发
+                            	<span></span>
+                            </p>
+                        </a>
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_vista_03.png" />
+                        	<p>
+                            	JS web应用开发
+                            	<span></span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="book_content_paging">
+                    	<a href="#">
+                        	<img src="images/book_read_ico/book_huaxi_07.png" />
+                        	<p>
+                            	jQ交互式前端开发
+                            	<span></span>
+                            </p>
+                        </a>
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_vista_03.png" />
+                        	<p>
+                            	JS web应用开发
+                            	<span></span>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="book_content_paging">
+                        <a href="#">
+                        	<img src="images/book_read_ico/book_live_03.jpg" />
+                        	<p>
+                            	响应式web设计
+                            	<span></span>    
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--主题系统设置界面-->
+        <div class="system_seting">
+        	<div class="system_seting_drag"></div>
+        	<div class="theme_app_title">
+            	<h3>主题设置</h3>
+            	<a class="close_btn ahover"></a>
+            </div>	
+            <div class="system_app_list clearfix">
+            	<a href="#">
+                	<img src="images/system_app_ico/settingbutton_themeicon.png" />
+                    <p>主题</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_marketicon.png" />
+                    <p>应用市场</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_notifysettingicon.png" />
+                    <p>QQ提醒</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_notificationsicon.png" />
+                    <p>通知设置</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_hotkeysettingicon.png" />
+                    <p>热键</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_restoreicon.png" />
+                    <p>系统还原</p>
+                </a>
+                <a href="#">
+                	<img src="images/system_app_ico/settingbutton_desktopsetting.png" />
+                    <p>桌面设置</p>
+                </a>
+            </div>
+        </div>
+        
+        <!--手风琴-->
+        <div id="sfq_box">
+            <div class="sfq_box_title">手风琴效果</div>
+            <a class="sfq_box_closeBtn" href="#"></a>
+            <div class="sfq_box_body">
+                <h3>手风琴效果</h3>
+                <ul id="ul1">
+                    <li><img src="img/mm1_big.png"></li>
+                    <li><img src="img/mm2_big.png"></li>
+                    <li><img src="img/mm3_big.png"></li>
+                    <li><img src="img/mm4_big.png"></li>
+                    <li><img src="img/mm5_big.png"></li>
+                    <li><img src="img/mm6_big.png"></li>
+                    <li><img src="img/mm7_big.png"></li>
+                    <li><img src="img/mm8_big.png"></li>
+                    <li><img src="img/mm1_big.png"></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--指引-->
+        <div id="new_hand_help">
+        	<div class="new_hand_btns clearfix">
+                <a class="account_help" href="#"></a>
+                <a class="addApp_help" href="#"></a>
+                <a class="theme_help" href="#"></a>
+                <a class="oneKeySave_help" href="#"></a>
+                <a class="quick_help" href="#"></a>
+            </div>
+            <a class="new_hand_close png_bg" href="#"></a>
+        </div>
+        
+        <!--字符串操作、自定义滚动条层-->
+        <div id="stringCtl">
+        	<div class="stringCtl_title">关键词查找、自定义滚动条</div>
+        	<a class="stringCtl_closeBtn" href="#"></a>
+            
+            <div class="stringCtl_control_list">
+            	<input title="添加文章" class="addTxt" type="button" value="添加文章" />
+                添加关键词：
+                <input class="KeyWordInput" type="text" value="添加关键字" />
+                <input title="高亮显示关键字" class="KeyWordSearch" type="button" value="高亮显示关键字" />
+                <input title="显示关键字出现位置" class="KeyWordWhere" type="button" value="显示关键字出现位置" />
+            </div>
+            <!--搜索结果-->
+            <p class="stringCtl_result">处理结果：</p>
+            <div class="stringCtl_bottom clearfix">
+            	<textarea class="stringCtl_text_input">添加文章区域: 示例文章：拼音：nán（形声。从木，南声。本义：楠木）同本义[ nanmu（Phoebe Zhennan ）]。樟科，常绿乔木。是樟科楠属和润楠属各树种的统称，有香楠、金丝楠、水楠等种类。属大乔木，成熟时可达30米，其木材纹理细密，质地坚硬，富有香味价格昂贵，多用于造船和宫殿。楠木极其珍贵，已经列入中国国家重点保护野生植物名录之中。</textarea>
+                <div class="mouseScrll_box">
+                	<div class="mouseScrll_box_btn"></div>
+                </div>
+                <!--右侧区域-->
+                <div class="stringCtl_bottom_right">
+                    <div class="stringCtl_text_window">
+                        <p class="stringCtl_text_content"></p>
+                    </div>
+                    <div class="stringCtl_describe">1.添加一段文章后。选择'添加文章按钮'，文章就会被加载到右侧区域内。<br />2.通过关键词添加，可以高亮显示关键词，另外可以显示关键词出现的位置。<br />3.自定义滚动条,支持拖动、支持在彩虹区域内滚动鼠标中键。<br />4.对自定义滚动条的按钮加了显示隐藏判断。</div>
+                </div>
+            </div>
+        </div>
+        
+        <!--表格操作-->
+        <div id="table_control">
+        	<div class="table_control_title">表格操作</div>
+        	<a class="table_control_closeBtn" href="#"></a>
+        	<div class="table_control_btns">
+            	<input class="table_control_add" type="button" value="添加" />
+                <input class="table_control_sort" type="button" value="排序" />
+                <!-- <input class="table_control_search" title="忽略大小写"  type="button" value="模糊搜索" /> -->
+            	<input class="table_control_txt" type="text" value="新增内容" />
+            </div>
+            <table class="table_control_tab">
+            	<thead>
+                	<tr>
+                    	<th>序号</th>
+                        <th>姓名</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<tr>
+                    	<td>1</td>
+                        <td>Viva1</td>
+                        <td><a class="tab_del" href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                    	<td>2</td>
+                        <td>Viva2</td>
+                        <td><a class="tab_del" href="#">删除</a></td>
+                    </tr>
+                    <tr>
+                    	<td>3</td>
+                        <td>Viva3</td>
+                        <td><a class="tab_del" href="#">删除</a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                	<tr>
+                    	<td>日期</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        
+        <!--时钟-->
+        <div id="Date_clock">
+        	<div class="Date_clock_btns clearfix">
+            	<a class="close_btn png_bg" title="关闭" href="#"></a>
+                <a class="share_btn png_bg" title="分享" href="#"></a>
+            	<a class="welcome_btn png_bg" title="邀请" href="#"></a>
+            </div>
+            <div class="Date_clock_body png_bg">
+            	<div class="Date_clock_time clearfix">
+                	<img src="images/Date_clock_ico/0.png" />
+                    <img src="images/Date_clock_ico/0.png" />
+                    <img src="images/Date_clock_ico/c.png" />
+                    <img src="images/Date_clock_ico/0.png" />
+                    <img src="images/Date_clock_ico/0.png" />
+                    <img src="images/Date_clock_ico/c.png" />
+                    <img src="images/Date_clock_ico/0.png" />
+                    <img src="images/Date_clock_ico/0.png" />
+                </div>
+                <p class="Date_clock_date"><span></span>年<span></span>月<span></span>日 星期<span></span></p>
+            </div>
+        </div>
+        
+        <!--布局转换-->
+        <div id="layout_change">
+        	<div class="layout_change_title">布局转换</div>
+            <a class="layout_change_closeBtn" href="#"></a>
+            <ul class="layout_change_body clearfix">
+            	<li><img src="images/layoutChange_ico/layoutChange_ico_1.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_2.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_3.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_4.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_5.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_6.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_7.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_8.jpg" /></li>
+                <li><img src="images/layoutChange_ico/layoutChange_ico_9.jpg" /></li>
+            </ul>
+        </div>
+        
+        <!--图片预加载-->
+        <div id="Img_onload">
+			<div class="Img_onload_title">图片预加载</div>
+            <a class="Img_onload_closeBtn" href="#"></a>
+            <div class="Img_onload_bottom clearfix">
+                <div class="Img_onload_window">
+                    <ul class="Img_onload_body clearfix">
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_1.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_2.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_3.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_4.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_5.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_6.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_7.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_8.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_9.jpg" /></li>
+                        
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_1.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_2.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_3.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_4.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_5.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_6.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_7.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_8.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_9.jpg" /></li>
+                        
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_1.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_2.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_3.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_4.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_5.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_6.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_7.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_8.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_9.jpg" /></li>
+                        
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_1.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_2.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_3.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_4.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_5.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_6.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_7.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_8.jpg" /></li>
+                        <li><img src="images/white.jpg" _src="images/layoutChange_ico/layoutChange_ico_9.jpg" /></li>
+                    </ul>
+                </div>
+                <div class="Img_onload_scrollbox">
+                    <a class="Img_onload_scrollbtn" href="#"></a>
+                </div> 
+            </div>       
+        </div>
+        
+        <!--微博留言-->
+		<div id="sina_txt">
+        	<div class="sina_txt_title">微博留言(微博留言效果+Cookie使用)</div>
+        	<a class="sina_txt_closeBtn" href="#"></a>
+            <div class="sina_txt_btns clearfix">
+            	<a class="sina_txt_publish" href="#">发布留言</a>
+                <a class="sina_txt_saveCookie" href="#">记录cookie</a>
+                <a class="sina_txt_delCookie" href="#">删除cookie</a>
+            </div>
+            <div class="sina_txt_body clearfix">
+        		<textarea class="sina_txt_input">（0）再次添加您的留言。（1） 点击记录Cookie后，重刷浏览器，再点开此窗口您的最新一条留言将会被显示出来。 （2） 点击删除Cookie后，重刷浏览器，再点开此窗口，最新留言就不会被显示出来了。</textarea>
+            	<div class="sina_txt_show_area">
+                	<div class="sina_txt_show"></div>
+                    <p>您的最新留言为:<br /><span class="sina_new_txt">还没有对最新留言存储cookie</span></p>
+                </div>
+        	</div>
+        </div>
+        
+        <!--开发文档-->
+        <div id="about_webpage">
+        	<div class="about_webpage_title">页面js开发思路及效果说明</div>
+            <a class="about_webpage_closeBtn" href="#"></a>
+            <div class="about_webpage_body">
+            	<h3>页面说明</h3>
+                <p>【开发周期】：一个月</p>
+                <p>【文档简述】：页面以电脑桌面为蓝本，通过运用JS相关知识，将部分所学进行了运用，考虑到网页JS代码的可维护性和重复使用性，将JS文件设置了3个层级，底层（最基本的，稳定的代码）、UI层 常用的封装函数、应用层（实际网页应用的JS代码），页面所有弹出层放在一个盒子内方便维护，在此页面中，运用部分JS知识点，例如：字符串操作，数组操作，DOM，BOM，Cookie，事件对象，阻止冒泡，绑定事件，图片延时加载,手风琴选项卡，运动,面向对象,继承,原型等。</p>
+                <h4>具体网页内容</h4>
+                <p>【1】.网页基本尺寸：网页尺寸通过BOM操作，获取浏览器的可视区域的大小，对网页尺寸进行了设定，运用window.onresize进行网页大小自适应。</p>
+                <p>【2】.桌面按钮运用了照片墙的可拖动与换位置效果</p>
+                <p>【3】.桌面上按钮的位置：桌面上按钮的位置是根据浏览区可视区域尺寸计算而来，浏览器高度变化之时，会自动改变位置，排序在剩余可视区域内，故此，对按钮进行了定位处理，定位的left,top,根据当前浏览区域一列可放多少，超出部分left如何变化,top如何变化，计算求出，</p>
+                <p>【4】.桌面上的按钮可以进行拖动：若与其他按钮碰撞，实现互换位置，若最终位于其他按钮碰触，则返回之前位置。照片墙思路(1.按钮增加拖拽效果函数，2.将按钮坐标记录在一个位置数组中，拖拽时候检测碰撞，排除自己情况，碰上则交换两者在位置数组中坐标索引，分别赋值，为碰则回到位置数组对应值，在碰撞中涉及到计算距离，碰撞到多目标，筛选最近的元素进行交换)</p>
+                <p>【5】.顶部菜单：(a)顶部菜单是导航条区域，可以对桌面按钮进行翻页变化，增加按钮的数量，和分类管理效果。(b)通过BOM对顶部菜单通过获取可视区大小，如果浏览器变化，菜单始终出于中心位置。(c)顶部菜单搜索框，用jsonp的百度搜索接口进行跨域交互操作，点击所选信息，将内容获取到搜索框value内，点击提交，提交到百度搜索。</p>
+                <p>【6】.点击左侧导航栏新浪图标弹出曾经做过的一个简单的新浪博客静态页面，<br>美丽说图标，曾经做过的一个美丽说主页静态页面<br>微信图标：出现弹出层，通过BOM实现登陆框在浏览器可视区域中心居中，并且出现遮罩层，遮罩层的高度为document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight中的最大值</p>
+                <p>【7】.主题设置：选择左侧导航栏的主题设置，以及下方的苹果菜单设置按钮，点开窗口时候就加载主题背景，点击主题背景后通过运动框架实现淡入淡出效果。</p>
+                <p>【8】.系统设置：拖拽坐下角，改变层级大小功能，其他弹出界面皆有拖拽功能，实现知识点，事件对象的应用。</p>
+                <p>【9】.时钟：运用JS系统内置Date对象，获取系统时间，将时间处理成字符串，通过两位数补0函数，将图片SRC对应字符串charAt改变转化图片时钟，日期直接处理,开启定时器。</p>
+                <p>【10】a.自定义右键菜单：只是阻止默认事件，右键事件，另外通过运动框架增加淡入淡出效果，并且使用了回调函数，实现完全消失。</p>
+                <p></p>
+                <p>以下桌面按钮均双击点开</p>
+                <p>【11】.利用运动实现手风琴选项卡效果</p>
+                <p>【12】.文本操作按钮:运用字符串操作charAt，定时器实现打字效果，添加关键词，运用split、join标记关键字，用过indexOf,临时数组，查找出现位置.</p>
+                <p>【13】.自定义滚动条：鉴于浏览器差异，主流绑定事件DOMMouseScroll 事件细节ev.detail ，IE为onmousewheel 事件细节为wheelDelta知识对其兼容。</p>
+                <p>【14】.表格操作按钮：表格添加、删除、排序，通过DOM操作</p>
+                <p>【15】.布局转换按钮：布局转换使原本的浮动通过JS转化为定位，运用了数组.offsetTop、offsetLeft等，此外增加了移入移出运动效果。</p>
+                <p>【16】.图片预加载按钮：通过BOM操作对进入到可视区域内的图片进行SRC复制，通过Attribute自定义属性，需要时候再加载，提高系统性能。</p>
+                <p>【17】.微博留言按钮：通过DOM操作、运动实现逐个显示文字，通过Cookie，点击记录Cookie按钮，对最新一条留言进行addCookie函数，将其存到到浏览器中，刷新浏览器，再次点开窗口，最新留言就会显示出来，删除Cookie同样用的removeCookie函数。</p>
+                <p>【18】.面向对象按钮：用面向对象方法写出两个选项卡。</p>
+                <p>【19】.灵魂回响网站按钮：双击进入之前做的一个灵魂回响的静态页面，有一些简单的鼠标hover效果。</p>
+                <p>【20】.苹果导航：思路，最下面苹果导航是通过计算鼠标到期图片中心距离，得出比例，最近为最大，反之最小，另外设置最小值。</p>	
+                <p>【21】.部分弹出页面在桌面点击左键会被关闭，为了防止点击事件的冒泡发生，部分点击层阻止了冒泡。</p>
+            </div>
+        </div>
+        
+        <!--联系我-->
+        <div id="call_me">
+        	<div class="call_me_closebtn"></div>
+            <div class="call_me_body">
+            	<h4>基本信息：</h4>
+                <p>姓名：肖楠   年龄：26</p>
+                <p>籍贯：山西运城   目前居住地：北京昌平</p>
+                <p>电话号码：18335933992  QQ/微信 号码:77786158</p>
+                <h4>工作经历</h4>
+                <p>2010.3 - 2011.2 电商公司实习，进行简单的网页制作<br> 2011.3 - 2012.8 江苏徐州进修市场营销，(现代新型营销模式等) <br>2012.9 - 2014.3 个体生意煤碳运输 <br>2014.5 - 2015.4 苹果授权店运营督导<br> 2015.4 - 2015.8 智能社进修前端工程师</p>
+                <h4>技术概况：</h4>
+                <p>1.熟练使用XHTML、CSS和JavaScript，jQuery，熟悉W3C标准。</p>
+				<p>2.熟练使用HTML5和CSS3，自己规划方向移动平台WEB开发。</p>
+				<p>3.熟悉常用软件PhotoShop，Dreamweaver，webstrom，sublime等。</p>
+                <p>4.熟悉php后台语言。</p>
+                <p>5.熟悉 MV* 框架，模块化。</p>
+                <p>6.积极配合项目团队人员，后台人员，产品经理工作。</p>
+				<p>7.学习能力强，有自学能力，具备优秀的理解、沟通能力，较强的自我驱动力。</p>
+                <!-- <p>8.熟练使用常见的调试工具：Firebug，debugbar，以及谷歌、等调试工具。</p> -->
+            </div>
+       	</div>
+        
+        <!--面向对象选项卡-->
+        <div id="MyTabBox">
+			<div class="MyTabBox_title">面向对象选项卡</div>
+            <a class="MyTabBox_closeBtn" href="#"></a>
+        	<div class="MyTabBox_body">
+            	<!--选项卡一-->
+                <div id="MyTabBox_One" class="MyTabBoxSingle">
+                	<div class="MyTabBox_btns clearfix">
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                        <a href="#">选项三</a>
+                    </div>
+                    <div class="MyTabBox_window">
+                    	<p>（选项卡一） 点击上面按钮切换 内容一</p>
+                        <p>（选项卡一） 点击上面按钮切换 内容二</p>
+                        <p>（选项卡一） 点击上面按钮切换 内容三</p>
+                    </div>
+                </div>
+                <!--选项卡二-->
+                <div id="MyTabBox_Two" class="MyTabBoxSingle">
+                	<div class="MyTabBox_btns clearfix">
+                        <a href="#">选项一</a>
+                        <a href="#">选项二</a>
+                        <a href="#">选项三</a>
+                    </div>
+                    <div class="MyTabBox_window">
+                    	<p>（选项卡二） 滑入上面按钮切换 内容一</p>
+                        <p>（选项卡二） 滑入上面按钮切换 内容二</p>
+                        <p>（选项卡二） 滑入上面按钮切换 内容三</p>
+                    </div>
+                </div>
+            </div>
+        </div>	 
+                
+    </div>
+    <!--网页背景-->
+	<div id="bg"><img src="images/background-3.jpg" /></div>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

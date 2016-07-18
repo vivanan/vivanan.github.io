@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align: top;
+}
+ul{
+	width:666px;
+	margin:0 auto;
+}
+li{
+	width:200px;
+	height:200px;
+	border:1px solid #ccc;
+	margin:10px;
+	float:left;
+}
+li img{
+	width:100%;
+	height:100%;
+}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var aLi=document.getElementsByTagName('li');
+	var aPosarr=[];
+	var zIndex=999;
+	for (var i = 0; i < aLi.length; i++) {
+		aPosarr[i]={
+			left:aLi[i].offsetLeft,
+			top:aLi[i].offsetTop
+		}
+	}
+	for (var i = 0; i < aLi.length; i++) {
+		aLi[i].style.left=aPosarr[i].left+'px';
+		aLi[i].style.top=aPosarr[i].top+'px';
+		aLi[i].style.position='absolute';
+		aLi[i].style.margin=0;
+	}
+	for (var i = 0; i < aLi.length; i++) {
+		aLi[i].onmouseover=function(){
+			this.style.zIndex=zIndex++;
+			move(this,{width:300,height:300,marginLeft:-50,marginTop:-50},500)
+		}
+		aLi[i].onmouseout=function(){
+			move(this,{width:200,height:200,marginLeft:0,marginTop:0},500)
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<ul>
+	<li><img src="img/1.jpg"></li>
+	<li><img src="img/2.jpg"></li>
+	<li><img src="img/3.jpg"></li>
+	<li><img src="img/4.jpg"></li>
+	<li><img src="img/5.jpg"></li>
+	<li><img src="img/6.jpg"></li>
+	<li><img src="img/7.jpg"></li>
+	<li><img src="img/8.jpg"></li>
+	<li><img src="img/9.jpg"></li>
+</ul>
+</body>
+</html>
