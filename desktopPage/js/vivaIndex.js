@@ -852,7 +852,7 @@
 			},{
 				duration:1000,
 				complete:function(){
-					window.open('https://www.baidu.com/');
+					window.open('https://vivanan.github.io/linghunhuixiang/linghunhuixiang.html');
 				}
 			})
 			
@@ -863,13 +863,14 @@
 	var oPicWebApp = (function(){
 		
 		var oPicWebOpen = getByClass(content_window,'picWeb_ico')[0];
+		// var tempwindow=window.open('_blank');
 		oPicWebOpen.ondblclick = function(){
 			$(document.body).animate({
 				opacity:0
 			},{
 				duration:1000,
 				complete:function(){
-					window.open('https://www.baidu.com/');
+					window.open('https://vivanan.github.io');
 				}
 			})
 		}
@@ -885,7 +886,10 @@
 			},{
 				duration:1000,
 				complete:function(){
-					window.open('https://www.baidu.com/');
+					window.open('https://vivanan.github.io/CSS3/js/index.htm');
+					$(document.body).animate({
+						opacity:1
+					})
 				}
 			})
 		}
