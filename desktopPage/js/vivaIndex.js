@@ -1257,6 +1257,36 @@
 		}
 
 	})();
+	/*-----QQ登陆框-----*/
+		var oQQLoginingApp = (function(){
+			var oQQLogining = getByClass(oLeftBar[0],'QQ_logining')[0];
+			var oQQLoginBox = document.getElementById('QQ_login');
+			var oQQLoginClose = getByClass(oQQLoginBox,'QQ_login_closebtn')[0];
+			var oQQLoginMove = getByClass(oQQLoginBox,'QQ_login_ico')[0];
+			
+			oQQLogining.onclick = QQLoginShow;
+			
+			function QQLoginShow(){
+				oQQLoginBox.style.display = 'block';
+				oQQLoginBox.style.left = (viewW() - oQQLoginBox.offsetWidth)/2 + 'px';
+				oQQLoginBox.style.top = (viewH() - oQQLoginBox.offsetHeight)/2 + 'px';	
+				//oMarkApp.markAuto();
+			}
+			
+			oQQLoginClose.onclick = function(){
+				oQQLoginBox.style.display = 'none';
+				//oMarkApp.BoxName.style.display = 'none';
+			}
+			
+			DragSingle(oQQLoginMove,oQQLoginBox,viewW(),viewH());
+			
+			//函数返回值
+			return {
+				BoxName : oQQLoginBox,
+				QQLoginAuto : QQLoginShow
+			}
+		
+		})()
 	/*--------------------文档点击触发-------------------------*/
 		
 		document.onclick = function(){

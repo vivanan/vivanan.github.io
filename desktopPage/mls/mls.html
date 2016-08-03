@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/base.css" rel="stylesheet" />
+<script src="js/DD_belatedPNG.js"></script>
+<style>
+	.title{width:100%; height:39px; background:#f5f5f5; border-bottom:1px solid #ccc; position:relative;}
+	.tit-ul{height:100%;width:750px; position:absolute; right:0;}
+	.li-1 a{ display:inline-block;border-right:1px dotted #ccc; margin-top:11px; padding:0 16px 0 15px;}
+	.li-1 span{display:inline-block;height:15px; color:#FFF; background:url(images/gouwuche_03.jpg) repeat-x; position:relative; padding:0 5px; font-size:9px; line-height:15px;}
+	.i-1{width:5px; height:15px; background:url(images/gouwuche_01.jpg); position:absolute; left:0; top:0;}
+	.i-2{width:5px; height:15px; background:url(images/gouwuche_05.jpg); position:absolute; right:0; top:0;}
+	.h-top{width:100%; height:66px; background:url(images/logo_n4.png) no-repeat 10px 15px; }
+	.search-1{width:466px; margin:0 auto; margin-top:16px; margin-left:370px;}
+	.nav-top{height:40px; background:#ff6599;}
+	.ul-top{width:800px; margin:0 auto; font-size:14px; font- weight:bold;}
+	.li-top{height:40px; line-height:40px; padding:0 15px;color:#FFF;font-weight:bold;}
+	.li-top:hover{background:#ed3577; }
+	.box-top{width:100%; height:574px; background:url(images/topbg.jpg) -300px 0 no-repeat; position:relative; }
+	.top-left{width:218px; height:572px; position:absolute; left:75px; top:0; border:1px solid #e6e6e6; padding-left:20px; background:#fff;}
+	.dl-tl{width:198px; height:104px; border-bottom:1px dotted #e6e6e6;margin-top:10px;}
+	.dl-tl dt{width:77px; height:22px; background:url(images/wel_ico2.png) -0 -44px;margin-bottom:11px;}
+	.dl-tl dd{ margin-right:15px;margin-bottom:11px;}
+	.col{color:#ff6599;}
+	
+	
+	.top-mid{width:1080px; height:142px; position:absolute; left:324px; top:429px; }
+	.top-mid img{ border:1px solid #e6e6e6; margin-right:10px;}
+	.top-right{width:200px; height:419px; position:absolute; right:75px; top:0;}
+	.top-right img{border-bottom:1px solid #e6e6e6;}
+	
+	.popular{border-bottom:1px solid #e6e6e6; padding-bottom:8px; margin-bottom:8px;}
+	.popular-1{width:157px; height:25px; margin-top:20px; background:url(images/wel_ico2.png);}
+	.box-pop{width:1200px; margin:0 auto; }
+	.box-pop li{width:180px; margin-right:24px; margin-bottom:20px;}
+	.box-pop img{margin-bottom:10px;}
+	.fontcolor{margin-top:28px; color:#ff6599;margin-bottom:12px;}
+	.fontcolor span{color:#666; font-size:9px; text-decoration:line-through;}
+	.box-pop .last{width:180px; height:12px; border-top:1px dotted #e6e6e6; padding-top:10px;}
+	.box-pop .li-last{margin-right:0;}
+	.gp{width:157px; height:25px; margin-top:20px; background:url(images/wel_ico2.png) 0 -240px;}
+	
+	.shop{width:1200px; height:100px; margin:0 auto; background:url(images/jingxuandianpu.jpg); margin-top:40px;}
+	.clothes{width:75px; height:22px; margin-top:20px; background:url(images/wel_ico2.png) 0 -44px;}
+	.popular p{width:120px; font-size:14px; margin-top:26px;}
+	.popular .today{padding-left:9px; border-left:1px dotted #e6e6e6; margin-left:9px;}
+	.popular .today span{font-weight:bold;}
+	.clothes-con{width:1200px; height:610px; border-bottom:1px solid #e6e6e6; margin:0 auto;  overflow:hidden;}
+	.clo-1{width:940px;height:100%;padding-top:12px;}
+	.clo-hotshop{width:238px; height:590px; border-left:1px solid #e6e6e6; padding-top:20px; padding-left:20px;}
+	.clo-1 .box-li{width:180px; height:255px; background:url(images/clothes1.jpg); position:relative; margin-right:5px; margin-bottom:5px;}
+	.clo-1 .box-clo{width:180px;height:34px; background:url(images/bar_bg.png); text-align:center; line-height:34px; position:absolute; left:0; bottom:0; color:#fff;}
+	
+	.clo-nav{width:940px; height:44px; margin-top:12px;}
+	.dl-1{width:312px; height:39px; padding-top:5px;}
+	.dt-1{width:50px; height:39px;  padding-top:9px; padding-left:12px; }
+	.dt-1 a{color:#ff6699;font-size:16px; }
+	.dl-1 dd{margin-right:11px; margin-bottom:10px;}
+	.dl-2{border-left:1px dotted #e6e6e6; border-right:1px dotted #e6e6e6;}
+	.dt-2{font-size:16px; font-weight:bold;}
+	.dd-1{width:240px; height:34px; padding:14px 0;border-bottom:1px dotted #e6e6e6;}
+	.picborder{border:1px solid #e6e6e6; margin-right:12px;}
+	.dd-1 p{line-height:18px;}
+	.dd-2{border-bottom:0;}
+	
+	.shoes{width:77px; height:23px; margin-top:20px; background:url(images/wel_ico2.png) 0 -82px;}
+	.clo-1 .box-shoes{width:180px; height:255px; background:url(images/shoes.jpg); position:relative; margin-right:5px; margin-bottom:5px;}
+	
+	.bag{width:77px; height:23px; margin-top:20px; background:url(images/wel_ico2.png) 0 -120px;}
+	.clo-1 .box-bag{width:180px; height:255px; background:url(images/bag.jpg); position:relative; margin-right:5px; margin-bottom:5px;}
+	
+	.ps{width:77px; height:23px; margin-top:20px; background:url(images/wel_ico2.png) 0 -158px;}
+	.clo-1 .box-ps{width:180px; height:255px; background:url(images/ps.jpg); position:relative; margin-right:5px; margin-bottom:5px;}
+	
+	.book{width:116px; height:23px; margin-top:20px; background:url(images/wel_ico2.png) 0 -201px;}
+	.bookbox{width:1200px; height:285px; margin:0 auto; margin-bottom:20px;}
+	.bookbox div{width:213px; height:271px; border:1px solid #e6e6e6; margin-top:10px; margin-right:15px; padding-top:12px; padding-left:13px; background:url(images/book.jpg) 13px 36px no-repeat; position:relative;}
+	.bookbox p{font-size:14px; font-weight:bold; color:#666;}
+	.bookbox .book-last{margin-right:0;}
+	.book-p{position:absolute; left:13px; bottom:17px;}
+	.kankan{position:absolute; right:13px; bottom:17px;}
+	
+	.box-last{height:310px;background:#f5f5f5; border-top:1px solid #e6e6e6; padding:32px 11px 0;}
+	.last-con{width:1200px; height:180px;margin:0 auto; border-bottom:1px solid #e6e6e6;}
+	.call{width:185px;height:180px; background:url(images/phone.jpg) 0 5px no-repeat; position:relative; color:#666;margin-right:55px;}
+	.call-p{width:139px;height:70px; position:absolute; left:46px; top:2px; line-height:24px;}
+	.last-con dl{width:66px; height:180px;color:#666; margin-right:55px;}
+	.last-con dt{font-size:16px; font-weight:bold; margin-bottom:20px;}
+	.last-con dd{margin-bottom:13px;}
+	.last-con .weixin{width:135px;}
+	.weixin dd{width:115px; height:115px; background:url(images/qrcode-new.jpg);}
+	.box-last .last-lianjie{width:1200px; height:30px; margin:0 auto; border-bottom:1px solid #e6e6e6; line-height:30px;margin-bottom:15px;}
+	.box-last .last-over{width:1200px; height:30px; margin:0 auto;line-height:30px;}
+</style>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+</head>
+
+<body>
+	<!--头部开始-->
+    <h1 class="title">
+    	<ul class="tit-ul clearfix">
+    		<li class="li-1 fl">
+            	<a href="#">
+                	<img src="images/i_wx_single.png" /> 微信登陆
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                 	<img src="images/QQ.jpg" /> QQ登陆
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	登陆
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	注册
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	<img src="images/gwc.jpg" /> 我的购物车
+                    <span class="buycar">
+                    	<i class="i-1"></i>
+                    0
+                    	<i class="i-2"></i>
+                    </span>
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	<img src="images/dd.jpg" /> 我的订单
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	<img src="images/sj.jpg" /> 下载APP
+                </a>
+            </li>
+            <li class="li-1 fl">
+            	<a href="#">
+                	客户服务
+                </a>
+            </li>
+    	</ul>
+    </h1>
+    <!--头部结束-->
+    <h1 class="h-top">
+    	<img src="images/sousuo.jpg" class="search-1" />
+    </h1>
+    <!--标题菜单开始-->
+    <h1 class="nav-top">
+    	<ul class="ul-top clearfix">
+        	<a href="#"><li class="li-top fl">首页</li></a>
+            <a href="#"><li class="li-top fl">今日最热</li></a>
+            <a href="#"><li class="li-top fl">衣服</li></a>
+            <a href="#"><li class="li-top fl">鞋子</li></a>
+            <a href="#"><li class="li-top fl">包包</li></a>
+            <a href="#"><li class="li-top fl">配饰</li></a>
+            <a href="#"><li class="li-top fl">美妆</li></a>
+            <a href="#"><li class="li-top fl">特卖</li></a>
+            <a href="#"><li class="li-top fl">团购</li></a>
+            <a href="#"><li class="li-top fl">好店</li></a>
+            <a href="#"><li class="li-top fl">杂志</li></a>
+            <a href="#"><li class="li-top fl">爱美丽club</li></a>
+        </ul>
+    </h1>
+    <!--标题菜单结束-->
+    <!--导航开始-->
+    <div class="box-top">
+    	<div class="top-left">
+        	<dl class="dl-tl clearfix">
+            	<dt></dt>
+            	<dd class="fl"><a href="#">冬季新品</a></dd>
+                <dd class="fl"><a href="#" class="col">毛衣</a></dd>
+                <dd class="fl"><a href="#">活力运动鞋</a></dd>
+                <dd class="fl"><a href="#">连衣裙</a></dd>
+                <dd class="fl"><a href="#" class="col">新款靴子</a></dd>
+                <dd class="fl"><a href="#">单肩包</a></dd>
+                <dd class="fl"><a href="#">暖冬美裤</a></dd>
+                <dd class="fl"><a href="#">外套</a></dd>
+                <dd class="fl"><a href="#" class="col">入冬打底裤</a></dd>
+            </dl>
+            <dl class="dl-tl clearfix">
+            	<dt></dt>
+            	<dd class="fl"><a href="#">冬季新品</a></dd>
+                <dd class="fl"><a href="#" class="col">毛衣</a></dd>
+                <dd class="fl"><a href="#">活力运动鞋</a></dd>
+                <dd class="fl"><a href="#">连衣裙</a></dd>
+                <dd class="fl"><a href="#" class="col">新款靴子</a></dd>
+                <dd class="fl"><a href="#">单肩包</a></dd>
+                <dd class="fl"><a href="#">暖冬美裤</a></dd>
+                <dd class="fl"><a href="#">外套</a></dd>
+                <dd class="fl"><a href="#" class="col">入冬打底裤</a></dd>
+            </dl>
+            <dl class="dl-tl clearfix">
+            	<dt></dt>
+            	<dd class="fl"><a href="#">冬季新品</a></dd>
+                <dd class="fl"><a href="#" class="col">毛衣</a></dd>
+                <dd class="fl"><a href="#">活力运动鞋</a></dd>
+                <dd class="fl"><a href="#">连衣裙</a></dd>
+                <dd class="fl"><a href="#" class="col">新款靴子</a></dd>
+                <dd class="fl"><a href="#">单肩包</a></dd>
+                <dd class="fl"><a href="#">暖冬美裤</a></dd>
+                <dd class="fl"><a href="#">外套</a></dd>
+                <dd class="fl"><a href="#" class="col">入冬打底裤</a></dd>
+            </dl>
+            <dl class="dl-tl clearfix">
+            	<dt></dt>
+            	<dd class="fl"><a href="#">冬季新品</a></dd>
+                <dd class="fl"><a href="#" class="col">毛衣</a></dd>
+                <dd class="fl"><a href="#">活力运动鞋</a></dd>
+                <dd class="fl"><a href="#">连衣裙</a></dd>
+                <dd class="fl"><a href="#" class="col">新款靴子</a></dd>
+                <dd class="fl"><a href="#">单肩包</a></dd>
+                <dd class="fl"><a href="#">暖冬美裤</a></dd>
+                <dd class="fl"><a href="#">外套</a></dd>
+                <dd class="fl"><a href="#" class="col">入冬打底裤</a></dd>
+            </dl>
+            <dl class="dl-tl clearfix" style="border-bottom:0;">
+            	<dt></dt>
+            	<dd class="fl"><a href="#">冬季新品</a></dd>
+                <dd class="fl"><a href="#" class="col">毛衣</a></dd>
+                <dd class="fl"><a href="#">活力运动鞋</a></dd>
+                <dd class="fl"><a href="#">连衣裙</a></dd>
+                <dd class="fl"><a href="#" class="col">新款靴子</a></dd>
+                <dd class="fl"><a href="#">单肩包</a></dd>
+                <dd class="fl"><a href="#">暖冬美裤</a></dd>
+                <dd class="fl"><a href="#">外套</a></dd>
+                <dd class="fl"><a href="#" class="col">入冬打底裤</a></dd>
+            </dl>
+        </div>
+        <div class="top-mid clearfix">
+        	<img src="images/rexiaobang.jpg" class="fl" />
+            <img src="images/rexiaobang.jpg" class="fl" />
+            <img src="images/rexiaobang.jpg" class="fl" />
+            <img src="images/rexiaobang.jpg"  class="fl"/>
+            <img src="images/rexiaobang1.jpg" class="fl" />
+        </div>
+        <div class="top-right">
+        	<div><img src="images/_14.jpg" /></div>
+            <div><img src="images/_17.jpg" /></div>
+            <div><img src="images/_19.jpg" /></div>
+        </div>
+        
+    </div>
+    <!--导航结束-->
+    <!--人气单品开始-->
+    <h2 class="popular">
+    	<div class="popular-1"></div>
+    </h2>
+    <div class="box-pop">
+    	<ul class="clearfix">
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl li-last">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+            <li class="fl li-last">
+                <a href="#"><img src="images/5678.jpg" /></a>
+                <p><a href="#">显瘦针织连衣裙 4色3码任你选</a></p>
+                <p class="fontcolor">￥49.00 <span class="low">￥189.00</span></p>
+                <p class="last"><a href="#">1885人已购买</a></p>
+                
+            </li>
+        </ul>
+    </div>
+    <!--人气单品结束-->
+    <!--团购开始-->
+    <h2 class="popular">
+    	<div class="gp"></div>
+    </h2>
+    <div class="box-pop">
+    	<ul class="clearfix">
+            <li class="fl">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+            <li class="fl">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+            <li class="fl li-last">
+                <a href="#"><img src="images/56789.jpg" /></a>
+                <p><a href="#">弹力修身加绒PU皮裤</a></p>
+                <p class="fontcolor">￥59.80 <span class="low">￥264.00</span></p>
+                <p class="last"><a href="#">1885人已参加</a></p>
+                
+            </li>
+          
+        </ul>
+    </div>
+    <!--团购结束-->
+    <div class="shop"></div>
+    <!--衣服开始-->
+    <h2 class="popular clearfix">
+    	<div class="clothes fl"></div>
+        <p class="fl"><a href="#" class="today">今日上新 <span>4098</span> 件</a></p>
+        <p class="fr"><a href="#">查看所有衣服&gt;</a></p>
+    </h2>
+    <div class="clothes-con clearfix">
+    	<div class="clo-1 fl clearfix">
+        	<a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+        	<a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-li">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <div class="clo-nav fl clearfix">
+            	<dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">上衣</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl dl-2">
+            		<dt class="dt-1 fl"><a href="#">裙子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">裤子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+            </div>
+        </div>
+    	<dl class="clo-hotshop fl">
+        	<dt class="dt-2 clearfix">最热衣服好店<a href="#" class="fr">更多好店&gt;</a></dt>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix dd-2">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+        </dl>
+    </div>
+    <!--衣服结束-->
+    <!--鞋子开始-->
+    <h2 class="popular clearfix">
+    	<div class="shoes fl"></div>
+        <p class="fl"><a href="#" class="today">今日上新 <span>4098</span> 件</a></p>
+        <p class="fr"><a href="#">查看所有衣服&gt;</a></p>
+    </h2>
+    <div class="clothes-con clearfix">
+    	<div class="clo-1 fl clearfix">
+        	<a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+        	<a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-shoes">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <div class="clo-nav fl clearfix">
+            	<dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">上衣</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl dl-2">
+            		<dt class="dt-1 fl"><a href="#">裙子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">裤子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+            </div>
+        </div>
+    	<dl class="clo-hotshop fl">
+        	<dt class="dt-2 clearfix">最热衣服好店<a href="#" class="fr">更多好店&gt;</a></dt>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix dd-2">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+        </dl>
+    </div>
+    <!--鞋子结束-->
+    <!--包包开始-->
+    <h2 class="popular clearfix">
+    	<div class="bag fl"></div>
+        <p class="fl"><a href="#" class="today">今日上新 <span>4098</span> 件</a></p>
+        <p class="fr"><a href="#">查看所有衣服&gt;</a></p>
+    </h2>
+    <div class="clothes-con clearfix">
+    	<div class="clo-1 fl clearfix">
+        	<a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+        	<a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-bag">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <div class="clo-nav fl clearfix">
+            	<dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">上衣</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl dl-2">
+            		<dt class="dt-1 fl"><a href="#">裙子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">裤子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+            </div>
+        </div>
+    	<dl class="clo-hotshop fl">
+        	<dt class="dt-2 clearfix">最热衣服好店<a href="#" class="fr">更多好店&gt;</a></dt>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix dd-2">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+        </dl>
+    </div>
+    <!--包包结束-->
+    <!--配饰-->
+    <h2 class="popular clearfix">
+    	<div class="ps fl"></div>
+        <p class="fl"><a href="#" class="today">今日上新 <span>4098</span> 件</a></p>
+        <p class="fr"><a href="#">查看所有衣服&gt;</a></p>
+    </h2>
+    <div class="clothes-con clearfix">
+    	<div class="clo-1 fl clearfix">
+        	<a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+        	<a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <a href="#" class="fl"><div class="box-ps">
+            	<div class="box-clo">冬季实穿连衣裙</div>
+            </div></a>
+            <div class="clo-nav fl clearfix">
+            	<dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">上衣</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl dl-2">
+            		<dt class="dt-1 fl"><a href="#">裙子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+                <dl class="dl-1 fl">
+            		<dt class="dt-1 fl"><a href="#">裤子</a></dt>
+            		<dd class="fl"><a href="#">九分裤</a></dd>
+                    <dd class="fl"><a href="#">短裤</a></dd>
+                    <dd class="fl"><a href="#">背带裤</a></dd>
+                    <dd class="fl"><a href="#">小脚裤</a></dd>
+                    <dd class="fl"><a href="#">高腰裤</a></dd>
+                    <dd class="fl"><a href="#">牛仔裤</a></dd>
+                    <dd class="fl"><a href="#">哈伦裤</a></dd>
+                    <dd class="fl"><a href="#">打底裤</a></dd>
+                    <dd class="fl"><a href="#">西装裤</a></dd>
+                    <dd class="fl"><a href="#">运动裤</a></dd>
+            	</dl>
+            </div>
+        </div>
+    	<dl class="clo-hotshop fl">
+        	<dt class="dt-2 clearfix">最热衣服好店<a href="#" class="fr">更多好店&gt;</a></dt>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+            <dd class="dd-1 clearfix dd-2">
+            	<img src="images/mixiaotu.jpg" class="picborder fl" />
+                <p class="fl"><a href="#">左右时尚</br>2060件商品/总销量53194</a></p>
+                
+            </dd>
+        </dl>
+    </div>
+    <!--配饰-->
+    <!--热门杂志-->
+    <h2 class="popular clearfix">
+    	<div class="book fl"></div>
+       
+        <p class="fr"><a href="#">查看所有衣服&gt;</a></p>
+    </h2>
+    <div class="bookbox clearfix">
+    	<div class="fl">
+        	<p>小女人有恋物癖</p>
+            <p class="book-p"><a href="#">886个分享</a></p>
+            <img src="images/qukankan.jpg" class="kankan" />
+        </div>
+        <div class="fl">
+        	<p>小女人有恋物癖</p>
+            <p class="book-p"><a href="#">886个分享</a></p>
+            <img src="images/qukankan.jpg" class="kankan" />
+        </div>
+        <div class="fl">
+        	<p>小女人有恋物癖</p>
+            <p class="book-p"><a href="#">886个分享</a></p>
+            <img src="images/qukankan.jpg" class="kankan" />
+        </div>
+        <div class="fl">
+        	<p>小女人有恋物癖</p>
+            <p class="book-p"><a href="#">886个分享</a></p>
+            <img src="images/qukankan.jpg" class="kankan" />
+        </div>
+        <div class="fl book-last">
+        	<p>小女人有恋物癖</p>
+            <p class="book-p"><a href="#">886个分享</a></p>
+            <img src="images/qukankan.jpg" class="kankan" />
+        </div>
+    
+    </div>
+    <!--尾部-->
+    <div class="box-last">
+    	<div class="last-con clearfix">
+        	<div class="call fl">
+            	<p class="call-p">4000-800-577<br />美丽说客服热线<br />周一至周日： 08：00-22：00</p>
+            </div>
+            <dl class="fl">
+            	<dt>用户帮助</dt>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+            </dl>
+            <dl class="fl">
+            	<dt>用户帮助</dt>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+            </dl>
+            <dl class="fl">
+            	<dt>用户帮助</dt>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+                <dd><a href="#">新手指南</a></dd>
+            </dl>
+            <dl class="weixin fl">
+            	<dt>美丽说微信服务号</dt>
+                <dd></dd>
+            </dl>
+            <dl class="weixin fr">
+            	<dt>美丽说微信服务号</dt>
+                <dd></dd>
+            </dl>
+            
+        </div>
+        <div class="last-lianjie"><a href="#">&nbsp;友情链接： 腾讯女性&nbsp; 天气预报&nbsp; 悠哉旅游网&nbsp; 爱乐活&nbsp; 蜜芽宝贝&nbsp; 趣分期大学生分期购物&nbsp; 爱美赏&nbsp; 马可波罗&nbsp;</a></div>
+        <div class="last-over"><a href="#">Copyright @2015 Meilishuo.com 电信与信息服务业务经营许可证100798号  企业法人营业执照  京ICP备11031139号  京公网安备110108006045 
+客服邮箱：kf@meilishuo.com  客服电话：4000-800-577  文明办网文明上网举报电话：010-82615762  违法不良信息举报中心 我最喜爱的人民警察评选>></a></div>
+    </div>
+    
+</body>
+</html>

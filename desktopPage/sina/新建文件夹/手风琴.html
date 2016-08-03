@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Viva - xiaonanviva.com" />
+<meta name="copyright" content="Viva - xiaonanviva.com" />
+<meta name="description" content="Viva" />
+<title>Viva</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+ul{
+	height:640px;
+	margin:0 auto;
+	position:relative;
+	overflow: hidden;
+}
+li{
+	width:980px;
+	height:640px;
+	position:absolute;
+	left:0;
+	top:0;
+
+}
+li img{
+	width:980px;
+	vertical-align: top;
+}
+</style>
+<script src="move.js"></script>
+<script>
+window.onload=function(){
+	var oUl=document.getElementById('ul');
+	var aLi=oUl.getElementsByTagName('li');
+	var w=15;
+	oUl.style.width=aLi[0].offsetWidth+(aLi.length-1)*w+'px';
+	for (var i = 1; i < aLi.length; i++) {
+		aLi[i].style.left=aLi[0].offsetWidth+(i-1)*w+'px';
+	}
+	for (var i = 0; i < aLi.length; i++) {
+		aLi[i].index=i;
+		aLi[i].onmouseover=function(){
+			for (var i = 1; i < aLi.length; i++) {
+				if (i<=this.index) {
+					move(aLi[i],{left:i*w},500)
+				}else{
+					move(aLi[i],{left:aLi[0].offsetWidth+(i-1)*w},500)
+				}
+			}	
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<ul id="ul">
+	<li><img src="img2/1.jpg"></li>
+	<li><img src="img2/2.jpg"></li>
+	<li><img src="img2/3.jpg"></li>
+	<li><img src="img2/4.jpg"></li>
+	<li><img src="img2/5.jpg"></li>
+	<li><img src="img2/6.jpg"></li>
+	<li><img src="img2/7.jpg"></li>
+	<li><img src="img2/8.jpg"></li>
+	<li><img src="img2/9.jpg"></li>
+	<li><img src="img2/10.jpg"></li>
+	<li><img src="img2/11.jpg"></li>
+	<li><img src="img2/12.jpg"></li>
+	<li><img src="img2/13.jpg"></li>
+	<li><img src="img2/14.jpg"></li>
+	<li><img src="img2/15.jpg"></li>
+	<li><img src="img2/16.jpg"></li>
+	<li><img src="img2/17.jpg"></li>
+	<li><img src="img2/18.jpg"></li>
+	<li><img src="img2/19.jpg"></li>
+	<li><img src="img2/20.jpg"></li>
+	<li><img src="img2/21.jpg"></li>
+	<li><img src="img2/22.jpg"></li>
+	<li><img src="img2/23.jpg"></li>
+	<li><img src="img2/24.jpg"></li>
+	<li><img src="img2/25.jpg"></li>
+	<li><img src="img2/26.jpg"></li>
+</ul>
+</body>
+</html>
