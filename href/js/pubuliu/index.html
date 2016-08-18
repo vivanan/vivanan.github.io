@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+	function rnd(n,m){
+		return parseInt(Math.random()*(m-n)+n);
+	}
+	function createLi(){
+		var oLi = document.createElement('li');
+		oLi.style.height = rnd(100,300)+ 'px';
+		oLi.style.background = '#fff';
+		return oLi;
+	}
+	window.onload = function(){
+		var oUl = document.getElementById('pbl');
+		var oA = document.getElementById('return_top');
+		var oTopic = document.getElementById('rmtopic');
+
+		var oAds = document.getElementById('ads');
+		var aLi = oAds.getElementsByTagName('li');
+		var aP = oAds.getElementsByTagName('p');
+		var aDiv = oAds.getElementsByTagName('div');
+
+		var oShuoshuo = document.getElementById('shuoshuo');
+		var oText = oShuoshuo.children[0];
+		var oRmwb = oShuoshuo.children[4];
+		var oCountDown = oShuoshuo.children[5];
+		var timer = null;
+
+		var oWbBody = document.getElementById('wb_body')
+		var oBg = oWbBody.children[0];
+		var oBgBody = oWbBody.children[1];
+		var oClose = oBgBody.children[0].children[0];
+		var oMiddle = oBgBody.children[1];
+		var aColor = oMiddle.children;
+
+		oBg.onclick = function(){
+			oBgBody.style.display = 'block';
+
+			oClose.onclick = function(){
+				oBgBody.style.display = 'none';
+			}
+			aColor[0].onclick = function(){
+				oWbBody.style.background = '#f30';
+			}
+			aColor[1].onclick = function(){
+				oWbBody.style.background = 'yellow';
+			}
+			aColor[2].onclick = function(){
+				oWbBody.style.background = 'green';
+			}
+			aColor[3].onclick = function(){
+				oWbBody.style.background = 'pink';
+			}
+		}
+
+		if(navigator.userAgent.indexOf('MSIE 9.0') != -1){
+			oText.onfocus = function(){
+				timer = setInterval(function(){
+					oCountDown.style.display = 'block';
+					oRmwb.style.display = 'none';
+					oCountDown.innerHTML = oText.value.length;
+				},30);
+			};
+			oText.onblur = function(){
+				clearInterval(timer);
+			};
+		}else{
+			oText.onfocus = oText.oninput = oText.onpropertychange = function(){
+				oCountDown.style.display = 'block';
+				oRmwb.style.display = 'none';
+				oCountDown.innerHTML = '还可以输入'+(140-oText.value.length)+'字';
+			};
+		}
+
+		for(var i = 0; i < aLi.length; i++){
+			aLi[i].index = i;
+			aLi[i].onmouseover = function(){
+				for(var j = 0; j < aLi.length; j++){
+					aP[j].style.display = 'block';
+					aDiv[j].style.display = 'none';
+				}
+				aP[this.index].style.display = 'none';
+				aDiv[this.index].style.display = 'block';
+			}
+		}
+
+		function create30(){
+			for(var i = 0; i < 30; i++){
+				var oLi = createLi();
+				oUl.appendChild(oLi);
+			}
+		}
+		create30();
+		window.onscroll = function(){
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var clientH = document.documentElement.clientHeight;
+			// console.log(document.body.offsetHeight);
+			if(scrollTop > 0){
+				oA.style.display = 'block';
+			}else{
+				oA.style.display = 'none';
+			}
+			if((scrollTop + clientH) >= document.body.scrollHeight - 300){
+				create30();
+			}
+			// alert(oTopic.offsetTop);
+			if(scrollTop >= 773){
+				oTopic.style.position = 'fixed';
+				oTopic.style.left = 945 + 'px';
+				oTopic.style.top = 65 + 'px';
+			}else{
+				oTopic.style.position = '';
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="top">
+		<div class="tiao"></div>
+		<div class="top-nav">
+			<div class="inner">
+				<a href="javascript:;" class="logo"></a>
+				<div class="nav">
+					<input type="text" class="search" placeholder="大家正在搜：如果我能说话">
+					<a href="javascript:;" class="home">首页</a>
+					<a href="javascript:;" class="find">发现</a>
+					<a href="javascript:;" class="game">游戏</a>
+					<a href="javascript:;" class="geren">楠神丶still</a>
+					<div class="tiao"></div>
+				</div>
+				<a href="javascript:;" class="letter"></a>
+				<a href="javascript:;" class="set"></a>
+				<a href="javascript:;" class="share"></a>
+			</div>
+		</div>
+	</div>
+	<div class="top-0"></div>
+
+	<div class="wb-body" id="wb_body">
+		<div class="bg"></div>
+		<div id="bg">
+			<div class="top">
+				<div class="close">×</div>
+			</div>
+			<div class="middle">
+				<div class="red" style="background: #a00;"></div>
+				<div class="yellow" style="background: yellow;"></div>
+				<div class="green" style="background: green;"></div>
+				<div class="pink" style="background: pink;"></div>
+			</div>
+		</div>
+		<div class="music"></div>
+		<div class="sixin">私信聊天</div>
+		<a href="#" id="return_top" style="display:none;">↑</a>
+
+		<div class="wb-inner clr">
+			<div class="left-nav">
+				<ul class="nav-home">
+					<li>首页</li>
+					<li>收藏</li>
+					<li>赞</li>
+				</ul>
+				<ul class="nav-remen">
+					<li>热门微博</li>
+				</ul>
+				<ul class="nav-more">
+					<li>好友圈</li>
+					<li>群微博</li>
+					<li>歌手</li>
+					<li>演员</li>
+					<li>IT</li>
+					<li>资讯</li>
+					<li>搞笑</li>
+				</ul>
+			</div>
+			<div class="left-nav-0 fl"></div>
+
+			<div class="con fl">
+				<div class="shuoshuo" id="shuoshuo">
+					<textarea id="shuoshuo"></textarea>
+					<ul class="insert clr">
+						<li class="biaoqing fl">表情</li>
+						<li class="tupian fl">图片</li>
+						<li class="shipin fl">视频</li>
+						<li class="topic fl">话题</li>
+						<li class="wenzhang fl">头条文章</li>
+						<li class="more fl">···</li>
+					</ul>
+					<div class="gongkai">公开</div>
+					<input type="button" value="发布" class="fabu">
+					<div id="rmwb">
+						<a href="javascript:;" class="rmwb">热门微博</a>
+						<p class="news">温州皮革厂倒闭啦！</p>
+					</div>
+					<span class="count-down">还可输入140字</span>
+				</div>
+				<div class="ads"><img src="images/wb-body_36.png"></div>
+				<div class="con-nav">
+					<ul class="nav clr">
+						<li class="fl"><b>全部</b></li>
+						<li class="fl">原创</li>
+						<li class="fl">图片</li>
+						<li class="fl">视频</li>
+						<li class="fl">音乐</li>
+						<li class="fl">文章</li>
+					</ul>
+					<input type="text" name="" id="search-wb" placeholder="搜索我关注人的微博">
+					<div class="new-wb">有5条新微博，点击查看</div>
+				</div>
+				<!-- 瀑布流 -->
+				<ul class="pbl" id="pbl"></ul>
+
+			</div>
+			<div class="wb-right fr">
+				<div class="touxiang"><img src="images/wb-body_06.png"></div>
+				<div class="right-ads">
+					<div class="tit">亚洲好书榜实时趋势</div>
+					<ul id="ads">
+						<li>
+							<p style="display:none;">《鲁宾逊漂流记》</p>
+							<div style="display:block;">《鲁宾逊漂流记》</div>
+						</li>
+						<li>
+							<p>《哈利波特与死亡圣器》</p>
+							<div>《哈利波特与死亡圣器》</div>
+						</li>
+						<li>
+							<p>《中国为什么有希望》</p>
+							<div>《中国为什么有希望》</div>
+						</li>
+					</ul>
+					<div class="bottom">查看更多&gt;</div>
+				</div>
+
+				<div class="toupiao"><img src="images/toupiao.jpg"></div>
+				<div class="rmtopic" id="rmtopic">
+					<div class="tit">
+						热门话题
+						<span class="huan">换一换</span>
+					</div>
+					<ul class="topic-list">
+						<li><b>#畅意挑战者联盟#</b><i class="icon">推荐</i></li>
+						<li><b>#一句话证明你是单身狗#</b><span>1.2亿</span></li>
+						<li><b>#晒长腿打挑战#</b><span>9719万</span></li>
+						<li><b>#最好的我们#</b><span>15.5亿</span></li>
+						<li><b>#亲爱的翻译官#</b><span>19.4亿</span></li>
+						<li><b>#猴年马月真到了#</b><span>7824万</span></li>
+						<li><b>#爱心一碗饭#</b><span>3.3亿</span></li>
+						<li><b>#新肾天使#</b><span>686万</span></li>
+						<li><b>#环境日#</b><span>2018万</span></li>
+					</ul>
+					<p class="search-more">查看更多&gt;</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

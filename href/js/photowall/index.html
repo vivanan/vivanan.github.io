@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <link rel="shortcut icon" href="../../../favicon.ico"/>
+    <link rel="bookmark" href="../../../favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: url(../../../img/blur-1.jpg);
+        }
+        #ul1{
+            width: 516px;
+            margin: 0 auto;
+        }
+        #ul1 li{
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 10px;
+            border: 1px solid #ccc;
+        }
+        #ul1 li.active{
+            border: 1px dashed red;
+        }
+        #ul1 img{
+            width: 150px;
+        }
+        #btn1{
+            position: absolute;
+            left: 50%;
+            top: 530px;
+            width: 150px;
+            height: 40px;
+            margin-left: -75px;
+            font-family: '微软雅黑';
+            font-size: 16px;
+            color: #333;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="common.js"></script>
+    <script>
+        window.onload = function () {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.children;
+            var oBtn=document.getElementById('btn1');
+
+            oBtn.onclick=function(){
+                aPos.sort(function(){
+                    return Math.random()-0.5;
+                });
+                for(var i=0; i<aLi.length; i++){
+                    move(aLi[i], aPos[aLi[i].index]);
+                }
+            };
+
+            var aPos=[];
+            var zIndex=999;
+            for(var i=0; i<aLi.length; i++){
+                aPos[i]={
+                    left: aLi[i].offsetLeft,
+                    top: aLi[i].offsetTop
+                };
+            }
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].style.position='absolute';
+                aLi[i].style.left=aPos[i].left+'px';
+                aLi[i].style.top=aPos[i].top+'px';
+                aLi[i].style.margin=0;
+            }
+
+            for(var i=0; i<aLi.length; i++){
+                drag(aLi[i]);
+                aLi[i].index=i;
+            }
+
+            function drag(obj){
+                obj.onmousedown=function(ev){
+                    obj.style.zIndex=zIndex++;
+                    clearInterval(obj.timer);
+                    var oEvent=ev || event;
+                    var disX=oEvent.clientX-obj.offsetLeft;
+                    var disY=oEvent.clientY-obj.offsetTop;
+
+                    document.onmousemove=function(ev){
+                        var oEvent=ev || event;
+                        obj.style.left=oEvent.clientX-disX+'px';
+                        obj.style.top=oEvent.clientY-disY+'px';
+
+                        for(var i=0; i<aLi.length; i++){
+                            aLi[i].className='';
+                        }
+                        var oNear=findNearest(obj);
+                        if(oNear){
+                            oNear.className='active';
+                        }
+                    };
+                    document.onmouseup=function(){
+                        document.onmousemove=null;
+                        document.onmouseup=null;
+
+                        var oNear=findNearest(obj);
+                        if(oNear){
+                            move(oNear, aPos[obj.index]);
+                            move(obj, aPos[oNear.index]);
+
+                            oNear.className='';
+
+                            var tmp;
+                            tmp=oNear.index;
+                            oNear.index=obj.index;
+                            obj.index=tmp;
+                        }else{
+                            move(obj, aPos[obj.index]);
+                        }
+                    };
+                    return false;
+                };
+            }
+            function collTest(obj, obj2){
+                var l1=obj.offsetLeft;
+                var r1=obj.offsetWidth+l1;
+                var t1=obj.offsetTop;
+                var b1=obj.offsetHeight+t1;
+
+                var l2=obj2.offsetLeft;
+                var r2=obj2.offsetWidth+l2;
+                var t2=obj2.offsetTop;
+                var b2=obj2.offsetHeight+t2;
+
+                if(r1<l2 || b1<t2 || l1>r2 || t1>b2){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+            function getDis(obj, obj2){
+                var l1=obj.offsetLeft+obj.offsetWidth/2;
+                var t1=obj.offsetTop+obj.offsetHeight/2;
+
+                var l2=obj2.offsetLeft+obj2.offsetWidth/2;
+                var t2=obj2.offsetTop+obj2.offsetHeight/2;
+
+                var a=l1-l2;
+                var b=t1-t2;
+                return Math.sqrt(a*a+b*b);
+            }
+            function findNearest(obj){
+                var iMin=99999999;
+                var iMinIndex=-1;
+
+                for(var i=0; i<aLi.length; i++){
+                    if(obj==aLi[i])continue;
+                    if(collTest(obj, aLi[i])){
+                        var dis=getDis(obj, aLi[i]);
+                        if(dis<iMin){
+                            iMin=dis;
+                            iMinIndex=i;
+                        }
+                    }
+                }
+                if(iMinIndex==-1){
+                    return null;
+                }else{
+                    return aLi[iMinIndex];
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="随机换位置" id="btn1">
+    <ul id="ul1">
+        <li><img src="img/1.jpg"></li>
+        <li><img src="img/2.jpg"></li>
+        <li><img src="img/3.jpg"></li>
+        <li><img src="img/4.jpg"></li>
+        <li><img src="img/5.jpg"></li>
+        <li><img src="img/6.jpg"></li>
+        <li><img src="img/7.jpg"></li>
+        <li><img src="img/8.jpg"></li>
+        <li><img src="img/9.jpg"></li>
+    </ul>
+</body>
+</html>

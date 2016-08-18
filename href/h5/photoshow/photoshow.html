@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-从中心放大</title>
+    <link rel="shortcut icon" href="../../../favicon.ico"/>
+    <link rel="bookmark" href="../../../favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: url(../../../img/blur-2.jpg);
+            background-size: cover;
+        }
+        ul{
+            width: 516px;
+            margin: 30px auto;
+        }
+        ul li{
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 10px;
+            border: 1px solid #ccc;
+            transition: .5s all ease;
+        }
+        ul li img{
+            width: 150px;
+        }
+        ul li:hover{
+            transform: scale(1.5);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+        };
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img src="img/1.jpg"></li>
+        <li><img src="img/2.jpg"></li>
+        <li><img src="img/3.jpg"></li>
+        <li><img src="img/4.jpg"></li>
+        <li><img src="img/5.jpg"></li>
+        <li><img src="img/6.jpg"></li>
+        <li><img src="img/7.jpg"></li>
+        <li><img src="img/8.jpg"></li>
+        <li><img src="img/9.jpg"></li>
+    </ul>
+</body>
+</html>

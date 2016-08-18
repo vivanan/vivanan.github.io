@@ -1,0 +1,79 @@
+/*
+	*************
+ 	create by Tim
+	on 2016-6-21
+	*************
+ */
+
+/*封面*/
+/*.cover{position: relative; width: 100%; height: 667px; background: url(../img/cover.jpg); overflow: hidden;}
+.cover .slogan{margin-top: 150px; text-align: center;}
+.cover .slogan span{font-size: 50px; color: #456; font-family:'Raleway41a8d742b6436'; opacity: 0;}
+.cover .slogan2{margin-top: 50px; text-align: center; font-size: 40px; color: #456; font-family:'Source-Han-Ligh418bad8fd6436';}
+.cover .enter{width: 100px; height: 30px; border: 1px solid #456; color: #123; text-align: center; line-height: 30px; font-size: 14px; margin: 50px auto; cursor: pointer;}*/
+
+/*HOME*/
+body{overflow: hidden;}
+.bg{position: absolute; left: 0; top: 0; width: 100%;}
+.home{position: relative; margin: 0 auto; width: 100%; overflow: hidden; background: url(../img/bg.png);}
+.home .logo{position: fixed; left: 60px; top: 50px; font-size: 20px; font-family: '黑体'; color: #fafafa; z-index: 999;}
+.home .nav{position: fixed; left: 65px; top: 190px; width: 100px; height: 366px; z-index: 999; overflow: hidden;}
+.home .nav li{position: relative; font-size: 16px; color: #fe0; cursor: pointer; margin: 30px 0; padding-bottom: 10px;}
+.home .nav b{position: absolute; left: 0; bottom: 0; height: 3px; background: #f0ca29;}
+.home .nav .icon{font-size: 40px;}
+.home .banner{position: relative; width: 500px; height: 300px; margin: 200px auto; overflow: hidden;}
+.banner .welcome{font-size: 35px; color: #efefef; font-family: '微软雅黑';}
+.banner .l1{position: absolute; right: 0; top: 50px; width: 50px; height: 5px; background: #e0a614;}
+.banner .l2{position: absolute; right: 0; top: 50px; width: 5px; height: 50px; background: #edc92d;}
+.banner .l3{position: absolute; left: 30px; top: -200px; width: 5px; height: 200px; background: #edc92d;}
+.banner .l4{position: absolute; left: 500px; bottom: 20px; width: 350px; height: 5px; background: #e0a614;}
+.banner .web{position: absolute; left: 80px; top: 100px; font-size: 35px; color: #efefef;}
+.banner .let{position: absolute; left: 100px; top: 200px; font-size: 20px; color: #efefef;}
+
+
+/*ABOUT*/
+.about{position: relative; width: 100%; background: url(../img/tree.jpg); background-size: cover;}
+.about .block-1{position: absolute; left: 252px; top: 62px; width: 210px; height: 210px; background: rgba(237,201,45,0.1); border: 1px solid #edc92d; color: #fe0; padding: 20px; font-size: 16px;}
+.about .block-1 li{margin-top: 15px;}
+.about .block-2{position: absolute; left: 503px; top: 313px; width: 210px; height: 210px; background: rgba(245,202,35,0.1); border: 1px solid #edc92d; padding: 20px; color: #fe0;}
+.about .block-2 li{margin-top: 70px; line-height: 30px;}
+.about .block-3{position: absolute; left: 443px; top: 252px; width: 120px; height: 120px; background: rgba(245,202,35,0.1); border: 1px solid #edc92d;}
+.about .block-4{position: absolute; left: 740px; top: 40px; width: 120px; height: 120px; background: rgba(245,202,35,0.4); border: 1px solid #edc92d; cursor: pointer;}
+.about .block-5{position: absolute; left: 304px; top: 444px; width: 120px; height: 120px; background: rgba(245,202,35,0.5); border: 1px solid #edc92d; cursor: pointer;}
+
+
+/*WORKS*/
+.works{position: relative; width: 100%; background: url(../img/snow2.jpg); background-size: cover;}
+.works-box{position: absolute; left: 250px; top: 50px;}
+.works .frame1{position: absolute; left: 0; top: 0; width: 900px; height: 500px; background: #000; opacity: 0.3;}
+.works .frame2{position: absolute; left: 30px; top: 30px; width: 900px; height: 500px; background: #000; opacity: 0.3;}
+.works-con{position: absolute; left: 0; top: 0;}
+.works-con li{position: absolute; width: 150px; height: 150px; background: rgba(17,34,51,0.5); border-radius: 10%; text-align: center; line-height: 150px; cursor: pointer;}
+.works-con li a{position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-size: 20px; color: #efefef;}
+.works-con .html{left: 90px; top: 80px;}
+.works-con .js{left: 330px; top: 80px;}
+.works-con .h5{left: 570px; top: 80px;}
+.works-con .ajax{left: 90px; top: 300px;}
+.works-con .mobile{left: 330px; top: 300px;}
+.works-con .more{left: 570px; top: 300px;}
+
+
+
+/*CONTACT*/
+.contact{position: relative; width: 100%; background: url(../img/read1.jpg); background-size: cover;}
+.contact-opa{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background: #000; opacity: 0.6;}
+.contact-list{position: absolute; left: 40%; top: 30%; width: 350px; margin-left: -145px; color: #fff; z-index: 2; line-height: 35px; font-size: 18px;}
+.contact .download{position: absolute; left: 50%; top: 50%; margin-top: 80px; color: #fff; border: 1px solid #fff; padding: 15px 30px; width: 64px; margin-left: -32px; box-shadow: 0 0 0px #fff; transition: .5s all ease;}
+.contact p{position: absolute; left: 60%; top: 30%; color: #fff; line-height: 20px;}
+.contact p img{width: 120px; height: 120px;}
+
+
+
+
+
+
+
+
+
+
+

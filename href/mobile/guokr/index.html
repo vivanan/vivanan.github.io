@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>果壳网</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: '微软雅黑';
+    }
+    /*头部*/
+    header{width: 100%; height: 2.25rem; background: #262626; border-bottom: 3px solid #49caac;}
+    header menu{float: left; width: 1.9rem; height: 1.2rem; background: url(img/1.jpg) no-repeat; background-size: contain; margin: 0.5rem 0 0 0.4rem;}
+    header div{float: left; width: 11rem; height: 2.25rem; line-height: 2.25rem; text-align: center; color: #fff;}
+    header b{float: right; width: 1.5rem; height: 1.2rem; background: url(img/2.jpg) no-repeat; background-size: contain; margin: 0.5rem 0.4rem 0 0;}
+    .reg-box{width: 100%; height: 2rem; color: #acabb7; font-size: 0.75rem; line-height: 2rem; text-indent: 3.5rem;}
+    .reg{float: left; width: calc(50% - 1px); background: url(img/3.jpg) no-repeat 1.5rem 0.4rem; background-size: 18.75%;}
+    .reg-box .icon{float: left; width: 1px; height: 1.5rem; margin-top: 0.2rem; background: #e5e5e5;}
+    .log{float: left; width: 50%; background: url(img/4.jpg) no-repeat 1.5rem 0.4rem; background-size: 18.75%;}
+    .banner, .banner img{width: 100%; height: 7.8rem;}
+
+    .news{padding: 0 0.4rem; border-bottom: 3px solid #44ae9b;}
+    .news li{width: 100%; height: 2rem; font-size: 0.8rem; color: #333; line-height: 2rem; border-bottom: 2px solid #f1f1f1; text-indent: 0.4rem;}
+    .news li:nth-child(7){border-bottom: 0;}
+
+    .hot{position: relative; width: 100%; height: 2rem; background: #fafafa; font-size: 0.8rem; line-height: 2rem; text-indent: 0.8rem; border-bottom: 2px solid #eee;}
+    .hot span{position: absolute; right: 0.8rem; top: 0.3rem; width: 1.5rem; height: 1.5rem; background: url(img/6.jpg) no-repeat; background-size: cover;}
+
+    .hot-nav{width: 100%; height: 2rem; border-bottom: 2px solid #eee;}
+    .hot-nav li{float: left; width: 3.1rem; height: 2rem; font-size: 0.8rem; color: #333; text-align: center; line-height: 2rem;}
+    .hot-nav li:nth-child(1){border-bottom: 2px solid #ba1733;}
+
+    .hot-con{padding: 0 0.4rem; border-bottom: 3px solid #43b79e;}
+    .hot-con li{width: 100%; height: 2rem; font-size: 0.8rem; color: #333; line-height: 2rem; border-bottom: 2px solid #f1f1f1; text-indent: 0.4rem;}
+    .hot-con li.first{height: 6.2rem;}
+    .hot-con li:nth-child(5){border-bottom: 0;}
+    .hot-con li.first h4{width: 100%; height: 2rem; font-size: 0.8rem; color: #333; line-height: 2rem; text-indent: 0.4rem;}
+    .hot-con li.first img{float: left; width: 5.2rem; height: 3.7rem; margin: 0 5px;}
+    .hot-con li.first span{float: left; display: inline-block; width: 9rem; line-height: 1.3rem; font-size: 0.7rem; color: #9c9c9c; margin-left: 5px;}
+
+    .to-top{width: 100%; height: 3rem;background: #fafafa; line-height: 3rem; text-align: center; background: url(img/9.jpg) no-repeat 4.8rem 0.9rem; background-size: 8.33%; font-size: 0.8rem; color: #a9adaf; border-bottom: 3px solid #57d2b3;}
+</style>
+<script>
+    ;(function(win, doc){
+        function change(){
+            doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+        }
+        change();
+
+        win.addEventListener('resize', change, false);
+    })(window, document);
+</script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <menu></menu>
+            <div>Guokr.com</div>
+            <b></b>
+        </header>
+    </div>
+    <ul class="reg-box">
+        <li class="reg">用户登录</li>
+        <li class="icon"></li>
+        <li class="log">用户注册</li>
+    </ul>
+    <div class="banner"><img src="img/5.jpg"></div>
+    <ul class="news">
+        <li>解读科学关电视，你应该知道的20个</li>
+        <li>运动出点汗，更好来谈判</li>
+        <li>“关掉”旧习惯，本性不再难移</li>
+        <li>男女搭配，破案不累</li>
+        <li>腰窝，性感无误？</li>
+        <li>有7000多种语言，就有7000多个</li>
+        <li>久坐杀精--今天，你坐多久了？</li>
+    </ul>
+    <div class="hot">热门问答<span></span></div>
+    <ul class="hot-nav">
+        <li>科技</li>
+        <li>生活</li>
+        <li>人文</li>
+        <li>自然</li>
+    </ul>
+    <ul class="hot-con">
+        <li class="first">
+            <h4>如果把探测器撞到彗星上会怎么样？</h4>
+            <img src="img/7.jpg">
+            <span>撞上去的事情人类已经干过了。。深度撞击号（英语：Deep Impact）是美国国家</span>
+        </li>
+        <li>这个“肥皂放入牛奶”的效果是怎么产</li>
+        <li>制造出大于全画幅的感光元件有意义吗</li>
+        <li>磁场是运动的电场吗？</li>
+        <li>什么函数能描述你的人生？</li>
+    </ul>
+    <div class="hot">小组热帖<span></span></div>
+    <ul class="hot-nav">
+        <li>科技</li>
+        <li>生活</li>
+        <li>人文</li>
+        <li>娱乐</li>
+    </ul>
+    <ul class="hot-con">
+        <li class="first">
+            <h4>史密森尼国家自然史博物馆：古脊椎</h4>
+            <img src="img/8.jpg">
+            <span>好久没逛果壳了，偶然发现了Baboon老师关于NMNH的帖子。因为去看过</span>
+        </li>
+        <li>#TIL#有的母螳螂会用美色诱杀其</li>
+        <li>艾森彗星T-18小时：绝地反击！</li>
+        <li>[ISON]我儿，老大哥在看着你</li>
+        <li>【天文每日一图】NGC 1999: </li>
+    </ul>
+    <div class="to-top">回到顶部</div>
+</body>
+</html>

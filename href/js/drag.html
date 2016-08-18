@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="shortcut icon" href="../../favicon.ico"/>
+	<link rel="bookmark" href="../../favicon.ico"/>
+<style>
+	*{margin: 0; padding: 0;}
+	body{background: url(../../img/blur-1.jpg);}
+	#box{position: absolute; left: 550px; top: 200px; width: 200px; height: 200px; background: #abc;}
+	#l{position: absolute; left: 0; top: 0; width: 10px; height: 100%; background: #a00; cursor: pointer;}
+	#t{position: absolute; left: 0; top: 0; width: 100%; height: 10px; background: #a00; cursor: pointer;}
+	#r{position: absolute; right: 0; top: 0; width: 10px; height: 100%; background: #a00; cursor: pointer;}
+	#b{position: absolute; left: 0; bottom: 0; width: 100%; height: 10px; background: #a00; cursor: pointer;}
+	#lt{position: absolute; left: 0; top: 0; width: 10px; height: 10px; background: #09f; cursor: pointer;}
+	#lb{position: absolute; left: 0; bottom: 0; width: 10px; height: 10px; background: #09f; cursor: pointer;}
+	#rt{position: absolute; right: 0; top: 0; width: 10px; height: 10px; background: #09f; cursor: pointer;}
+	#rb{position: absolute; right: 0; bottom: 0; width: 10px; height: 10px; background: #09f; cursor: pointer;}
+</style>
+<script>
+	window.onload = function(){
+		var oBox = document.getElementById('box');
+		var oL = oBox.children[0];
+		var oT = oBox.children[1];
+		var oR = oBox.children[2];
+		var oB = oBox.children[3];
+		var oLt = oBox.children[4];
+		var oLb = oBox.children[5];
+		var oRt = oBox.children[6];
+		var oRb = oBox.children[7];
+		// 右
+		oR.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var oldW = oBox.offsetWidth;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = oEvent.clientX - downX;
+				oBox.style.width = targetX + oldW + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 下
+		oB.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downY = oEvent.clientY;
+			var oldH = oBox.offsetHeight;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetY = oEvent.clientY - downY;
+				oBox.style.height = oldH + targetY + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 左
+		oL.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var oldW = oBox.offsetWidth;
+			var oldL = oBox.offsetLeft;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = downX - oEvent.clientX;
+				oBox.style.width = oldW + targetX + 'px';
+				oBox.style.left = oldL - targetX + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 上
+		oT.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downY = oEvent.clientY;
+			var oldH = oBox.offsetHeight;
+			var oldT = oBox.offsetTop;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetY = downY - oEvent.clientY;
+				oBox.style.height = oldH + targetY + 'px';
+				oBox.style.top = oldT - targetY + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 左上
+		oLt.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var downY = oEvent.clientY;
+			var oldW = oBox.offsetWidth;
+			var oldH = oBox.offsetHeight;
+			var oldL = oBox.offsetLeft;
+			var oldT = oBox.offsetTop;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = downX - oEvent.clientX;
+				var targetY = downY - oEvent.clientY;
+				oBox.style.width = oldW + targetX + 'px';
+				oBox.style.height = oldH + targetY + 'px';
+				oBox.style.left = oldL - targetX + 'px';
+				oBox.style.top = oldT - targetY + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 左下
+		oLb.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var downY = oEvent.clientY;
+			var oldW = oBox.offsetWidth;
+			var oldH = oBox.offsetHeight;
+			var oldL = oBox.offsetLeft;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = downX - oEvent.clientX;
+				var targetY = oEvent.clientY - downY;
+				oBox.style.width = oldW + targetX + 'px';
+				oBox.style.height = oldH + targetY + 'px';
+				oBox.style.left = oldL - targetX + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 右上
+		oRt.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var downY = oEvent.clientY;
+			var oldW = oBox.offsetWidth;
+			var oldH = oBox.offsetHeight;
+			var oldT = oBox.offsetTop;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = oEvent.clientX - downX;
+				var targetY = downY - oEvent.clientY;
+				oBox.style.width = oldW + targetX + 'px';
+				oBox.style.height = oldH + targetY + 'px';
+				oBox.style.top = oldT - targetY + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+		// 右下
+		oRb.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var downX = oEvent.clientX;
+			var downY = oEvent.clientY;
+			var oldW = oBox.offsetWidth;
+			var oldH = oBox.offsetHeight;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				var targetX = oEvent.clientX - downX;
+				var targetY = oEvent.clientY - downY;
+				oBox.style.width = oldW + targetX + 'px';
+				oBox.style.height = oldH + targetY + 'px';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="box">
+		<div id="l"></div>
+		<div id="t"></div>
+		<div id="r"></div>
+		<div id="b"></div>
+		<div id="lt"></div>
+		<div id="lb"></div>
+		<div id="rt"></div>
+		<div id="rb"></div>
+	</div>
+</body>
+</html>

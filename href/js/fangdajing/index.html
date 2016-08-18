@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<link rel="shortcut icon" href="../../../favicon.ico"/>
+	<link rel="bookmark" href="../../../favicon.ico"/>
+<style>
+	body{background: url(../../../img/blur-1.jpg);}
+	*{margin: 0; padding: 0;}
+	div{position: relative; float: left; width: 350px; height: 350px; border: 1px solid #666; margin: 100px;}
+	#big{overflow: hidden; margin-left: 0; display: none;}
+	#big img{position: absolute; left: 0; top: 0;}
+	#small span{position: absolute; left: 0; top: 0; width: 100px; height: 100px; background: #ff0; opacity: 0.6; display: none;}
+</style>
+<script>
+	function getPos(obj){
+		var l = 0;
+		var t = 0;
+		while(obj){
+			l += obj.offsetLeft;
+			t += obj.offsetTop;
+			obj = obj.offsetParent;
+		}
+		return {left:l, top:t};
+	}
+	window.onload = function(){
+		var oSmall = document.getElementById('small');
+		var oBig = document.getElementById('big');
+		var oSpan = oSmall.children[1];
+		var oImg = oBig.children[0];
+		// 鼠标移入
+		oSmall.onmouseover = function(){
+			oBig.style.display = 'block';
+			oSpan.style.display = 'block';
+		}
+		// 鼠标移出
+		oSmall.onmouseout = function(){
+			oBig.style.display = 'none';
+			oSpan.style.display = 'none';
+		}
+		// 鼠标移动
+		oSmall.onmousemove = function(ev){
+			var oEvent = ev || event;
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var l = oEvent.clientX - oSpan.offsetWidth/2 - getPos(oSmall).left;
+			var t = oEvent.clientY - oSpan.offsetHeight/2 - getPos(oSmall).top + scrollTop;
+			if(l <= 0){
+				l = 0;
+			}
+			if(t <= 0){
+				t = 0;
+			}
+			if(l >= oSmall.offsetWidth - oSpan.offsetWidth){
+				l = oSmall.offsetWidth - oSpan.offsetWidth;
+			}
+			if(t >= oSmall.offsetHeight - oSpan.offsetHeight){
+				t = oSmall.offsetHeight - oSpan.offsetHeight;
+			}
+			oSpan.style.left = l + 'px';
+			oSpan.style.top = t + 'px';
+			oImg.style.left = -l/(oSmall.offsetWidth - oSpan.offsetWidth)*(oImg.offsetWidth - oBig.offsetWidth) + 'px';
+			oImg.style.top = -t/(oSmall.offsetHeight - oSpan.offsetHeight)*(oImg.offsetHeight - oBig.offsetHeight) + 'px';
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="small">
+		<img src="1.jpg">
+		<span></span>
+	</div>
+	<div id="big">
+		<img src="2.jpg">
+	</div>
+</body>
+</html>
