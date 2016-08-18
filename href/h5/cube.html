@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3-立体魔方</title>
+	<link rel="shortcut icon" href="../../favicon.ico"/>
+	<link rel="bookmark" href="../../favicon.ico"/>
+<style>
+	body{background: #000;}
+	#box{width: 200px; height: 200px; position: absolute; left: 50%; top: 100px; margin-left: -100px; transform: perspective(800px) rotateY(-60deg) rotateX(30deg); transform-style: preserve-3d;}
+	#box div{position: absolute; left: 0; top: 0; width: 200px; height: 200px; color: #fff; font-size: 50px; text-align: center; line-height: 200px; opacity: 0.6;}
+	.right{transform: translateX(100px) rotateY(90deg);}
+	.left{transform: translateX(-100px) rotateY(90deg);}
+	.front{transform: translateZ(100px);}
+	.back{transform: translateZ(-100px);}
+	.top{transform: translateY(-100px) rotateX(90deg);}
+	.bottom{transform: translateY(100px) rotateX(90deg);}
+</style>
+<script>
+	window.onload = function(){
+		var oBox = document.querySelector('#box');
+		var x = 30;
+		var y = -60;
+		oBox.onmousedown = function(ev){
+			var oEvent = ev || event;
+			var disX = oEvent.clientX - y;
+			var disY = oEvent.clientY - x;
+			document.onmousemove = function(ev){
+				var oEvent = ev || event;
+				x = oEvent.clientY - disY;
+				y = oEvent.clientX - disX;
+				oBox.style.transform = 'perspective(800px) rotateY('+y+'deg) rotateX('+x+'deg)';
+			};
+			document.onmouseup = function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+			};
+			return false;
+		};
+	};
+</script>
+</head>
+<body>
+	<div id="box">
+		<div class="c"></div>
+		<div style="background: #00f;" class="right">右</div>
+		<div style="background: #f00;" class="left">左</div>
+		<div style="background: #ff0;" class="front">前</div>
+		<div style="background: #0f0;" class="back">后</div>
+		<div style="background: #f0f;" class="top">上</div>
+		<div style="background: #0ff;" class="bottom">下</div>
+	</div>
+</body>
+</html>

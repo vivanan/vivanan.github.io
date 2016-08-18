@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>当当网</title>
+<style>
+    *{margin: 0; padding: 0; list-style: none; font-family: '微软雅黑';}
+    img{vertical-align: top;}
+    .wrap{background: #f0f0f0;}
+    header{width: 100%; height: 2.1rem;}
+    .logo{float: left; width: 4.35rem; height: 1.25rem; background: url(img/1.jpg) no-repeat; background-size: cover; margin: 0.5rem 0 0 0.5rem;}
+    header .btn{float: right; width: 6rem; height: 2.15rem;}
+    header .menu,header .car,header .login{float: left;}
+    header .menu{width: 1rem; height: 1rem; background: url(img/4.jpg); background-size: cover; margin: 0.5rem 0.75rem 0 0;}
+    header .car{width: 1.6rem; height: 1.15rem; background: url(img/3.jpg); background-size: cover; margin: 0.4rem 0.75rem 0 0;}
+    header .login{width: 1.15rem; height: 1.2rem; background: url(img/2.jpg); background-size: cover; margin: 0.4rem 0.75rem 0 0;}
+
+    .banner{width: 100%; height: 6.25rem; background: url(img/5.jpg); background-size: cover;}
+
+    .ads{width: 15.2rem; height: 1.5rem; line-height: 1.5rem; background: #faaf4a; color: #fff; text-align: center; font-size: 0.7rem; margin: 0.5rem auto;}
+    .ads span{float: left; width: 1.1rem; height: 0.85rem; background: url(img/6.jpg); background-size: cover; margin: 0.3rem 0 0 0.3rem;}
+
+    .search{width: 15rem; height: 2rem; margin: 0.5rem auto;}
+    .search #text{float: left; width: 12rem; height: 2rem; box-sizing: border-box; border: 2px solid #ff9300; font-size: 0.6rem; color: #959595; text-indent: 0.6rem;}
+    .search #btn{float: right; width: 3rem; height: 2rem; border: 0; background: url(img/7.jpg) no-repeat center #ff9300; background-size: cover;}
+
+    .nav{width: 10.5rem; margin: 1rem auto 0.3rem; overflow: hidden;}
+    .nav li{float: left; font-size: 0.75rem; margin: 0 0.75rem 1rem 0; color: #666;}
+    .nav ul{width: 11.5rem;}
+
+    .order{width: 14.75rem; height: 5.4rem; margin: 0 auto; overflow: hidden;}
+    .order ul{width: 16rem;}
+    .order li{float: left; width: 3rem; height: 3rem; font-size: 0.6rem; color: #999; text-align: center; margin-right: 0.9rem;}
+    .order li img{width: 3rem; height: 3rem; margin-bottom: 3px;}
+
+    .jrsj{width: 100%; height: 1.5rem; background: #f89909; color: #fff;}
+    .jrsj h4{float: left; width: 3.5rem; height: 1.5rem; line-height: 1.4rem; font-size: 0.7rem; text-align: right; font-weight: normal;}
+    .jrsj p{float: left; width: 4.75rem; height: 1.5rem; line-height: 1.5rem; text-align: right; font-size: 0.55rem;}
+    .jrsj span{float: right; width: 1rem; height: 1.5rem; line-height: 1.5rem; font-size: 0.8rem; font-weight: bold;}
+
+    .muyulu{width: 15rem; height: 8.25rem; margin: 0 auto;}
+    .muyulu li{float: left; width: 7.25rem; height: 7.25rem; margin-top: 0.5rem;}
+    .muyulu li:nth-child(1){margin-right: 0.5rem;}
+    .muyulu li img{width: 7.25rem; height: 7.25rem;}
+
+    .sj-2{width: 15.25em; margin: 0 auto; padding-bottom: 0.5rem;}
+    .sj-2 li{width: 100%; height: 2rem; border-top: 1px solid #fff;}
+    .sj-2 li:nth-child(2){border-bottom: 1px solid #fff;}
+    .sj-2 p{float: left; height: 2rem; line-height: 2rem; color: #656565; text-indent: 0.5rem; font-size: 0.65rem;}
+    .sj-2 span{float: right; width: 3rem; height: 2rem; line-height: 2rem; font-size: 0.65rem; color: #da1527;}
+
+    .wph{width: 100%; height: 1.5rem; background: #e50055; color: #fff;}
+    .wph h4{float: left; width: 3.5rem; height: 1.5rem; line-height: 1.4rem; font-size: 0.7rem; text-align: right; font-weight: normal;}
+    .wph p{float: left; width: 4.75rem; height: 1.5rem; line-height: 1.5rem; text-align: right; font-size: 0.55rem;}
+    .wph span{float: right; width: 1rem; height: 1.5rem; line-height: 1.5rem; font-size: 0.8rem; font-weight: bold;}
+
+    .banner-2 li{width: 100%;}
+    .banner-2 li img{width: 100%;}
+
+    .ads-2{width: 15rem; height: 5rem; margin: 0 auto; background: #f0f0f0;}
+    .ads-2 ul{width: 15.5rem; height: 5rem;}
+    .ads-2 li{float: left; width: 4.65rem; height: 1.5rem; background: #fff; line-height: 1.5rem; text-align: center; font-size: 0.7rem; color: #333; margin: 0.5rem 0.5rem 0 0;}
+
+    .sj-3{width: 15.25em; margin: 0 auto; padding-bottom: 0.5rem;}
+    .sj-3 li{width: 100%; height: 2rem; border-top: 1px solid #fff;}
+    .sj-3 li:nth-child(2){border-bottom: 1px solid #fff;}
+    .sj-3 p{float: left; height: 2rem; line-height: 2rem; color: #656565; text-indent: 0.5rem; font-size: 0.65rem;}
+    .sj-3 span{float: right; width: 2rem; height: 2rem; line-height: 2rem; font-size: 0.65rem; color: #ffa729;}
+
+    .order-2{width: 14.75rem; height: 5.4rem; margin: 0 auto; overflow: hidden;}
+    .order-2 ul{width: 16rem;}
+    .order-2 li{float: left; width: 3rem; height: 3rem; font-size: 0.6rem; color: #999; text-align: center; margin-right: 0.9rem;}
+    .order-2 li img{width: 3rem; height: 3rem; margin-bottom: 3px;}
+
+    footer{width: 100%; height: 11rem; background: #e0e0e0; overflow: hidden;}
+
+    .search-2{width: 15rem; height: 2rem; margin: 0.5rem auto;}
+    .search-2 #text2{float: left; width: 12rem; height: 2rem; box-sizing: border-box; border: 2px solid #adadad; font-size: 0.6rem; color: #adadad; text-indent: 0.6rem;}
+    .search-2 #btn2{float: right; width: 3rem; height: 2rem; border: 0; background: url(img/21.jpg) no-repeat center #adadad; background-size: cover;}
+
+    .kefu{width: 10.25rem; height: 4.2rem; margin: 0 auto; overflow: hidden;}
+    .kefu ul{width: 10.25rem; height: 4.2rem;}
+    .kefu li{float: left; font-size: 0.7rem; color: #262626; width: 3.25rem; height: 0.9rem; padding: 0.3rem 0 2px 0; text-align: center; margin-top: 0.2rem; border-bottom: 3px solid #e0e0e0;}
+    .kefu li:nth-child(2){border-bottom: 3px solid #f93;}
+
+    .reg-box{width: 100%; height: 1.5rem; background: #b0b0b0;}
+    .reg-box p{float: left; width: 2.5rem; height: 1.5rem; line-height: 1.5rem; text-align: center; color: #fff; font-size: 0.7rem;}
+    .reg-box span{float: right; width: 2.7rem; height: 1.5rem; line-height: 1.5rem; color: #fff; text-align: center; background: url(img/22.jpg) no-repeat left center; background-size: 17%; font-size: 0.65rem;}
+    .warm{width: 100%; height: 2rem; text-indent: 9px; font-size: 0.6rem; color: #a3a3a3; line-height: 2rem;}
+</style>
+<script>
+    ;(function(win, doc){
+        function change(){
+            doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+        }
+        change();
+
+        win.addEventListener('resize', change, false);
+    })(window, document);
+</script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="logo"></h1>
+            <div class="btn">
+                <div class="menu"></div>
+                <div class="car"></div>
+                <div class="login"></div>
+            </div>
+        </header>
+        <div class="banner"></div>
+        <div class="ads"><span></span>下载当当手机客户端即得5元现金券</div>
+        <div class="search">
+            <input type="text" placeholder="尾品汇" id="text">
+            <input type="button" value="" id="btn">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>图书</li>
+                <li>母婴</li>
+                <li>童装</li>
+                <li>美妆</li>
+                <li>家居</li>
+                <li>服装</li>
+                <li>鞋靴</li>
+                <li>箱包</li>
+                <li>运动</li>
+                <li>更多</li>
+            </ul>
+        </div>
+        <div class="order">
+            <ul>
+                <li><img src="img/8.jpg"><p>我的订单</p></li>
+                <li><img src="img/9.jpg"><p>我的优惠</p></li>
+                <li><img src="img/10.jpg"><p>口袋客服</p></li>
+                <li><img src="img/11.jpg"><p>浏览历史</p></li>
+            </ul>
+        </div>
+        <div class="jrsj">
+            <h4>今日闪价</h4>
+            <p>挑战全网最底价</p>
+            <span>&gt</span>
+        </div>
+        <ul class="muyulu">
+            <li><img src="img/12.jpg"></li>
+            <li><img src="img/13.jpg"></li>
+        </ul>
+        <ul class="sj-2">
+            <li>
+                <p>桌面迷你小太阳取暖器2档调</p>
+                <span>￥29.00</span>
+            </li>
+            <li>
+                <p>LOCK&LOCK乐扣 普通型套</p>
+                <span>￥69.90</span>
+            </li>
+        </ul>
+        <div class="wph">
+            <h4>尾品汇1-3折</h4>
+            <p>名品清仓特卖</p>
+            <span>&gt</span>
+        </div>
+        <ul class="banner-2">
+            <li><img src="img/14.jpg"></li>
+            <li><img src="img/15.jpg"></li>
+            <li><img src="img/16.jpg"></li>
+        </ul>
+        <div class="ads-2">
+            <ul>
+                <li>男装</li>
+                <li>女装</li>
+                <li>鞋</li>
+                <li>运动户外</li>
+                <li>箱包礼品</li>
+            </ul>
+        </div>
+        <ul class="sj-3">
+            <li>
+                <p>笛莎童装 每个女孩都是公主</p>
+                <span>2.0折</span>
+            </li>
+            <li>
+                <p>亚都净化专场 全国包邮49折</p>
+                <span>3.0折</span>
+            </li>
+        </ul>
+        <div class="order-2">
+            <ul>
+                <li><img src="img/17.jpg"><p>手机充值</p></li>
+                <li><img src="img/18.jpg"><p>元宝福利社</p></li>
+                <li><img src="img/19.jpg"><p>当当客户端</p></li>
+                <li><img src="img/20.jpg"><p>读书客户端</p></li>
+            </ul>
+        </div>
+        <footer>
+            <div class="search-2">
+                <input type="text" placeholder="请输入商品名称" id="text2">
+                <input type="button" value="" id="btn2">
+            </div>
+            <div class="kefu">
+                <ul>
+                    <li>精简版</li>
+                    <li>触屏版</li>
+                    <li>电脑版</li>
+                    <li>提建议</li>
+                    <li>客&nbsp;&nbsp;服</li>
+                    <li>帮&nbsp;&nbsp;助</li>
+                </ul>
+            </div>
+            <div class="reg-box">
+                <p>登录</p>
+                <p>注册</p>
+                <span>TOP</span>
+            </div>
+            <p class="warm">温馨提示：本信息仅供提供演示方便链接，与原网站无关！</p>
+        </footer>
+    </div>
+</body>
+</html>

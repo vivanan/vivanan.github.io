@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-立体轮播图</title>
+    <link rel="shortcut icon" href="../../../favicon.ico"/>
+    <link rel="bookmark" href="../../../favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: #000;
+        }
+        .btn{
+            position: absolute;
+            left: 50%;
+            top: 500px;
+            margin-left: -54px;
+        }
+        .btn input{
+            width: 50px;
+            height: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #ul1{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            margin-left: -150px;
+            margin-top: -150px;
+            perspective: 1000px;
+        }
+        #ul1 li{
+            width: 300px;
+            height: 300px;
+            background: #5dcaff;
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 1s all ease;
+            border-radius: 5px;
+        }
+        #ul1 li img{
+            border-radius: 5px;
+        }
+        #ul1 li.cur{
+            opacity: 1;
+            z-index: 2;
+        }
+        #ul1 li.l1{
+            transform: scale(0.9) translateX(-200px) rotateY(60deg);
+            opacity: .6;
+        }
+        #ul1 li.r1{
+            transform: scale(0.9) translateX(200px) rotateY(-60deg);
+            opacity: .6;
+        }
+        #ul1 li.l2{
+            transform: scale(0.9) translateX(-300px) rotateY(80deg);
+        }
+        #ul1 li.r2{
+            transform: scale(0.9) translateX(300px ) rotateY(-80deg);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oLeft=document.querySelectorAll('input')[0];
+            var oRight=document.querySelectorAll('input')[1];
+            var aLi=document.querySelectorAll('#ul1 li');
+
+            // 准备空数组存class
+            var arr=[];
+            for(var i=0; i<aLi.length; i++){
+                arr[i]=aLi[i].className;
+            }
+
+            //左
+            oLeft.onclick=function(){
+                arr.unshift(arr.pop());
+                console.log(arr);
+                for(var i=0; i<arr.length; i++){
+                    aLi[i].className=arr[i];
+                }
+            };
+            // 右
+            oRight.onclick=function(){
+                arr.push(arr.shift());
+                console.log(arr);
+                for(var i=0; i<arr.length; i++){
+                    aLi[i].className=arr[i];
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <div class="btn">
+        <input type="button" value="←">
+        <input type="button" value="→">
+    </div>
+
+    <ul id="ul1">
+        <li class="l2"><img src="img/3.jpg"></li>
+        <li class="l1"><img src="img/4.jpg"></li>
+        <li class="cur"><img src="img/5.jpg"></li>
+        <li class="r1"><img src="img/6.jpg"></li>
+        <li class="r2"><img src="img/7.jpg"></li>
+        <li><img src="img/8.jpg"></li>
+        <li><img src="img/9.jpg"></li>
+        <li><img src="img/10.jpg"></li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

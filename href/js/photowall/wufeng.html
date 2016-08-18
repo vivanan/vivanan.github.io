@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动</title>
+    <link rel="shortcut icon" href="../../../favicon.ico"/>
+    <link rel="bookmark" href="../../../favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: url(../../../img/blur-1.jpg);
+        }
+        #box{
+            width: 680px;
+            height: 170px;
+            border: 1px solid #999;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #ul1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #e6e6fa;
+        }
+        #ul1 li{
+            float: left;
+            padding: 10px;
+        }
+        #ul1 img{
+            width: 150px;
+        }
+        .btn{
+            position: absolute;
+            left: 50%;
+            top: 320px;
+            margin-left: -54px;
+        }
+        .btn input{
+            width: 50px;
+            height: 25px;
+            font-size: 18px;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.children;
+            var oBtn=document.getElementById('btn1');
+            var oBtn2=document.getElementById('btn2');
+
+            oUl.innerHTML+=oUl.innerHTML;
+            oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+
+            var left=0;
+            var timer;
+            function toLeft(){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    left-=2;
+                    if(left<=-oUl.offsetWidth/2){
+                        left=0;
+                    }
+                    oUl.style.left=left+'px';
+                }, 30);
+            }
+            toLeft();
+            function toRight(){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    left+=2;
+                    if(left>=0){
+                        left=-oUl.offsetWidth/2;
+                    }
+                    oUl.style.left=left+'px';
+                }, 30);
+            }
+
+            oBtn.onclick=function(){
+                toLeft();
+            };
+            oBtn2.onclick=function(){
+                toRight();
+            };
+        };
+    </script>
+</head>
+<body>
+    <div class="btn">
+        <input type="button" value="←" id="btn1">
+        <input type="button" value="→" id="btn2">
+    </div>
+    
+    <div id="box">
+        <ul id="ul1">
+            <li><img src="img/1.jpg"></li>
+            <li><img src="img/2.jpg"></li>
+            <li><img src="img/3.jpg"></li>
+            <li><img src="img/4.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>

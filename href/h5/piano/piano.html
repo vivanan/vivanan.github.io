@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-模拟钢琴</title>
+    <link rel="shortcut icon" href="../../../favicon.ico"/>
+    <link rel="bookmark" href="../../../favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #ul1 li{
+            width: calc(12.5% - 2px);
+            height: 400px;
+            background: #ccc;
+            float: left;
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 400px;
+            border: 1px solid #000;
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: .4s all ease;
+        }
+        #ul1 li.active{
+            background: #999;
+            top: 5px;
+        }
+    </style>
+    <script src="sound.js"></script>
+    <script>
+        window.onload = function () {
+            var aLi=document.querySelectorAll('#ul1 li');
+
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].dataset.index=i;
+                aLi[i].onmousedown=function(){
+                    for(var i=0; i<aLi.length; i++){
+                        aLi[i].className='';
+                    }
+                    this.className='active';
+                    // 出声
+                    var oAudio=new Audio();
+                    oAudio.src=oggSound['sound'+(parseInt(this.dataset.index)+49)];
+                    oAudio.play();
+                };
+                aLi[i].onmouseup=function(){
+                    this.className='';
+                };
+            }
+
+            document.onkeydown=function(ev){
+                var oEvent=ev || event;
+                
+                if(oEvent.keyCode>=49 && oEvent.keyCode<=56){
+                    aLi[oEvent.keyCode-49].className='active';
+                    var oAudio=new Audio();
+                    oAudio.src=oggSound['sound'+oEvent.keyCode];
+                    oAudio.play();
+                }
+            };
+            document.onkeyup=function(ev){
+                var oEvent=ev || event;
+                if(oEvent.keyCode>=49 && oEvent.keyCode<=56){
+                    aLi[oEvent.keyCode-49].className='';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>1</li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

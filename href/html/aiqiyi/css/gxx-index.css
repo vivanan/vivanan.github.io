@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+.x-box{width:980px; height:875px; margin:0 auto;}
+.x-top{margin-bottom:50px;}
+.x-box .xxx-top{width:980px; height:438px; margin-bottom:46px;}
+.x-top .xx-left{width:380px; height:438px; }
+.x-top .xx-left1{ width:380px; height:288px;}
+.x-top .xx-left1-1{font-size:24px; line-height:100%; padding:6px 0 10px; border-bottom:2px solid #85ba4d; color:#85ba4d;}
+.xx-left1-1 i{background:url(../image/img-6.jpg) no-repeat; width:66px; height:26px; float:right;}
+.left1-2{color:#85ba4d; padding-bottom:2px;background:url(../image/imgb.jpg)  no-repeat 0px 0px; width:36px; height:14px;}
+.left2-1{ font-size:19px; height:45px; line-height:45px; padding:9px 0 0 20px;}
+.left1 p{ font-size:16px; line-height:100%; padding-left:20px ;background:url(../image/img-5.jpg) no-repeat 0 1px; margin:6px 0 11px ;}
+.left3{width:380px; height:150px;}
+.left3-1{width:180px; height:34px; background:#f2f2f2; border-bottom:1px solid #ebebeb;float:left; line-height:34px; text-align:center;}
+.left3 img{ float:left; }
+.left3-2{margin-right:20px;}
+.center{padding:0 20px 0 20px;}
+.center img{width:380px; height:252px;}
+.center1,.center4,.center5{ font-size:16px; line-height:100%;}
+.center2,.center3{ font-size:15px; line-height:100%;}
+.center1,.center2{margin-bottom:19px;}
+.center3,.center4{ margin-bottom:18px;}
+.center1{ margin-top:24px;}
+.center5{ margin-bottom:4px;}
+.xx-right{ width:180px; height:320px;}
+.xx-right img{float:left;}
+.right1{width:180px; height:34px; background:#f2f2f2; border-bottom:1px solid #ebebeb; float:left; margin-bottom:15px;}
+.right2{ margin-bottom:0;}
+.x-box .x-bottom{ width:980px; height:392px;}
+.bottom1{ padding-left:20px; width:760px; height:39px; border-bottom:2px solid #699f4f; margin-right:20px; background:url(../image/aiqiyi_03.jpg) no-repeat 0 2px; margin-bottom:24px;}
+.bottom1 .bottom1-1{ font-size:27px; font-weight:bold; color:#699f4f;  float: left;}
+.bottom1-2{ color:#699f4f; background:url(../image/imgb.jpg) no-repeat 24px 2px; float:left; width:40px; margin:15px 0 0 18px;}
+.bottom1-3,.bottom1-4,.bottom1-5,.bottom1-6{ float:left; padding-right:22px; margin:16px 0 0 8px;}
+.bottom1-3{background:url(../image/aiqiyi_09.jpg) no-repeat 84px 0px; margin:16px 0 0 34px; }
+.bottom1-4{background:url(../image/aiqiyi_09.jpg) no-repeat 56px 0px; }
+.bottom1-5{background:url(../image/aiqiyi_09.jpg) no-repeat 68px 0px; }
+.bottom1 img{float:right;}
+.bleft{width:380px; height:324px; margin-right:20px; }
+.bleft i{height:20px; line-height:20px; padding-top:7px; display:block; background:#f2f2f2;}
+.x-bottom1{width:800px; height:390px;}
+.bleft em{height:20px; line-height:20px; padding-bottom:8px; display:block; background:#f2f2f2;}
+.bcenter{width:380px;height:325px;margin-right:20px;}
+.bcenter div{width:175px; height:49px; border-bottom:1px solid #ebebeb; background:#f2f2f2; Padding:6px 0 0 6px; }
+.bcenter div a{ font-size:12px; line-height:20px;}
+.bcenter div i{ font-size:12px; line-height:20px; color:#999999;}
+.div1{ margin-top:10px; }
+.div2{ margin-left:10px;}
+.bright1{ font-size:27px; color:#699f4f;}
+.x-bottom .bright h4{padding-bottom:10px; border-bottom:2px solid #699f4f; margin-bottom:25px;}
+.x-bottom .bright .xx-right em{padding-bottom:18px;}
+
+
+
+

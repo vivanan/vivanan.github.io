@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>驱动之家</title>
+<style>
+	*{margin: 0; padding: 0; list-style: none; font-family: '微软雅黑';}
+	header{width: 100%; height: 2.2rem; background: #d70302; border-bottom: 3px solid #c8b8c3;}
+	header .logo{float: left; width: 6.3rem; height: 2.2rem; background: url(img/1.jpg); background-size: contain;}
+	header p{float: right; font-size: 0.75rem; color: #fff; margin: 0.6rem 1.65rem 0 0;}
+
+	nav{width: 100%; height: 1.65rem;}
+	nav ul{width: 15.2em; height: 1.65rem; margin: 0 auto;}
+	nav li{float: left; position: relative; width: 3rem; height: 1.2rem; margin: 6px 0; font-size: 0.85rem; color: #363636; text-align: center; line-height: 1.2rem;}
+	nav li:nth-child(1){color: #ac3d06;}
+	nav li span{position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 2px solid #c20d06;}
+
+	.banner{width: 100%; height: 8rem; border-bottom: 0.35rem solid #999;}
+	.banner img{width: 100%; height: 8rem;}
+
+	.news-list{width: 100%; height: 100%; overflow: hidden;}
+	.news-list li{padding: 0.875rem 0.6rem 0.6rem; overflow: hidden; border-bottom: 1px solid #ececec;}
+	.news-list li h3{font-weight: normal; font-size: 0.8rem; color: #2d2d2d; margin-bottom: 0.75rem;}
+	.news-list .author{float: left; color: #999; font-size: 0.65rem;}
+	.news-list span{float: right; width: 2rem; height: 1rem; color: #999; font-size: 0.65rem; margin-right: 0.4rem; text-align: right;}
+	.news-list span img{float: right; width: 0.875rem; height: 0.875rem; margin-top: 0.1rem; margin-left: 0.2rem;}
+
+	.ads{width: 100%; height: 9rem;}
+	.ads li{float: left; width: 7rem; margin: 1.5rem 0.5rem 0.5rem; font-size: 0.65rem; color: #4d4d4d; text-align: center;}
+	.ads li img{width: 6rem; height: 4.5rem; margin-bottom: 0.6rem;}
+
+	.next{width: 100%; height: 2.1rem; border-bottom: 1px solid #ececec; text-align: center; line-height: 2rem; font-size: 0.7rem; color: #4b4b4b;}
+
+	footer{width: 100%; height: 4rem; background: #eee;}
+	footer ul{width: 9.6rem; height: 0.95rem; margin: 0 auto; padding: 0.75rem 0;}
+	footer ul li{float: left; width: 3.15rem; height: 0.85rem; text-align: center; font-size: 0.75rem; color: #737373; border-right: 1px solid #737373;}
+	footer ul li:nth-child(3){border-right: 0;}
+	footer p{text-align: center; font-size: 0.6rem; color: #777;}
+</style>
+<script>
+    ;(function(win, doc){
+        function change(){
+            doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+        }
+        change();
+        win.addEventListener('resize', change, false);
+    })(window, document);
+</script>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="logo"></div>
+			<p>传统版</p>
+		</header>
+		<nav>
+			<ul>
+				<li>全部<span></span></li>
+				<li>硬件</li>
+				<li>软件</li>
+				<li>手机</li>
+				<li>科技</li>
+			</ul>
+		</nav>
+		<div class="banner"><img src="img/2.jpg"></div>
+		<ul class="news-list">
+			<li>
+				<h3>金发美女+比基尼在零重力下的诱惑</h3>
+				<div class="author">萧萧&nbsp;|&nbsp;&nbsp;5分钟前</div>
+				<span>2 <img src="img/3.jpg"></span>
+			</li>
+			<li>
+				<h3>三星入门4G手机续航测试：秒掉Nexus5</h3>
+				<div class="author">小呆&nbsp;|&nbsp;&nbsp;2小时前</div>
+				<span>16 <img src="img/3.jpg"></span>
+			</li>
+			<li>
+				<h3>PSV版《生化奇兵》到底还有没有了？</h3>
+				<div class="author">黄栋&nbsp;|&nbsp;&nbsp;2小时前</div>
+				<span>6 <img src="img/3.jpg"></span>
+			</li>
+			<li>
+				<h3>苏宁架构大调：设八大直属独立公司</h3>
+				<div class="author">小路&nbsp;|&nbsp;&nbsp;2小时前</div>
+				<span>5 <img src="img/3.jpg"></span>
+			</li>
+			<li>
+				<h3 style="color: #9a2408">百度薅羊毛继续：一分钱换迅雷白金会员</h3>
+				<div class="author">鲲鹏&nbsp;|&nbsp;&nbsp;3小时前</div>
+				<span>21 <img src="img/3.jpg"></span>
+			</li>
+		</ul>
+		<ul class="ads">
+			<li>
+				<img src="img/4.jpg">
+				<p>触目惊心 揭秘iPhone翻新全过程</p>
+			</li>
+			<li>
+				<img src="img/5.jpg">
+				<p>东芝消费级5TB硬盘突然上市 真便宜</p>
+			</li>
+		</ul>
+		<ul class="news-list">
+			<li>
+				<h3>真正有生命的鞋子：活体细胞合成材料制成</h3>
+				<div class="author">萧萧&nbsp;|&nbsp;&nbsp;5小时前</div>
+				<span>12 <img src="img/3.jpg"></span>
+			</li>
+			<li>
+				<h3>做工如何？神州899元5寸四核机大拆解</h3>
+				<div class="author">雪花&nbsp;|&nbsp;&nbsp;5小时前</div>
+				<span>19 <img src="img/3.jpg"></span>
+			</li>
+		</ul>
+		<div class="next">【下一页】</div>
+		<footer>
+			<ul>
+				<li>Pad版</li>
+				<li>触屏版</li>
+				<li>传统版</li>
+			</ul>
+			<p>京ICP备 11024344号-7 驱动之家 京公网安</p>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+	.zwy_box{
+		width:980px;
+		margin:0 auto;
+		}
+	a:hover{
+		color:#699f27;
+		}
+		/*张王英第三部分*/
+	.zwy_box .column_1{
+		width:980px;
+		border-bottom:1px solid #e1e1e1;
+		padding-bottom:10px;
+		}
+	.zwy_box .column_1 .tit_1{
+		font-size:22px;
+		line-height:22px;
+		color:#699f00;
+		font-weight:bold;
+		}
+	.zwy_box .column_1 img{
+		margin:2px 12px 0 3px;
+		}
+	.zwy_box .column_1 .tit_2{
+		line-height:14px;
+		font-size:14px;
+		color:#699f00;
+		margin-top:7px;
+		}
+		/*奔跑吧兄弟 标题结束*/
+	.zwy_box .con_1 li{
+		width:180px;
+		margin:15px 10px 20px;
+		}
+	.zwy_box .con_1 .first{
+		margin-left:0;
+		}
+	.zwy_box .con_1 .last{
+		margin-right:0;
+		}
+	.zwy_box .con_1 li a{
+		font-size:14px;
+		line-height:21px;
+		}
+	.zwy_box .con_1 li span{
+		width:54px;
+		border:1px solid #e7e7e7;
+		color:#699f00;
+		line-height:14px;
+		text-align:center;
+		padding:3px;
+		font-size:14px;
+		margin-right:3px;
+		background:#fff;
+		}
+	.zwy_box .con_1 li div{
+		height:38px;
+		background:#f2f2f2;
+		border-bottom:1px solid #ebebeb;
+		padding:8px 5px;
+		}
+		/*奔跑吧兄弟 内容结束*/
+	.zwy_box .con_1 li p{
+		font-size:12px;
+		color:#999999;
+		line-height:20px;
+		}
+		/*脱口秀 内容结束*/
+	.zwy_box .banner{
+		margin:30px 0 50px 0;
+		}
+		/*横幅广告 内容结束*/
+	.zwy_box .column_2{
+		width:980px;
+		border-bottom:2px solid #8ac024;
+		padding-bottom:5px;
+		}
+	.zwy_box .column_2 .tit_2{
+		line-height:14px;
+		font-size:14px;
+		color:#699f00;
+		margin-top:7px;
+		}
+	.zwy_box .column_2 .tit_3{
+		font-size:24px;
+		line-heignt:24px;
+		font-weight:bold;
+		color:#699f00;
+		}
+	.zwy_box .column_2 .first{
+		margin-top:10px;
+		}
+	.zwy_box .column_2 .icon{
+		margin:0 5px 0 0;
+		padding:0;
+		}
+	.zwy_box .column_2 ul{
+		margin:20px 0 0 34px;
+		}
+	.zwy_box .column_2 ul li a{
+		font-size:14px;
+		line-height:14px;
+		}
+	.zwy_box .column_2 ul li img{
+		margin:0 7px;
+	    }
+	.zwy_box .column_2 .last{
+		margin-bottom:0 0 5px 0;
+		}
+		/*娱乐 标题结束*/
+	.zwy_box .con_2{
+		margin-top:25px;
+		}
+	.zwy_box .con_2 .bottom_1{
+		width:370px;
+		height:44px;
+		background:#f2f2f2;
+		border-bottom:1px solid #ebebeb;
+		padding:10px 5px 0;
+		}
+	.zwy_box .con_2 .bottom_2{
+		width:170px;
+		height:44px;
+		background:#f2f2f2;
+		border-bottom:1px solid #ebebeb;
+		padding:10px 5px 0;
+		}
+	.zwy_box .con_2 .bottom_1 .first,.zwy_box .con_2 .bottom_1 p{
+		font-size:12px;
+		line-height:20px;
+		}
+	.zwy_box .con_2 .bottom_1 p{
+		color:#999;
+		}
+	.zwy_box .con_2 ul{
+		width:600px;
+		}
+	.zwy_box .con_2 ul li{
+		padding-left:20px;
+		padding-bottom:15px;
+		}
+	.zwy_box .con_2 .bottom_2 p a{
+		font-size:12px;
+		line-height:20px;
+		font-family:'微软雅黑';
+		}
+		/*娱乐 内容结束*/
