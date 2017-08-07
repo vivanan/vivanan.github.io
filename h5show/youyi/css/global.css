@@ -82,11 +82,11 @@ input,textarea,select,button{border:1px solid #CCC;font-family:微软雅黑,'Hei
 .p3-div3{ top: 90%; }
 .p3-1{ height: auto; margin-top:-50%; height: auto }
 .p3-2{ height: auto; margin-bottom: -50%; height: auto}
-.p9-div2{top: 10%;width: 80%;left: 10%;}
+.p9-div2{top: 9%;width: 80%;left: 10%;}
 .p9-3{ width: 50%; left: 25%;  height: 50px;}
 .p9-4{width:100%; font-size: 20px;text-align: center; line-height: 50px;}
 .p9-5{text-align: center;width: 100%;top: 48%;color: rgb(188, 188, 188);font-size: 15px;line-height: 1.5em;}
-.p9-div3{position: relative;top: 18%;left: 25%;width: 50%;height: 210px;}
+.p9-div3{position: relative;top: 16%;left: 25%;width: 50%;height: 210px;}
 .p9-6,.p10-1{width: 100%;height: auto;z-index: 11;}
 .p9-7,.p10-2{width: 76%;left: 11%;top: 9%;border-radius: 100%;z-index: 111;}
 .p9-8,.p10-3{width: 100%;top: 55%;}
@@ -118,7 +118,7 @@ input,textarea,select,button{border:1px solid #CCC;font-family:微软雅黑,'Hei
 .p4-div1{ width: 80%; height: 45%; left: 10%; top: 23%; }
 .p4-div2{ width: 12%; height: 40%; top: 18%;  left: 7%; }
 .p4-3{ width: 50%; right: 26%;}
-.p4-div3{ width: 85%; height: 75%; left: 14%; top: 20%; overflow: hidden; }
+.p4-div3{ width: 85%; height: 75%; left: 14%; top: 20%;  }
 .p4-5{ width: 30px; height: auto; left: 37%; }
  .p4.active .p4-5{-webkit-animation:pullDown 2s ease  both;
 	-moz-animation:pullDown 2s ease  both;
