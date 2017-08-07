@@ -1,0 +1,365 @@
+/*p1*/
+.p1.active .p1-9{-webkit-animation:flipInY 2s linear both;
+	-moz-animation:flipInY 2s linear  both;
+	-ms-animation:flipInY 2s linear  both;
+	animation:flipInY 2s linear  both;
+}
+.p1.active .p1-1,.p6.active .p6-1{-webkit-animation:slideLeft 2s ease-in-out 2s both;
+	-moz-animation:slideLeft 2s ease-in-out 2s both;
+	-ms-animation:slideLeft 2s ease-in-out 2s both;
+	animation:slideLeft 2s ease-in-out 2s both;
+}
+.p1.active .p1-2{-webkit-animation:zoomInDown 1000ms ease 3200ms both running;
+	-moz-animation:zoomInDown 1000ms ease 3200ms both running;
+	-ms-animation:zoomInDown 1000ms ease 3200ms both running;
+	animation:zoomInDown 1000ms ease 3200ms both running;
+}
+.p1.active .p1-3{-webkit-animation:slideUp 1000ms ease 4000ms both running;
+	-moz-animation:slideUp 1000ms ease 4000ms both running;
+	-ms-animation:slideUp 1000ms ease 4000ms both running;
+	animation:slideUp 1000ms ease 4000ms both running;
+}
+.p1.active .p1-4{-webkit-animation:rotateIn 1000ms ease 4500ms both running;
+	-moz-animation:rotateIn 1000ms ease 4500ms both running;
+	-ms-animation:rotateIn 1000ms ease 4500ms both running;
+	animation:rotateIn 1000ms ease 4500ms both running;
+}
+.p1.active .p1-5{-webkit-animation:slideLeft 3000ms ease 4000ms both running;
+	-moz-animation:slideLeft 3000ms ease 4000ms both running;
+	-ms-animation:slideLeft 3000ms ease 4000ms both running;
+	animation:slideLeft 3000ms ease 4000ms both running;
+}
+.p1.active .p1-6{-webkit-animation:pullDown 1000ms ease 5000ms both running;
+	-moz-animation:pullDown 1000ms ease 5000ms both running;
+	-ms-animation:pullDown 1000ms ease 5000ms both running;
+	animation:pullDown 1000ms ease 5000ms both running;
+}
+.p1.active .p1-div3{-webkit-animation:slideUp 1000ms ease 5500ms both running;
+	-moz-animation:slideUp 1000ms ease 5500ms both running;
+	-ms-animation:slideUp 1000ms ease 5500ms both running;
+	animation:slideUp 1000ms ease 5500ms both running;
+}
+
+.p1.active .p1-div5{-webkit-animation:slideUp 1000ms ease 5500ms both running;
+	-moz-animation:slideUp 1000ms ease 5500ms both running;
+	-ms-animation:slideUp 1000ms ease 5500ms both running;
+	animation:slideUp 1000ms ease 5500ms both running;
+}
+
+.p1.active .p1-7{-webkit-animation:slideLeft 1000ms ease 5500ms both running;
+	-moz-animation:slideLeft 1000ms ease 5500ms both running;
+	-ms-animation:slideLeft 1000ms ease 5500ms both running;
+	animation:slideLeft 1000ms ease 5500ms both running;
+}
+.p1.active .p1-8{-webkit-animation:expandOpen 1000ms ease 6000ms both running;
+	-moz-animation:expandOpen 1000ms ease 6000ms both running;
+	-ms-animation:expandOpen 1000ms ease 6000ms both running;
+	animation:expandOpen 1000ms ease 6000ms both running;
+}
+/*p2*/
+.p2.active .p2-3{-webkit-animation:fadeInUp 1000ms ease 1500ms both running;
+	-moz-animation:fadeInUp 1000ms ease 1500ms both running;
+	-ms-animation:fadeInUp 1000ms ease 1500ms both running;
+	animation:fadeInUp 1000ms ease 1500ms both running;
+}
+.p2.active .p2-4{-webkit-animation:pullDown 1000ms ease 1500ms both running;
+	-moz-animation:pullDown 1000ms ease 1500ms both running;
+	-ms-animation:pullDown 1000ms ease 1500ms both running;
+	animation:pullDown 1000ms ease 1500ms both running;
+}
+.p2.active .p2-5{-webkit-animation:fadeInUp 1000ms ease 2500ms both running;
+	-moz-animation:fadeInUp 1000ms ease 2500ms both running;
+	-ms-animation:fadeInUp 1000ms ease 2500ms both running;
+	animation:fadeInUp 1000ms ease 2500ms both running;
+}
+.p2.active .p2-6{-webkit-animation:pullDown 1000ms ease 2500ms both running;
+	-moz-animation:pullDown 1000ms ease 2500ms both running;
+	-ms-animation:pullDown 1000ms ease 2500ms both running;
+	animation:pullDown 1000ms ease 2500ms both running;
+}
+.p2.active .p2-7{-webkit-animation:fadeInUp 1000ms ease 3500ms both running;
+	-moz-animation:fadeInUp 1000ms ease 3500ms both running;
+	-ms-animation:fadeInUp 1000ms ease 3500ms both running;
+	animation:fadeInUp 1000ms ease 3500ms both running;
+}
+.p2.active .p2-8{-webkit-animation:pullDown 1000ms ease 3500ms both running;
+	-moz-animation:pullDown 1000ms ease 3500ms both running;
+	-ms-animation:pullDown 1000ms ease 3500ms both running;
+	animation:pullDown 1000ms ease 3500ms both running;
+}
+.p2.active .p2-9{-webkit-animation:fadeInUp 1000ms ease 4500ms both running;
+	-moz-animation:fadeInUp 1000ms ease 4500ms both running;
+	-ms-animation:fadeInUp 1000ms ease 4500ms both running;
+	animation:fadeInUp 1000ms ease 4500ms both running;
+}
+.p2.active .p2-10{-webkit-animation:pullDown 1000ms ease 4500ms both running;
+	-moz-animation:pullDown 1000ms ease 4500ms both running;
+	-ms-animation:pullDown 1000ms ease 4500ms both running;
+	animation:pullDown 1000ms ease 4500ms both running;
+}
+.p2.active .p2-12{-webkit-animation:pullDown 1000ms ease 4500ms both running;
+	-moz-animation:pullDown 1000ms ease 4500ms both running;
+	-ms-animation:pullDown 1000ms ease 4500ms both running;
+	animation:pullDown 1000ms ease 4500ms both running;
+}
+.p2.active .p2-11,.p10.active .li_2{-webkit-animation:fadeInRight 1000ms ease 5000ms both running;
+	-moz-animation:fadeInRight 1000ms ease 5000ms both running;
+	-ms-animation:fadeInRight 1000ms ease 5000ms both running;
+	animation:fadeInRight 1000ms ease 5000ms both running;
+}
+
+/*p3*/
+.p3.active .p3-1,.p3.active .p3-2,.p3.active .p3-3,.p4.active .p3-1,.p4.active .p3-2,.p4.active .p4-1,.p5.active .p3-1,
+.p5.active .p3-2,.p7.active .p3-1,.p7.active .p3-2,.p7.active .p4-1,.p6.active .p3-1,.p6.active .p3-2,
+.p9.active .p3-1,.p9.active .p3-2,.p10.active .p3-1,.p10.active .p3-2,.p8.active .p8-1{-webkit-animation:rotateIn 1s linear 0s both;
+	-moz-animation:rotateIn 1s linear 0s both;
+	-ms-animation:rotateIn 1s linear 0s both;
+	animation:rotateIn 1s linear 0s both;
+}
+.p3.active .p3-4{-webkit-animation:rotateIn 1000ms ease 600ms both running;
+	-moz-animation:rotateIn 1000ms ease 600ms both running;
+	-ms-animation:rotateIn 1000ms ease 600ms both running;
+	animation:rotateIn 1000ms ease 600ms both running;
+}
+.p3.active .p3-5{-webkit-animation:fadeInUp 2000ms ease 600ms both running;
+	-moz-animation:fadeInUp 2000ms ease 600ms both running;
+	-ms-animation:fadeInUp 2000ms ease 600ms both running;
+	animation:fadeInUp 2000ms ease 600ms both running;
+}
+.p3.active .p3-6{-webkit-animation:flipInY 1000ms ease 1000ms both running;
+	-moz-animation:flipInY 1000ms ease 1000ms both running;
+	-ms-animation:flipInY 1000ms ease 1000ms both running;
+	animation:flipInY 1000ms ease 1000ms both running;
+}
+.p3.active .p3-7,.p9.active .p9-4,.p10.active .p9-4{-webkit-animation:zoomIn 1000ms ease 1500ms both running;
+	-moz-animation:zoomIn 1000ms ease 1500ms both running;
+	-ms-animation:zoomIn 1000ms ease 1500ms both running;
+	animation:zoomIn 1000ms ease 1500ms both running;
+}
+.p3.active .p3-8,.p9.active .p9-5,.p10.active .p9-5{-webkit-animation:fadeInDown 1000ms ease 2000ms both running;
+	-moz-animation:fadeInDown 1000ms ease 2000ms both running;
+	-ms-animation:fadeInDown 1000ms ease 2000ms both running;
+	animation:fadeInDown 1000ms ease 2000ms both running;
+}
+/*p9*/
+.p9.active .p9-3,.p10.active .p9-3{-webkit-animation:slideDown 1000ms ease 1000ms both running;
+	-moz-animation:slideDown 1000ms ease 1000ms both running;
+	-ms-animation:slideDown 1000ms ease 1000ms both running;
+	animation:slideDown 1000ms ease 1000ms both running;
+}
+.p9.active .p9-6{-webkit-animation:rotateIn 4000ms ease 2500ms both running;
+	-moz-animation:rotateIn 4000ms ease 2500ms both running;
+	-ms-animation:rotateIn 4000ms ease 2500ms both running;
+	animation:rotateIn 4000ms ease 2500ms both running;
+}
+.p9.active .p9-7{-webkit-animation:rotateIn 1000ms ease 3000ms both running;
+	-moz-animation:rotateIn 1000ms ease 3000ms both running;
+	-ms-animation:rotateIn 1000ms ease 3000ms both running;
+	animation:rotateIn 1000ms ease 3000ms both running;
+}
+.p9.active .p9-8{-webkit-animation:fadeInUp 3000ms ease 3000ms both running;
+	-moz-animation:fadeInUp 3000ms ease 3000ms both running;
+	-ms-animation:fadeInUp 3000ms ease 3000ms both running;
+	animation:fadeInUp 3000ms ease 3000ms both running;
+}
+.p9.active .p9-9{-webkit-animation:fadeInDown 1000ms ease 4000ms both running;
+	-moz-animation:fadeInDown 1000ms ease 4000ms both running;
+	-ms-animation:fadeInDown 1000ms ease 4000ms both running;
+	animation:fadeInDown 1000ms ease 4000ms both running;
+}
+.p9.active .p9-10{-webkit-animation:fadeInDown 1000ms ease 4500ms both running;
+	-moz-animation:fadeInDown 1000ms ease 4500ms both running;
+	-ms-animation:fadeInDown 1000ms ease 4500ms both running;
+	animation:fadeInDown 1000ms ease 4500ms both running;
+}
+/*p10*/
+.p10.active .li_2{animation-delay:4000ms;
+	-webkit-animation-delay: 4000ms;
+	-moz-animation-delay: 4000ms;
+	-ms-animation-delay: 4000ms;
+}
+/*p4*/
+.p4.active .p4-6{-webkit-animation:rotateIn 1500ms ease 2000ms both running;
+	-moz-animation:rotateIn 1500ms ease 2000ms both running;
+	-ms-animation:rotateIn 1500ms ease 2000ms both running;
+	animation:rotateIn 1500ms ease 2000ms both running;
+}
+.p4.active .p4-7,.p4.active .p4-10,.p4.active .p4-13,
+.p4.active .p4-16,.p4.active .p4-19,.p4.active .p4-22,
+.p4.active .p4-25,.p4.active .p4-28{-webkit-animation:fadeInLeft 1000ms ease 2000ms both running;
+	-moz-animation:fadeInLeft 1000ms ease 2000ms both running;
+	-ms-animation:fadeInLeft 1000ms ease 2000ms both running;
+	animation:fadeInLeft 1000ms ease 2000ms both running;
+}
+.p4.active .p4-8,.p4.active .p4-11,.p4.active .p4-14,
+.p4.active .p4-17,.p4.active .p4-20,.p4.active .p4-23,
+.p4.active .p4-26,.p4.active .p4-29{-webkit-animation:fadeInRight 1000ms ease 2000ms both running;
+	-moz-animation:fadeInRight 1000ms ease 2000ms both running;
+	-ms-animation:fadeInRight 1000ms ease 2000ms both running;
+	animation:fadeInRight 1000ms ease 2000ms both running;
+}
+.p4.active .p4-9,.p4.active .p4-12,.p4.active .p4-15,
+.p4.active .p4-18,.p4.active .p4-21,.p4.active .p4-24,
+.p4.active .p4-27{-webkit-animation:rotateIn 1500ms ease 2500ms both running;
+	-moz-animation:rotateIn 1500ms ease 2500ms both running;
+	-ms-animation:rotateIn 1500ms ease 2500ms both running;
+	animation:rotateIn 1500ms ease 2500ms both running;
+}
+.p4.active .p4-10,.p4.active .p4-11{
+	animation-delay:2500ms;
+	-webkit-animation-delay: 2500ms;
+	-moz-animation-delay: 2500ms;
+	-ms-animation-delay: 2500ms;
+}
+.p4.active .p4-13,.p4.active .p4-14,.p4.active .p4-12{
+	animation-delay:3000ms;
+	-webkit-animation-delay: 3000ms;
+	-moz-animation-delay: 3000ms;
+	-ms-animation-delay: 3000ms;
+}
+.p4.active .p4-16,.p4.active .p4-17,.p4.active .p4-15{
+	animation-delay:3500ms;
+	-webkit-animation-delay: 3500ms;
+	-moz-animation-delay: 3500ms;
+	-ms-animation-delay: 3500ms;
+}
+.p4.active .p4-19,.p4.active .p4-20,.p4.active .p4-18{
+	animation-delay:4000ms;
+	-webkit-animation-delay: 4000ms;
+	-moz-animation-delay: 4000ms;
+	-ms-animation-delay: 4000ms;
+}
+.p4.active .p4-22,.p4.active .p4-23,.p4.active .p4-21{
+	animation-delay:4500ms;
+	-webkit-animation-delay: 4500ms;
+	-moz-animation-delay: 4500ms;
+	-ms-animation-delay: 4500ms;
+}
+.p4.active .p4-25,.p4.active .p4-26,.p4.active .p4-24{
+	animation-delay:5000ms;
+	-webkit-animation-delay: 5000ms;
+	-moz-animation-delay: 5000ms;
+	-ms-animation-delay: 5000ms;
+}
+.p4.active .p4-28,.p4.active .p4-29,.p4.active .p4-27{
+	animation-delay:5500ms;
+	-webkit-animation-delay: 5500ms;
+	-moz-animation-delay: 5500ms;
+	-ms-animation-delay: 5500ms;
+}
+
+/*p6*/
+.p6.active .p6-2{-webkit-animation:pullDown 1000ms ease 1000ms both running;
+	-moz-animation:pullDown 1000ms ease 1000ms both running;
+	-ms-animation:pullDown 1000ms ease 1000ms both running;
+	animation:pullDown 1000ms ease 1000ms both running;
+}
+.p6.active .p6-3,.p10.active .li_1,.p10.active .li_3{-webkit-animation:pullDown 1000ms ease 1500ms both running;
+	-moz-animation:pullDown 1000ms ease 1500ms both running;
+	-ms-animation:pullDown 1000ms ease 1500ms both running;
+	animation:pullDown 1000ms ease 1500ms both running;
+}
+.p10.active .li_1{
+	animation-delay:3500ms;
+	-webkit-animation-delay: 3500ms;
+	-moz-animation-delay: 3500ms;
+	-ms-animation-delay: 3500ms;
+}
+.p10.active .li_3{
+	animation-delay:4500ms;
+	-webkit-animation-delay: 4500ms;
+	-moz-animation-delay: 4500ms;
+	-ms-animation-delay: 4500ms;
+}
+.p6.active .p6-5,.p6.active .p6-6{-webkit-animation:fadeInRight 2000ms ease 4500ms both running;
+	-moz-animation:fadeInRight 2000ms ease 4500ms both running;
+	-ms-animation:fadeInRight 2000ms ease 4500ms both running;
+	animation:fadeInRight 2000ms ease 4500ms both running;
+}
+
+
+.p6.active .p6-6{animation-delay:3500ms;
+	-webkit-animation-delay: 3500ms;
+	-moz-animation-delay: 3500ms;
+	-ms-animation-delay: 3500ms;
+}
+.p6.active .li1,.p6.active .li2,.p6.active .li3,
+.p6.active .li4,.p6.active .li5,.p6.active .li6{-webkit-animation:pullDown 1000ms ease 2000ms both running;
+	-moz-animation:pullDown 1000ms ease 2000ms both running;
+	-ms-animation:pullDown 1000ms ease 2000ms both running;
+	animation:pullDown 1000ms ease 2000ms both running;
+}
+.p6.active .li2{animation-delay:2500ms;
+	-webkit-animation-delay: 2500ms;
+	-moz-animation-delay: 2500ms;
+	-ms-animation-delay: 2500ms;
+	width: 100%; text-align: center;  font-size: 18px; font-weight: bold; margin-top:50%
+}
+.p6.active .li3{animation-delay:2000ms;
+	-webkit-animation-delay: 2000ms;
+	-moz-animation-delay: 2000ms;
+	-ms-animation-delay: 2000ms;
+}
+.p6.active .li4{animation-delay:2500ms;
+	-webkit-animation-delay: 2500ms;
+	-moz-animation-delay: 2500ms;
+	-ms-animation-delay: 2500ms;
+}
+.p6.active .li5{animation-delay:3000ms;
+	-webkit-animation-delay: 3000ms;
+	-moz-animation-delay: 3000ms;
+	-ms-animation-delay: 3000ms;
+}
+.p6.active .li6{animation-delay:3500ms;
+	-webkit-animation-delay: 3500ms;
+	-moz-animation-delay: 3500ms;
+	-ms-animation-delay: 3500ms;
+}
+/*p7*/
+.p7.active .p7-1,.p7.active .p7-3{-webkit-animation:slideRight 1000ms ease 1000ms both running;
+	-moz-animation:slideRight 1000ms ease 1000ms both running;
+	-ms-animation:slideRight 1000ms ease 1000ms both running;
+	animation:slideRight 1000ms ease 1000ms both running;
+}
+.p7.active .p7-2,.p8.active .p8-2,.p7.active .p7-4{-webkit-animation:slideUp 1000ms ease 1000ms both running;
+	-moz-animation:slideUp 1000ms ease 1000ms both running;
+	-ms-animation:slideUp 1000ms ease 1000ms both running;
+	animation:slideUp 1000ms ease 1000ms both running;
+}
+.p7.active .p7-div2,.p8.active .p8-3,.p7.active  .p7-div4{-webkit-animation:slideDown 1000ms ease 1500ms both running;
+	-moz-animation:slideDown 1000ms ease 1500ms both running;
+	-ms-animation:slideDown 1000ms ease 1500ms both running;
+	animation:slideDown 1000ms ease 1500ms both running;
+}
+.p7.active .p7-3{animation-delay:2500ms;
+	-webkit-animation-delay: 2500ms;
+	-moz-animation-delay: 2500ms;
+	-ms-animation-delay: 2500ms;
+}
+
+.p7.active .p7-div4{animation-delay:3000ms;
+	-webkit-animation-delay: 3000ms;
+	-moz-animation-delay: 3000ms;
+	-ms-animation-delay: 3000ms;
+}
+.p7.active .p7-4{animation-delay:2500ms;
+	-webkit-animation-delay: 2500ms;
+	-moz-animation-delay: 2500ms;
+	-ms-animation-delay: 2500ms;
+}
+.p7.active .p7-div5 .p7-4,.p7.active .p7-5{-webkit-animation:flipInX 1000ms ease 4500ms both running;
+	-moz-animation:flipInX 1000ms ease 4500ms both running;
+	-ms-animation:flipInX 1000ms ease 4500ms both running;
+	animation:flipInX 1000ms ease 4500ms both running;
+}
+.p7.active .p7-5{animation-delay:4000ms;
+	-webkit-animation-delay: 4000ms;
+	-moz-animation-delay: 4000ms;
+	-ms-animation-delay: 4000ms;
+}
+.p7.active .p7-6{-webkit-animation:fadeInDown 1000ms ease 4500ms both running;
+	-moz-animation:fadeInDown 1000ms ease 4500ms both running;
+	-ms-animation:fadeInDown 1000ms ease 4500ms both running;
+	animation:fadeInDown 1000ms ease 4500ms both running;
+}
+/*p8*/

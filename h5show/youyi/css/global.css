@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, big, cite, code, del, em, font, img, ins, small, strong, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, select {margin:0;padding:0;box-sizing: border-box;-webkit-text-size-adjust:none;text-size-adjust:none;/*阻止旋转屏幕时自动调整字体大小*/}
+html{height:100%;}
+body{color: rgb(165, 23, 0);font-family:微软雅黑,'Heiti SC',黑体,Arial;font-size:0.875em; max-width: 640px;}
+ol,ul,li{list-style:none outside none;}
+a{text-decoration:none;color:inherit;}
+img{border:none;vertical-align:middle;/* max-width:100%;max-height:100% */}
+table{border-collapse:collapse;}
+tr,td,th{padding:0;margin:0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;color:rgb(28, 31, 135);line-height:120%;}
+input,textarea,select,button{border:1px solid #CCC;font-family:微软雅黑,'Heiti SC',黑体,Arial;padding:0;margin:0;}
+
+@media screen and (min-width:640px){
+	body,html,#loading{width:640px}
+	header{width:640px;}
+}
+@media screen and (max-width:320px){
+	body,html,#loading{width:320px}
+	header{width:320px;}
+}
+
+/* .p1{background: url(../img/bj.png) no-repeat center; } */
+.p8{background: url(../img/bj.png) no-repeat center; background-size:cover !important;}
+.p2{background: url(../img/bj.png) no-repeat center; background-size: cover !important;  }
+.p3,.p4,.p5,.p7,.p6,.p9,.p10{ background: url(../img/bj2.jpg) no-repeat center;  overflow: hidden; background-size: cover !important; }
+.absolute{ position: absolute; }
+/*p1*/
+.p1-div1{width: 100%;height: 100px;top: 0px;}
+.p1-1{top: 64px;height: auto;width: 25%;right: 10%;}
+.p1-div2{width: 100%;height: 60%;top: 7%;}
+.p1-2{right: 30%;}
+.p1-3{right: 23%;top: 24%;}
+.p1-4{right: 27%;top: 52%;}
+.p1-5{right: 26%;top: 67%;}
+.p1-6{right: 45%;top: 28%;}
+.p1-div3{ right: 50%;  font-size: 26px; font-weight: bold; width: 42px; height: auto; top: 26%;right: 45%; }
+.p1-div4{ bottom:26%; left: 13%;width: 20px; height: 160px;}
+.p1-div5 {line-height: 22px; right: 13%;top: 72%;}
+.p1-7{  color: #a72a16; font-size: 13px; line-height: 1.2em;  left: 10%; width:10px;font-weight: bold; }
+.p1-8{bottom: 0px; width: 20px;}
+.p1-9{ width: 100%; height: 100%; }
+/*p2*/
+.p2-div1{width: 100%;height: 80%;left:0;top:10%;}
+.p2-1{right: 12%;top: 8%;height: auto;}
+.p2.active .p2-1,.p4.active .p4-2{-webkit-animation:pullDown 1s ease 0.5s both;
+	-moz-animation:pullDown 1s ease 0.5s both;
+	-ms-animation:pullDown 1s ease 0.5s both;
+	animation:pullDown 1s ease 0.5s both;
+}
+.p2-2,.p4-3{width: 5%;top: 13%;right: 16%;font-size: 20px;line-height: 1.2em;font-weight: bold;color: #fff;text-align: center;}
+.p2.active .p2-2,.p4.active .p4-3{-webkit-animation:fadeIn 1s ease-in-out 0.5s both;
+	-moz-animation:fadeIn 1s ease-in-out 1s both;
+	-ms-animation:fadeIn 1s ease-in-out 1s both;
+	animation:fadeIn 1s ease-in-out 1s both;
+}
+.p2-3,.p2-5,.p2-7,.p2-9,.p2-12{top: 5%;right: 29%;height: 80%;width: 23px;text-align: center;font-size: 14px;font-weight: bold;line-height: 1.2em;}
+.p2-4,.p2-6,.p2-8,.p2-10{width: 3px;height: 80%;top: 5%;right: 37%;background: rgb(165, 23, 0);}
+.p2-5{right: 39%;}
+.p2-7{right: 48%;}
+.p2-9{right: 57%; height: 80%;}
+.p2-12{right: 68%; height: 80%;}
+.p2-6{right: 46%;}
+.p2-8{right: 55%;}
+.p2-10{right: 65%; height: 80%;}
+.p2-11{ left: 6%; bottom: 7%;  }
+/*p3*/
+.p3 .p3-div1,.p3 .p3-div3{ width: 80%; height: 23%; top: -7%; left: -40%;  }
+.p3 .p3-div3{ top: 84%;left: 60% }
+.p3 .p3-1{ height: auto; margin-top:-50%; height: auto }
+.p3 .p3-2{ height: auto; margin-bottom: -50%; height: auto}
+.p3-div2{position: relative;top: 12%;left: 25%;width: 50%;height: 210px;}
+.p3-3{width: 100%;height: auto;z-index: 11;}
+.p3-4{width: 76%;left: 12%;top: 16%;border-radius: 100%;z-index: 111;}
+.p3-5{width: 100%;top: 55%;}
+.p3-6{  left: 10%; }
+.p3-div4,.p7-div1,.p7-div3,.p6-div1{ width: 70%; left: 15%; height: 30px; top:47%;}
+.p3-7,.p7-2,.p7-4,.p6-3,.p7-6,.p7-4d{ text-align: center; font-size: 21px;  width: 100%; color: #fff; line-height: 1.8em;  }
+.p3-8{ top: 53%; font-size: 14px; text-align: center; line-height: 2em; width: 80%; left: 10%;}
+/*p9*/
+.p3-div1,.p3-div3{ width: 80%; height: 23%; top: -14%; left: 10%;  }
+.p3-div3{ top: 90%; }
+.p3-1{ height: auto; margin-top:-50%; height: auto }
+.p3-2{ height: auto; margin-bottom: -50%; height: auto}
+.p9-div2{top: 10%;width: 80%;left: 10%;}
+.p9-3{ width: 50%; left: 25%;  height: 50px;}
+.p9-4{width:100%; font-size: 20px;text-align: center; line-height: 50px;}
+.p9-5{text-align: center;width: 100%;top: 47%;color: rgb(188, 188, 188);font-size: 15px;line-height: 1.5em;}
+.p9-div3{position: relative;top: 18%;left: 25%;width: 50%;height: 210px;}
+.p9-6,.p10-1{width: 100%;height: auto;z-index: 11;}
+.p9-7,.p10-2{width: 76%;left: 11%;top: 9%;border-radius: 100%;z-index: 111;}
+.p9-8,.p10-3{width: 100%;top: 55%;}
+.p9-9,.p9-10,.text_con h2,.text_con p{font-size: 13px;text-align: center;line-height: 1.5em;top: 66%;width: 90%;left: 5%;}
+.p9-10{top: 52%;}
+@media only screen and (max-width:375px){
+.p9-7{width: 76%;left: 12%;top: 9%;border-radius: 100%;z-index: 111;}
+.p9-8{width: 100%;top: 45%;}
+.p3-4{left: 11%;top: 10%;}
+}
+/*p10*/
+
+.p10-div1{ top: 28%; width: 80%; left: 10%;  }
+.p10-div1 li{width: 100%;overflow: hidden;height: 120px;position: relative;}
+.p10-div1 li .img_box{ width: 35%; float: left; position: relative; height: 120px; }
+.text_con{width: 60%;margin-left: 40%;top: 25%;position: absolute;}
+.text_con h2,.text_con p{ text-align: left; width: 100%; }
+.p10-div1 li.Li_Even .text_con{ margin-right: 40%; margin-left: 0px; }
+.p10-div1 li.Li_Even .img_box{ margin-left:65%; }
+.p10-div1 li.Li_Even .text_con h2,.p10-div1 li.Li_Even .text_con p{ text-align: right; }
+@media only screen and (max-width:375px){
+.p10-div1 li,.p10-div1 li .img_box{height: 110px;}
+}
+@media only screen and (max-width:340px){
+.p10-div1 li,.p10-div1 li .img_box{height: 100px;}
+
+}
+/*p4*/
+.p4-div1{ width: 80%; height: 45%; left: 10%; top: 23%; }
+.p4-div2{ width: 12%; height: 40%; top: 18%;  left: 7%; }
+.p4-3{ width: 50%; right: 26%;}
+.p4-div3{ width: 85%; height: 63%; left: 14%; top: 20%; overflow: hidden; }
+.p4-5{ width: 30px; height: auto; left: 37%; }
+ .p4.active .p4-5{-webkit-animation:pullDown 2s ease  both;
+	-moz-animation:pullDown 2s ease  both;
+	-ms-animation:pullDown 2s ease  both;
+	animation:pullDown 2s ease  both;}
+.p4-6,.p4-9,.p4-12,.p4-15,.p4-18,.p4-21,.p4-24,.p4-27{ width: 30px; height: auto; left: 37%;}
+.p4-9,.p4-10,.p4-11{ top: 11%;  }
+.p4-7,.p4-8,.p4-10,.p4-11,.p4-13,.p4-14,.p4-15,.p4-16,.p4-17,.p4-19,.p4-20,.p4-22,.p4-23,.p4-25,.p4-26,.p4-28,.p4-29{ font-size: 13px; text-align: left; line-height: 2em; }
+.p4-7,.p4-10,.p4-13,.p4-16,.p4-19,.p4-22,.p4-25,.p4-28{left: 15%;}
+.p4-8,.p4-11,.p4-14,.p4-17,.p4-20,.p4-23,.p4-26,.p4-29{ left: 48%; }
+.p4-12,.p4-13,.p4-14{ top: 22%;  }
+.p4-15,.p4-16,.p4-17{ top: 33%;  }
+.p4-18,.p4-19,.p4-20{ top: 44%;  }
+.p4-21,.p4-22,.p4-23{ top: 55%;  }
+.p4-24,.p4-25,.p4-26{ top: 66%;  }
+.p4-27,.p4-28,.p4-29{ top: 77%;  }
+/*p6*/
+.p6 .p3-div1,.p6 .p3-div3{ width: 80%; height: 23%; top: -7%; left: -40%;  }
+.p6 .p3-div3{ top: 84%;left: 60% }
+.p6 .p3-1{ height: auto; margin-top:-50%; height: auto }
+.p6 .p3-2{ height: auto; margin-bottom: -50%; height: auto}
+.p6-div1{ top: 22% !important }
+.p6-1{ width: 23%; right: 8%; top: 10%; opacity: 0.5 }
+.p6-2{ right: 0; }
+.p6-3{ width: 80% !important; right: 0px; }
+.p6-div2{ top: 34%; width: 80%; left: 10%; }
+.p6-div2 li{ width: 48%; margin: 0 30% 6% 0; float: left; position: relative; margin-bottom: 6%;  }
+.p6-div2 li img{ width: 100%; height: auto; }
+.p6-div2 li img.p6-4{ position: absolute; width: 90%; height: auto; left: 66%; top: 10%;  }
+.p6-5{width: 10%;left: 30%;bottom: 12%;opacity: 0.5;}
+.p6-6{width: 17%;left: 8%;bottom: 10%;}
+.p6-w{ width: 100%; text-align: center; bottom: 28%; font-size: 18px; font-weight: bold; }
+
+
+/*p7*/
+.p7-div1,.p7-div3,.p6-div1{ top: 30%;}
+.p7-1, .p7-3{left:10%;}
+
+.p7-div2,.p7-div4,.p7-div6{top: 38%;font-size: 18px;line-height: 2em;text-align: center;width: 100%;font-weight: bold;}
+.p7-div3{top: 44%;}
+.p7-div4{top: 53%;}
+.p7-div5{ width: 100%; height: 168px; top: 52%; }
+.p7-5{ width: 80%; left: 10%; }
+.p7-4,.p7-4d{ width: 80%; height: auto;left: 10%; }
+/*p8*/
+.p8-1{left: 25%; top: 20%;}
+.p8-2,.p8-3{ width: 100%; text-align: center; bottom: 30%; font-size: 18px; font-weight: bold; }
+.p8-3{ bottom: 20%; font-size: 12px; }
+/*加载动画*/
+#loading{width:100%;height:100%;position:absolute;top:0;left:0;z-index:10000; background: #fff;}
+.zoom .inner-circle,.zoom .outer-circle{position:absolute;border-radius:140px;background:#afe4dd;left:50%;top:30%}
+.zoom .inner-circle{width:30px;height:30px;margin:-15px}
+.zoom .outer-circle{width:140px;height:140px;margin:-70px;opacity:.3;z-index:888;animation:outer-circle 2s infinite;-moz-animation:outer-circle 2s infinite;-webkit-animation:outer-circle 2s infinite;-o-animation:outer-circle 2s infinite}
+@keyframes outer-circle{0%{transform:scale(1)}50%{transform:scale(.5)}to{transform:scale(1)}}
+@-webkit-keyframes outer-circle{0%{-webkit-transform:scale(1)}50%{-webkit-transform:scale(.5)}to{-webkit-transform:scale(1)}}
+.title{padding:120px 0 240px;margin:0 auto;text-align:center;width:100%;height:auto;}
+.title img{ width: 20%; height: auto; }
+.loadnumber{text-align:center;line-height:2em;font-size:14px; color: #666}
+.Load{width:80%;margin:0 auto}
+.title .thumb{position:absolute;margin:-45px;overflow:hidden;left:50%;top:30%;background-color:#fff;z-index:1999}
+.title .thumb,.title .thumb img{width:90px;height:90px;border-radius:90px}
+/*加载动画*/
+
+
+/*音乐*/
+audio{display:inline;float:left}
+.music{width: 30px;height: 30px;text-align:center;background:url(../img/off.png);background-size:100%;position:fixed;z-index:1000;top: 20px;right: 20px;z-index:100;}
+.music-off{background:url(../img/on.png);background-size:100%}
+.music-ani{
+    animation:musicRound 1s infinite linear;
+    -webkit-animation:musicRound 1s infinite linear
+}
+@keyframes musicRound{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes musicRound{
+    0%{-webkit-transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}
+/*音乐*/
+.section{background-size:100% auto;background-position:center center}
+
+
+
